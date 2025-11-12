@@ -10,7 +10,9 @@ Before deploying to Vercel, ensure you have:
 
 ## Required Environment Variables
 
-Set these environment variables in your Vercel project settings:
+Set these environment variables in your Vercel project settings (under Project Settings > Environment Variables):
+
+**Important:** Make sure to set these for both Production and Preview environments.
 
 ### Supabase Configuration
 ```
@@ -59,6 +61,29 @@ Ensure your Supabase database has the required tables and RLS policies configure
 Configure Stripe webhooks to point to your Vercel deployment URL:
 - Webhook endpoint: `https://your-app-name.vercel.app/api/webhooks/stripe`
 - Events to listen for: `checkout.session.completed`, `payment_intent.succeeded`
+
+## Troubleshooting
+
+### Build Errors
+
+**"STRIPE_SECRET_KEY is not set" Error:**
+- Ensure `STRIPE_SECRET_KEY` is set in Vercel Environment Variables
+- Check that the variable is set for the correct environment (Production/Preview)
+- The Stripe client now uses lazy loading to avoid build-time errors
+
+**Deprecated warnings:**
+- `images.domains` has been updated to `images.remotePatterns`
+- Middleware warnings are informational and don't affect functionality
+
+### Runtime Errors
+
+**Authentication issues:**
+- Verify Supabase environment variables are correct
+- Check database RLS policies are configured
+
+**Stripe payment issues:**
+- Ensure webhook endpoint is configured in Stripe dashboard
+- Verify webhook secret matches Vercel's environment variable
 
 ## Post-Deployment Checklist
 
