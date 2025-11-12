@@ -1,8 +1,8 @@
 # Feature Inventory
 
-*Generated on 2025-11-12T17:33:50.764Z*
+*Generated on 2025-11-12T18:33:01.202Z*
 
-## Components (85)
+## Components (96)
 
 ### logo-settings
 - **File**: components/logo-settings.tsx
@@ -12,22 +12,22 @@
 ### logo
 - **File**: components/logo.tsx
 - **Exports**: Logo
-- **Last Modified**: 2025-11-12T17:02:56.720Z
+- **Last Modified**: 2025-11-12T18:13:51.643Z
 
 ### component-Navigation
 - **File**: undefined
 - **Exports**: None
-- **Last Modified**: 2025-11-12T17:31:39.995Z
+- **Last Modified**: 2025-11-12T17:34:03.761Z
 
 ### Navigation
 - **File**: undefined
 - **Exports**: None
-- **Last Modified**: 2025-11-12T17:31:39.995Z
+- **Last Modified**: 2025-11-12T17:34:03.761Z
 
 ### navigation
 - **File**: components/navigation.tsx
 - **Exports**: Navigation
-- **Last Modified**: 2025-11-12T17:31:39.995Z
+- **Last Modified**: 2025-11-12T17:34:03.761Z
 
 ### theme-provider
 - **File**: components/theme-provider.tsx
@@ -75,6 +75,11 @@
 - **Exports**: PreviewPanel
 - **Last Modified**: 2025-11-12T17:02:57.007Z
 
+### accordion.stories
+- **File**: components/ui/accordion.stories.tsx
+- **Exports**: meta, Basic, ServiceDetails, FAQ, OrderStatus, MultipleOpen
+- **Last Modified**: 2025-11-12T18:21:46.910Z
+
 ### accordion
 - **File**: components/ui/accordion.tsx
 - **Exports**: None
@@ -84,6 +89,11 @@
 - **File**: components/ui/alert-dialog.tsx
 - **Exports**: None
 - **Last Modified**: 2025-11-12T17:02:57.030Z
+
+### alert.stories
+- **File**: components/ui/alert.stories.tsx
+- **Exports**: meta, Basic, StatusAlerts, ServiceNotifications, SystemAlerts, AlertsWithActions, FormValidation, DashboardAlerts, DismissibleAlerts
+- **Last Modified**: 2025-11-12T18:25:54.999Z
 
 ### alert
 - **File**: components/ui/alert.tsx
@@ -95,6 +105,11 @@
 - **Exports**: None
 - **Last Modified**: 2025-11-12T17:02:57.041Z
 
+### avatar.stories
+- **File**: components/ui/avatar.stories.tsx
+- **Exports**: meta, Basic, Sizes, TeamMembers, CustomerAvatars, AvatarGroups, StatusIndicators, CommentsAndReviews, FallbackVariations
+- **Last Modified**: 2025-11-12T17:39:02.110Z
+
 ### avatar
 - **File**: components/ui/avatar.tsx
 - **Exports**: None
@@ -103,7 +118,7 @@
 ### badge.stories
 - **File**: components/ui/badge.stories.tsx
 - **Exports**: meta, Variants, StatusIndicators, TagsAndCategories, PricingAndFeatures, InteractiveBadges, InContext, Sizes
-- **Last Modified**: 2025-11-12T17:31:24.044Z
+- **Last Modified**: 2025-11-12T18:21:46.907Z
 
 ### badge
 - **File**: components/ui/badge.tsx
@@ -123,7 +138,7 @@
 ### button.stories
 - **File**: components/ui/button.stories.tsx
 - **Exports**: meta, Variants, Sizes, WithIcons, States, UseCases, Playground, Accessibility, ThemeExamples
-- **Last Modified**: 2025-11-12T17:31:23.922Z
+- **Last Modified**: 2025-11-12T17:37:45.365Z
 
 ### button
 - **File**: components/ui/button.tsx
@@ -138,7 +153,7 @@
 ### card.stories
 - **File**: components/ui/card.stories.tsx
 - **Exports**: meta, Basic, CompleteCard, Layouts, UseCases, GridLayout, Sizes
-- **Last Modified**: 2025-11-12T17:31:23.922Z
+- **Last Modified**: 2025-11-12T18:21:47.030Z
 
 ### card
 - **File**: components/ui/card.tsx
@@ -158,7 +173,7 @@
 ### checkbox.stories
 - **File**: components/ui/checkbox.stories.tsx
 - **Exports**: meta, Basic, States, ServiceSelection, TermsAndConditions, SettingsPanel, FilterOptions, BulkActions
-- **Last Modified**: 2025-11-12T17:32:04.728Z
+- **Last Modified**: 2025-11-12T18:25:55.065Z
 
 ### checkbox
 - **File**: components/ui/checkbox.tsx
@@ -169,6 +184,11 @@
 - **File**: components/ui/collapsible.tsx
 - **Exports**: None
 - **Last Modified**: 2025-11-12T17:02:57.291Z
+
+### command.stories
+- **File**: components/ui/command.stories.tsx
+- **Exports**: meta, Basic, CommandDialog, ServiceSearch, CustomerSearch, NavigationCommand, FileOperations, SettingsCommand, EmojiPicker
+- **Last Modified**: 2025-11-12T17:39:02.169Z
 
 ### command
 - **File**: components/ui/command.tsx
@@ -183,7 +203,7 @@
 ### dialog.stories
 - **File**: components/ui/dialog.stories.tsx
 - **Exports**: meta, Basic, FormDialog, ConfirmationDialog, SuccessDialog, LargeContentDialog, NestedDialogs, NoCloseButton
-- **Last Modified**: 2025-11-12T17:31:23.923Z
+- **Last Modified**: 2025-11-12T18:21:46.907Z
 
 ### dialog
 - **File**: components/ui/dialog.tsx
@@ -233,7 +253,7 @@
 ### input.stories
 - **File**: components/ui/input.stories.tsx
 - **Exports**: meta, Basic, Types, States, WithIcons, FormExamples, Sizes, Validation
-- **Last Modified**: 2025-11-12T17:31:23.923Z
+- **Last Modified**: 2025-11-12T17:37:45.365Z
 
 ### input
 - **File**: components/ui/input.tsx
@@ -244,6 +264,11 @@
 - **File**: components/ui/item.tsx
 - **Exports**: None
 - **Last Modified**: 2025-11-12T17:02:57.568Z
+
+### kbd.stories
+- **File**: components/ui/kbd.stories.tsx
+- **Exports**: meta, Basic, CommonShortcuts, ArrowKeys, CommandPalette, FormShortcuts, EditorShortcuts, PlatformShortcuts, InlineShortcuts, AccessibilityFeatures
+- **Last Modified**: 2025-11-12T17:39:02.170Z
 
 ### kbd
 - **File**: components/ui/kbd.tsx
@@ -270,10 +295,20 @@
 - **Exports**: None
 - **Last Modified**: 2025-11-12T17:02:57.661Z
 
+### popover.stories
+- **File**: components/ui/popover.stories.tsx
+- **Exports**: meta, Basic, UserMenu, SettingsPopover, FilterPopover, ShareMenu, ContactPopover, ColorPicker, ActionsMenu, DateTimePicker
+- **Last Modified**: 2025-11-12T18:25:55.022Z
+
 ### popover
 - **File**: components/ui/popover.tsx
 - **Exports**: None
 - **Last Modified**: 2025-11-12T17:02:57.667Z
+
+### progress.stories
+- **File**: components/ui/progress.stories.tsx
+- **Exports**: meta, Basic, ServiceProgress, FileUploadProgress, ProjectCompletion, SkillLevels, LoadingStates, StorageUsage
+- **Last Modified**: 2025-11-12T17:39:02.091Z
 
 ### progress
 - **File**: components/ui/progress.tsx
@@ -283,7 +318,7 @@
 ### radio-group.stories
 - **File**: components/ui/radio-group.stories.tsx
 - **Exports**: meta, Basic, ServicePriority, DeliveryMethod, PaymentMethod, ServicePlan, RatingSelection, ContactPreference
-- **Last Modified**: 2025-11-12T17:32:34.768Z
+- **Last Modified**: 2025-11-12T17:39:02.012Z
 
 ### radio-group
 - **File**: components/ui/radio-group.tsx
@@ -303,12 +338,17 @@
 ### select.stories
 - **File**: components/ui/select.stories.tsx
 - **Exports**: meta, Basic, Sizes, WithIcons, GroupedOptions, States, FormExamples, LongList, PreSelected
-- **Last Modified**: 2025-11-12T17:31:23.923Z
+- **Last Modified**: 2025-11-12T18:25:55.022Z
 
 ### select
 - **File**: components/ui/select.tsx
 - **Exports**: None
 - **Last Modified**: 2025-11-12T17:02:57.706Z
+
+### separator.stories
+- **File**: components/ui/separator.stories.tsx
+- **Exports**: meta, Horizontal, Vertical, CardSections, FormSections, NavigationSections, DataTableSections, ThemedSeparators
+- **Last Modified**: 2025-11-12T18:25:55.040Z
 
 ### separator
 - **File**: components/ui/separator.tsx
@@ -325,6 +365,11 @@
 - **Exports**: None
 - **Last Modified**: 2025-11-12T17:02:57.778Z
 
+### skeleton.stories
+- **File**: components/ui/skeleton.stories.tsx
+- **Exports**: meta, Basic, CardSkeleton, ProfileSkeleton, TableSkeleton, DashboardSkeleton, ListSkeleton, FormSkeleton, GallerySkeleton, CommentSkeleton, DifferentSizes
+- **Last Modified**: 2025-11-12T17:39:02.170Z
+
 ### skeleton
 - **File**: components/ui/skeleton.tsx
 - **Exports**: None
@@ -333,7 +378,7 @@
 ### slider.stories
 - **File**: components/ui/slider.stories.tsx
 - **Exports**: meta, Basic, VolumeControl, PriceRange, BrightnessControl, ServiceDuration, QualitySettings, MultipleRanges, VerticalSliders
-- **Last Modified**: 2025-11-12T17:33:22.431Z
+- **Last Modified**: 2025-11-12T17:39:02.013Z
 
 ### slider
 - **File**: components/ui/slider.tsx
@@ -353,12 +398,17 @@
 ### switch.stories
 - **File**: components/ui/switch.stories.tsx
 - **Exports**: meta, Basic, States, SettingsPanel, FeatureToggles, ThemeSwitcher, PrivacySettings, MediaControls, QuickToggles
-- **Last Modified**: 2025-11-12T17:33:00.270Z
+- **Last Modified**: 2025-11-12T17:39:02.012Z
 
 ### switch
 - **File**: components/ui/switch.tsx
 - **Exports**: None
 - **Last Modified**: 2025-11-12T17:02:57.803Z
+
+### table.stories
+- **File**: components/ui/table.stories.tsx
+- **Exports**: meta, Basic, OrdersTable, ServiceCatalog, InventoryTable, CustomerTable
+- **Last Modified**: 2025-11-12T18:21:46.906Z
 
 ### table
 - **File**: components/ui/table.tsx
@@ -368,7 +418,7 @@
 ### tabs.stories
 - **File**: components/ui/tabs.stories.tsx
 - **Exports**: meta, Basic, WithIcons, Dashboard, Vertical, ServiceDetails
-- **Last Modified**: 2025-11-12T17:31:23.923Z
+- **Last Modified**: 2025-11-12T17:37:45.445Z
 
 ### tabs
 - **File**: components/ui/tabs.tsx
@@ -378,7 +428,7 @@
 ### textarea.stories
 - **File**: components/ui/textarea.stories.tsx
 - **Exports**: meta, Basic, Sizes, States, FormExamples, WithCharacterCounter, AutoResizing, ValidationFeedback
-- **Last Modified**: 2025-11-12T17:31:42.632Z
+- **Last Modified**: 2025-11-12T18:21:46.910Z
 
 ### textarea
 - **File**: components/ui/textarea.tsx
@@ -405,6 +455,11 @@
 - **Exports**: None
 - **Last Modified**: 2025-11-12T17:02:57.863Z
 
+### tooltip.stories
+- **File**: components/ui/tooltip.stories.tsx
+- **Exports**: meta, Basic, IconButtons, StatusTooltips, FormHelp, PricingTooltips, ContactTooltips, RichTooltips
+- **Last Modified**: 2025-11-12T18:25:55.000Z
+
 ### tooltip
 - **File**: components/ui/tooltip.tsx
 - **Exports**: None
@@ -423,12 +478,12 @@
 ### component-ThemeProvider
 - **File**: undefined
 - **Exports**: None
-- **Last Modified**: 2025-11-12T17:31:46.982Z
+- **Last Modified**: 2025-11-12T17:34:03.832Z
 
 ### ThemeProvider
 - **File**: undefined
 - **Exports**: None
-- **Last Modified**: 2025-11-12T17:31:46.982Z
+- **Last Modified**: 2025-11-12T17:34:03.832Z
 
 ## Pages (14)
 
