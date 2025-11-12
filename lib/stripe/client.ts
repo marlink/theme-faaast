@@ -1,11 +1,28 @@
 import Stripe from 'stripe'
 
-if (!process.env.STRIPE_SECRET_KEY) {
-  throw new Error('STRIPE_SECRET_KEY is not set')
+let stripeInstance: Stripe | null = null
+
+export function getStripeClient(): Stripe {
+  if (!stripeInstance) {
+    const secretKey = process.env.STRIPE_SECRET_KEY
+    if (!secretKey) {
+      throw new Error('STRIPE_SECRET_KEY is not set')
+    }
+
+    stripeInstance = new Stripe(secretKey, {
+      apiVersion: '2024-12-18.acacia',
+      typescript: true,
+    })
+  }
+
+  return stripeInstance
 }
 
-export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
-  apiVersion: '2024-12-18.acacia',
-  typescript: true,
+// For backwards compatibility, export a getter that returns the client
+export const stripe = new Proxy({} as Stripe, {
+  get(target, prop) {
+    const client = getStripeClient()
+    return (client as any)[prop]
+  }
 })
 
