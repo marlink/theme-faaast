@@ -1,3 +1,5 @@
+'use client';
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Navigation } from '@/components/navigation';
@@ -14,6 +16,40 @@ import {
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
+
+const AnimatedPunchLines = () => {
+  const punchLines = [
+    "Open, navigate, and love a fresh, high‑speed site.",
+    "Enter, click, and enjoy your new, ultra‑fast website.",
+    "Browse, click, and discover your new, lightning‑fast website."
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isFading, setIsFading] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsFading(true);
+      setTimeout(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % punchLines.length);
+        setIsFading(false);
+      }, 500); // Half of the animation duration
+    }, 4000); // Change every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [punchLines.length]);
+
+  return (
+    <p
+      className={`text-base sm:text-lg md:text-xl lg:text-2xl text-zinc-300 mb-6 sm:mb-8 max-w-3xl mx-auto text-balance animate-fade-in-up [animation-delay:200ms] px-4 transition-opacity duration-1000 ${
+        isFading ? 'opacity-0' : 'opacity-100'
+      }`}
+    >
+      {punchLines[currentIndex]}
+    </p>
+  );
+};
 
 export default function Home() {
   const services = [
@@ -76,9 +112,7 @@ export default function Home() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 text-balance animate-fade-in-up [animation-delay:100ms] px-2">
             Your <span className="text-orange-500">Brand</span> specialist.
           </h1>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-zinc-300 mb-6 sm:mb-8 max-w-3xl mx-auto text-balance animate-fade-in-up [animation-delay:200ms] px-4">
-            Open, navigate, and love a fresh, high‑speed site. Enter, click, and enjoy your new, ultra‑fast website. Browse, click, and discover your new, lightning‑fast website.
-          </p>
+          <AnimatedPunchLines />
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center animate-fade-in-up [animation-delay:300ms] px-4">
             <Button
               asChild
