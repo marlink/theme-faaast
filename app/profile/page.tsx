@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
-import { checkDownloadStatus } from '@/lib/supabase/utils'
+import { checkDownloadStatusClient as checkDownloadStatus } from '@/lib/supabase/utils-client'
 import { ProfileContent } from './profile-content'
 import { Navigation } from '@/components/navigation'
 

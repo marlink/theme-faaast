@@ -1,3 +1,5 @@
+'use client';
+
 import { LogoSettings } from '@/components/logo-settings';
 import { Navigation } from '@/components/navigation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';

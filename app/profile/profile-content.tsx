@@ -7,7 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { createClient } from '@/lib/supabase/client'
-import { checkDownloadStatus, incrementDownloadCount, type UserDownloadStatus } from '@/lib/supabase/utils'
+import { checkDownloadStatusClient as checkDownloadStatus, incrementDownloadCountClient as incrementDownloadCount, type UserDownloadStatus } from '@/lib/supabase/utils-client'
 import { User, Download, LogOut, CreditCard, CheckCircle, Lock, Link as LinkIcon } from 'lucide-react'
 import { toast } from 'sonner'
 import type { User as SupabaseUser } from '@supabase/supabase-js'
