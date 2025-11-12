@@ -38,7 +38,13 @@ export function LogoProvider({ children, initialLogo = defaultLogo }: LogoProvid
       const stored = localStorage.getItem('website-logo');
       if (stored) {
         const parsedLogo = JSON.parse(stored);
-        setLogo(parsedLogo);
+        // Reset to default if old brand name is detected
+        if (parsedLogo.text === 'BeautifulRims' || parsedLogo.altText === 'BeautifulRims Logo') {
+          setLogo(defaultLogo);
+          localStorage.setItem('website-logo', JSON.stringify(defaultLogo));
+        } else {
+          setLogo(parsedLogo);
+        }
       }
     } catch (err) {
       console.warn('Failed to load stored logo:', err);
