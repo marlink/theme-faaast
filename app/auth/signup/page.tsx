@@ -52,17 +52,6 @@ export default function SignupPage() {
       }
 
       if (data.user) {
-        // Create user profile
-        const { error: profileError } = await supabase.from('user_profiles').insert({
-          user_id: data.user.id,
-          has_paid: false,
-          total_downloads: 0,
-        })
-
-        if (profileError) {
-          console.error('Error creating profile:', profileError)
-        }
-
         router.push('/profile')
         router.refresh()
       }

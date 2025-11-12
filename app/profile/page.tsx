@@ -14,6 +14,22 @@ export default async function ProfilePage() {
     redirect('/auth/login')
   }
 
+  // Ensure user profile exists
+  const { data: existingProfile } = await supabase
+    .from('user_profiles')
+    .select('id')
+    .eq('user_id', user.id)
+    .single()
+
+  if (!existingProfile) {
+    // Create profile if it doesn't exist
+    await supabase.from('user_profiles').insert({
+      user_id: user.id,
+      has_paid: false,
+      total_downloads: 0,
+    })
+  }
+
   const downloadStatus = await checkDownloadStatus(user.id)
 
   // Get user's themes
