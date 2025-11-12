@@ -10,35 +10,35 @@ export default function ProjectsPage() {
       title: 'Before & After: Complete Website Redesign',
       description:
         'This website came in with outdated design and poor UX. After complete redesign, performance optimization and modern theming, it looks stunning and performs perfectly.',
-      image: '/before-and-after-website-redesign-modern-digital-theme.jpg',
+      image: '/before-and-after-website-redesign-modern-digital-theme.svg',
       services: ['Theme Design', 'Performance Optimization', 'Custom Development'],
     },
     {
       title: 'Custom Theme: Modern E-commerce',
       description:
         'A premium e-commerce website with custom theme design and modern UI. The result is an engaging, conversion-optimized online store that drives sales.',
-      image: '/modern-ecommerce-website-theme-premium-design.jpg',
+      image: '/modern-ecommerce-website-theme-premium-design.svg',
       services: ['Theme Design', 'Custom Development'],
     },
     {
       title: 'Custom Development: Web Application',
       description:
         'A custom web application built from scratch with modern technologies. The result is a powerful, scalable solution that meets all business requirements.',
-      image: '/custom-web-application-development-modern-interface.jpg',
+      image: '/custom-web-application-development-modern-interface.svg',
       services: ['Custom Development', 'Performance Optimization'],
     },
     {
       title: 'Brand Theme: Corporate Redesign',
       description:
         'A complete corporate website redesign with custom branding and modern theme. The result is a professional, brand-consistent online presence.',
-      image: '/corporate-branding-website-redesign-premium-theme.jpg',
+      image: '/corporate-branding-website-redesign-premium-theme.svg',
       services: ['Theme Design', 'Custom Development'],
     },
     {
       title: 'Premium Digital Transformation',
       description:
         'Complete digital transformation of a legacy website. From code refactoring to modern theming and performance optimization, everything was carried out with the greatest care.',
-      image: '/digital-transformation-legacy-website-modern-upgrade.jpg',
+      image: '/digital-transformation-legacy-website-modern-upgrade.svg',
       services: ['Code Refactoring', 'Theme Design', 'Performance Optimization'],
     },
   ];
@@ -50,7 +50,7 @@ export default function ProjectsPage() {
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/digital-projects-showcase-modern-web-design-portfolio.jpg"
+            src="/digital-projects-showcase-modern-web-design-portfolio.svg"
             alt="Digital Projects Showcase"
             fill
             className="object-cover opacity-20"

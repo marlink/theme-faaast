@@ -196,7 +196,7 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto mb-6 sm:mb-8">
             <div className="relative aspect-square sm:col-span-2 sm:row-span-2 rounded-xl overflow-hidden group">
               <Image
-                src="/before-and-after-website-redesign-modern-digital-theme.jpg"
+                src="/before-and-after-website-redesign-modern-digital-theme.svg"
                 alt="Website Redesign Project"
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -217,7 +217,7 @@ export default function Home() {
 
             <div className="relative aspect-square rounded-xl overflow-hidden group">
               <Image
-                src="/modern-ecommerce-website-theme-premium-design.jpg"
+                src="/modern-ecommerce-website-theme-premium-design.svg"
                 alt="E-commerce Website Theme"
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -232,7 +232,7 @@ export default function Home() {
 
             <div className="relative aspect-square rounded-xl overflow-hidden group">
               <Image
-                src="/custom-web-application-development-modern-interface.jpg"
+                src="/custom-web-application-development-modern-interface.svg"
                 alt="Custom Web Application Development"
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -247,7 +247,7 @@ export default function Home() {
 
             <div className="relative aspect-square sm:col-span-2 rounded-xl overflow-hidden group">
               <Image
-                src="/corporate-branding-website-redesign-premium-theme.jpg"
+                src="/corporate-branding-website-redesign-premium-theme.svg"
                 alt="Corporate Branding Website Redesign"
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-500"
