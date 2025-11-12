@@ -20,9 +20,9 @@ import { useState, useEffect } from 'react';
 
 const AnimatedPunchLines = () => {
   const punchLines = [
-    "Open, navigate, and love a fresh, high‑speed site.",
-    "Enter, click, and enjoy your new, ultra‑fast website.",
-    "Browse, click, and discover your new, lightning‑fast website."
+    "Complete digital transformation with modern theme",
+    "Modern E-commerce",
+    "Web Application"
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
