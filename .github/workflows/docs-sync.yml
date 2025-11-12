@@ -1,0 +1,110 @@
+name: Documentation Sync
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - 'app/**'
+      - 'components/**'
+      - 'lib/**'
+      - 'types/**'
+      - 'docs/**'
+  pull_request:
+    branches: [ main, develop ]
+    paths:
+      - 'app/**'
+      - 'components/**'
+      - 'lib/**'
+      - 'types/**'
+      - 'docs/**'
+
+jobs:
+  docs-sync:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Get full git history
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Check documentation markers
+      run: npm run docs:markers
+
+    - name: Run documentation synchronization
+      run: npm run docs:sync
+
+    - name: Check for documentation drift
+      id: drift-check
+      run: |
+        if node scripts/docs-sync/docs-sync.js 2>&1 | grep -q "Documentation Drift Detected"; then
+          echo "drift-found=true" >> $GITHUB_OUTPUT
+        elif node scripts/docs-sync/check-markers.js 2>&1 | grep -q "documentation issues"; then
+          echo "drift-found=true" >> $GITHUB_OUTPUT
+        else
+          echo "drift-found=false" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Generate documentation diff
+      if: steps.drift-check.outputs.drift-found == 'true'
+      run: |
+        echo "## Documentation Drift Detected" >> docs-diff.md
+        echo "" >> docs-diff.md
+        node scripts/docs-sync/docs-sync.js >> docs-diff.md 2>&1
+
+    - name: Comment on PR with documentation issues
+      if: steps.drift-check.outputs.drift-found == 'true' && github.event_name == 'pull_request'
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const fs = require('fs');
+          const diffContent = fs.readFileSync('docs-diff.md', 'utf8');
+
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: `## 📚 Documentation Synchronization Alert
+
+⚠️ **Documentation drift detected!** The following issues need attention:
+
+${diffContent}
+
+### Actions Required:
+- [ ] Update user stories in \`docs/user-journeys/\`
+- [ ] Add missing feature documentation
+- [ ] Update README with new features
+- [ ] Run \`npm run docs:sync\` locally to auto-fix where possible
+
+This helps keep our documentation synchronized with implemented features.`
+          });
+
+    - name: Fail CI if documentation drift exists
+      if: steps.drift-check.outputs.drift-found == 'true'
+      run: |
+        echo "❌ Documentation drift detected. Please fix documentation issues before merging."
+        exit 1
+
+    - name: Commit documentation updates
+      if: success()
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add docs/ README.md
+        git diff --quiet && git diff --staged --quiet || git commit -m "docs: synchronize documentation with codebase changes"
+
+    - name: Push documentation updates
+      if: success()
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}

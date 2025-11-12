@@ -1,10 +1,19 @@
-import { LogoSettings } from '@/components/logo-settings'
-import { Navigation } from '@/components/navigation'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Settings, Palette, Globe } from 'lucide-react'
-import Link from 'next/link'
+import { LogoSettings } from '@/components/logo-settings';
+import { Navigation } from '@/components/navigation';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Settings, Palette, Globe, Save, X } from 'lucide-react';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export default function SettingsPage() {
+  const router = useRouter();
+
+  const handleSaveAndClose = () => {
+    // Here you could save settings to localStorage or API
+    router.push('/');
+  };
+
   return (
     <div className="min-h-screen bg-zinc-900">
       <Navigation />
@@ -12,13 +21,21 @@ export default function SettingsPage() {
       <div className="pt-20 pb-12">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto">
-            <div className="mb-8">
-              <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Website Settings
-              </h1>
-              <p className="text-zinc-400 text-lg">
-                Customize your website appearance and branding
-              </p>
+            <div className="flex justify-between items-start mb-8">
+              <div>
+                <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">Website Settings</h1>
+                <p className="text-zinc-400 text-lg">
+                  Customize your website appearance and branding
+                </p>
+              </div>
+              <Button
+                onClick={handleSaveAndClose}
+                className="bg-orange-600 hover:bg-orange-700 text-white flex items-center gap-2"
+                size="lg"
+              >
+                <Save className="w-4 h-4" />
+                Save and Close
+              </Button>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -113,5 +130,5 @@ export default function SettingsPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

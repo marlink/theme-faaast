@@ -1,0 +1,217 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e5]:
+        - link "ThemeFaaast" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e7]: ThemeFaaast
+        - generic [ref=e8]:
+          - link "Home" [ref=e9] [cursor=pointer]:
+            - /url: /pages/home
+          - link "Services" [ref=e10] [cursor=pointer]:
+            - /url: /services
+          - link "Projects" [ref=e11] [cursor=pointer]:
+            - /url: /projects
+          - link "About Us" [ref=e12] [cursor=pointer]:
+            - /url: /about
+          - link "Contact" [ref=e13] [cursor=pointer]:
+            - /url: /contact
+          - link "Settings" [ref=e14] [cursor=pointer]:
+            - /url: /settings
+        - generic [ref=e15]:
+          - link "Theme Studio" [ref=e16] [cursor=pointer]:
+            - /url: /theme-studio
+          - link "Sign In" [ref=e17] [cursor=pointer]:
+            - /url: /auth/login
+          - link "Request Quote" [ref=e18] [cursor=pointer]:
+            - /url: /quote
+    - generic [ref=e22]:
+      - heading "Our Services" [level=1] [ref=e23]
+      - paragraph [ref=e24]: At ThemeFaaast we offer a complete package of digital services. From custom themes to development and marketplace solutions. Everything under one roof with years of experience and craftsmanship.
+    - generic [ref=e27]:
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - img [ref=e32]
+          - heading "Theme Design & Customization" [level=3] [ref=e34]
+          - paragraph [ref=e35]: Custom website themes with unlimited color schemes and branding for a modern and professional digital presence.
+        - generic [ref=e36]:
+          - heading "What we offer:" [level=4] [ref=e37]
+          - list [ref=e38]:
+            - listitem [ref=e39]:
+              - img [ref=e40]
+              - generic [ref=e43]: Unlimited color schemes
+            - listitem [ref=e44]:
+              - img [ref=e45]
+              - generic [ref=e48]: Brand-consistent design
+            - listitem [ref=e49]:
+              - img [ref=e50]
+              - generic [ref=e53]: Mobile-responsive layouts
+            - listitem [ref=e54]:
+              - img [ref=e55]
+              - generic [ref=e58]: Modern UI/UX principles
+            - listitem [ref=e59]:
+              - img [ref=e60]
+              - generic [ref=e63]: Custom branding integration
+      - generic [ref=e66]:
+        - generic [ref=e67]:
+          - img [ref=e68]
+          - heading "Custom Development" [level=3] [ref=e79]
+          - paragraph [ref=e80]: Tailored web solutions and custom functionality development. We build bespoke features and integrations to meet your specific business needs.
+        - generic [ref=e81]:
+          - heading "What we offer:" [level=4] [ref=e82]
+          - list [ref=e83]:
+            - listitem [ref=e84]:
+              - img [ref=e85]
+              - generic [ref=e88]: Custom functionality development
+            - listitem [ref=e89]:
+              - img [ref=e90]
+              - generic [ref=e93]: Third-party integrations
+            - listitem [ref=e94]:
+              - img [ref=e95]
+              - generic [ref=e98]: API development
+            - listitem [ref=e99]:
+              - img [ref=e100]
+              - generic [ref=e103]: Database design
+            - listitem [ref=e104]:
+              - img [ref=e105]
+              - generic [ref=e108]: Performance optimization
+      - generic [ref=e111]:
+        - generic [ref=e112]:
+          - img [ref=e113]
+          - heading "Performance Optimization" [level=3] [ref=e117]
+          - paragraph [ref=e118]: Website speed optimization and performance tuning. We ensure your website loads fast and performs optimally across all devices.
+        - generic [ref=e119]:
+          - heading "What we offer:" [level=4] [ref=e120]
+          - list [ref=e121]:
+            - listitem [ref=e122]:
+              - img [ref=e123]
+              - generic [ref=e126]: Core Web Vitals optimization
+            - listitem [ref=e127]:
+              - img [ref=e128]
+              - generic [ref=e131]: Image optimization
+            - listitem [ref=e132]:
+              - img [ref=e133]
+              - generic [ref=e136]: Code minification
+            - listitem [ref=e137]:
+              - img [ref=e138]
+              - generic [ref=e141]: Caching implementation
+            - listitem [ref=e142]:
+              - img [ref=e143]
+              - generic [ref=e146]: Mobile performance tuning
+      - generic [ref=e149]:
+        - generic [ref=e150]:
+          - img [ref=e151]
+          - heading "Code Refactoring" [level=3] [ref=e153]
+          - paragraph [ref=e154]: Complete code cleanup and modernization services. We refactor legacy code to improve maintainability, security, and performance.
+        - generic [ref=e155]:
+          - heading "What we offer:" [level=4] [ref=e156]
+          - list [ref=e157]:
+            - listitem [ref=e158]:
+              - img [ref=e159]
+              - generic [ref=e162]: Code modernization
+            - listitem [ref=e163]:
+              - img [ref=e164]
+              - generic [ref=e167]: Technical debt reduction
+            - listitem [ref=e168]:
+              - img [ref=e169]
+              - generic [ref=e172]: Best practices implementation
+            - listitem [ref=e173]:
+              - img [ref=e174]
+              - generic [ref=e177]: Security improvements
+            - listitem [ref=e178]:
+              - img [ref=e179]
+              - generic [ref=e182]: Performance enhancements
+      - generic [ref=e185]:
+        - generic [ref=e186]:
+          - img [ref=e187]
+          - heading "Bug Fixes & Maintenance" [level=3] [ref=e191]
+          - paragraph [ref=e192]: Comprehensive debugging and website maintenance. We identify and fix issues while keeping your website running smoothly.
+        - generic [ref=e193]:
+          - heading "What we offer:" [level=4] [ref=e194]
+          - list [ref=e195]:
+            - listitem [ref=e196]:
+              - img [ref=e197]
+              - generic [ref=e200]: Bug identification and fixing
+            - listitem [ref=e201]:
+              - img [ref=e202]
+              - generic [ref=e205]: Regular maintenance
+            - listitem [ref=e206]:
+              - img [ref=e207]
+              - generic [ref=e210]: Security updates
+            - listitem [ref=e211]:
+              - img [ref=e212]
+              - generic [ref=e215]: Compatibility testing
+            - listitem [ref=e216]:
+              - img [ref=e217]
+              - generic [ref=e220]: Performance monitoring
+      - generic [ref=e223]:
+        - generic [ref=e224]:
+          - img [ref=e225]
+          - heading "Template Marketplace" [level=3] [ref=e229]
+          - paragraph [ref=e230]: Premium theme templates and digital assets marketplace. Access our collection of high-quality, customizable templates.
+        - generic [ref=e231]:
+          - heading "What we offer:" [level=4] [ref=e232]
+          - list [ref=e233]:
+            - listitem [ref=e234]:
+              - img [ref=e235]
+              - generic [ref=e238]: Premium theme collection
+            - listitem [ref=e239]:
+              - img [ref=e240]
+              - generic [ref=e243]: Customizable templates
+            - listitem [ref=e244]:
+              - img [ref=e245]
+              - generic [ref=e248]: Digital asset marketplace
+            - listitem [ref=e249]:
+              - img [ref=e250]
+              - generic [ref=e253]: Regular updates
+            - listitem [ref=e254]:
+              - img [ref=e255]
+              - generic [ref=e258]: Community support
+    - generic [ref=e260]:
+      - heading "Interested in one of our services?" [level=2] [ref=e261]
+      - paragraph [ref=e262]: Request a free quote today and discover what we can do for you.
+      - link "Request Quote" [ref=e263] [cursor=pointer]:
+        - /url: /quote
+    - contentinfo [ref=e264]:
+      - generic [ref=e265]:
+        - generic [ref=e266]:
+          - generic [ref=e267]:
+            - heading "ThemeFaaast" [level=3] [ref=e268]
+            - paragraph [ref=e269]: Your reliable partner for all digital solutions. With years of experience and craftsmanship, we create stunning digital experiences.
+          - generic [ref=e270]:
+            - heading "Sitemap" [level=4] [ref=e271]
+            - list [ref=e272]:
+              - listitem [ref=e273]:
+                - link "Services" [ref=e274] [cursor=pointer]:
+                  - /url: /services
+              - listitem [ref=e275]:
+                - link "Projects" [ref=e276] [cursor=pointer]:
+                  - /url: /projects
+              - listitem [ref=e277]:
+                - link "About Us" [ref=e278] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e279]:
+                - link "Contact" [ref=e280] [cursor=pointer]:
+                  - /url: /contact
+              - listitem [ref=e281]:
+                - link "Marketplace" [ref=e282] [cursor=pointer]:
+                  - /url: https://www.marktplaats.nl/u/beautifulrims/47376108/
+          - generic [ref=e283]:
+            - heading "Contact Information" [level=4] [ref=e284]
+            - generic [ref=e285]:
+              - paragraph [ref=e286]:
+                - text: "Address:"
+                - text: Mockstreet 10
+                - text: 1010MM Mocktown
+              - paragraph [ref=e287]:
+                - text: "Email:"
+                - text: support@marceli.online
+        - paragraph [ref=e289]: © 2025 Design System. All rights reserved.
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=e295] [cursor=pointer]:
+    - img [ref=e296]
+  - alert [ref=e299]
+```

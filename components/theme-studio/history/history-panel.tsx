@@ -1,15 +1,13 @@
-'use client'
+'use client';
 
-import { Card, CardContent } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 
 export function HistoryPanel() {
   return (
     <div className="space-y-2">
-      <div className="text-sm text-muted-foreground mb-3">
-        Recent changes
-      </div>
+      <div className="text-sm text-muted-foreground mb-3">Recent changes</div>
 
       <div className="space-y-2">
         <Card className="p-3">
@@ -18,7 +16,9 @@ export function HistoryPanel() {
               <div className="text-sm font-medium">Updated primary color</div>
               <div className="text-xs text-muted-foreground">2 minutes ago</div>
             </div>
-            <Badge variant="secondary" className="text-xs">Color</Badge>
+            <Badge variant="secondary" className="text-xs">
+              Color
+            </Badge>
           </div>
         </Card>
 
@@ -28,7 +28,9 @@ export function HistoryPanel() {
               <div className="text-sm font-medium">Modified spacing scale</div>
               <div className="text-xs text-muted-foreground">5 minutes ago</div>
             </div>
-            <Badge variant="secondary" className="text-xs">Spacing</Badge>
+            <Badge variant="secondary" className="text-xs">
+              Spacing
+            </Badge>
           </div>
         </Card>
       </div>
@@ -39,5 +41,5 @@ export function HistoryPanel() {
         </Button>
       </div>
     </div>
-  )
+  );
 }

@@ -1,27 +1,27 @@
-'use client'
+'use client';
 
-import { useState } from 'react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
-import { Badge } from '@/components/ui/badge'
-import { useTheme } from '@/lib/theme-engine/theme-context'
-import { Palette, Copy, Check } from 'lucide-react'
+import { useState } from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Badge } from '@/components/ui/badge';
+import { useTheme } from '@/lib/theme-engine/theme-context';
+import { Palette, Copy, Check } from 'lucide-react';
 
 export function ColorPicker() {
-  const { theme, updateTheme } = useTheme()
-  const [copiedColor, setCopiedColor] = useState<string | null>(null)
+  const { theme, updateTheme } = useTheme();
+  const [copiedColor, setCopiedColor] = useState<string | null>(null);
 
   const copyToClipboard = async (color: string) => {
     try {
-      await navigator.clipboard.writeText(color)
-      setCopiedColor(color)
-      setTimeout(() => setCopiedColor(null), 2000)
+      await navigator.clipboard.writeText(color);
+      setCopiedColor(color);
+      setTimeout(() => setCopiedColor(null), 2000);
     } catch (err) {
-      console.error('Failed to copy color:', err)
+      console.error('Failed to copy color:', err);
     }
-  }
+  };
 
   const updateColor = (key: string, value: string) => {
     updateTheme({
@@ -29,19 +29,27 @@ export function ColorPicker() {
         ...theme.colors,
         [key]: {
           ...theme.colors[key],
-          value
-        }
-      }
-    })
-  }
+          value,
+        },
+      },
+    });
+  };
 
   const colorGroups = {
     brand: ['primary', 'primary-hover', 'primary-foreground'],
-    surface: ['background', 'background-secondary', 'foreground', 'card', 'card-foreground', 'popover', 'popover-foreground'],
+    surface: [
+      'background',
+      'background-secondary',
+      'foreground',
+      'card',
+      'card-foreground',
+      'popover',
+      'popover-foreground',
+    ],
     interactive: ['accent', 'accent-foreground', 'muted', 'muted-foreground'],
     status: ['destructive', 'destructive-foreground', 'success', 'warning'],
-    border: ['border', 'input', 'ring']
-  }
+    border: ['border', 'input', 'ring'],
+  };
 
   return (
     <div className="space-y-6">
@@ -56,8 +64,8 @@ export function ColorPicker() {
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {colorKeys.map(key => {
-                const colorToken = theme.colors[key]
-                if (!colorToken) return null
+                const colorToken = theme.colors[key];
+                if (!colorToken) return null;
 
                 return (
                   <div key={key} className="space-y-2">
@@ -75,7 +83,7 @@ export function ColorPicker() {
                       <Input
                         type="text"
                         value={colorToken.value}
-                        onChange={(e) => updateColor(key, e.target.value)}
+                        onChange={e => updateColor(key, e.target.value)}
                         className="flex-1 font-mono text-sm"
                       />
 
@@ -104,7 +112,7 @@ export function ColorPicker() {
                       )}
                     </div>
                   </div>
-                )
+                );
               })}
             </div>
           </CardContent>
@@ -134,5 +142,5 @@ export function ColorPicker() {
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }

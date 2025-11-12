@@ -1,8 +1,8 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Navigation } from "@/components/navigation"
-import { MapPin, Mail, Clock, Phone } from "lucide-react"
-import Link from "next/link"
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Navigation } from '@/components/navigation';
+import { MapPin, Mail, Clock, Phone } from 'lucide-react';
+import Link from 'next/link';
 
 export default function ContactPage() {
   return (
@@ -14,13 +14,15 @@ export default function ContactPage() {
           className="absolute inset-0 z-0"
           style={{
             background: 'var(--bg-hero)',
-            filter: 'var(--bg-hero-blur) ? blur(var(--bg-hero-blur)) : none'
+            filter: 'var(--bg-hero-blur) ? blur(var(--bg-hero-blur)) : none',
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-zinc-900 via-zinc-900/90 to-zinc-900" />
 
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 text-balance">Get In Touch</h1>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 text-balance">
+            Get In Touch
+          </h1>
           <p className="text-xl text-zinc-300 max-w-3xl mx-auto text-balance leading-relaxed">
             Do you have questions or would you like to make an appointment? We are here for you!
           </p>
@@ -55,12 +57,7 @@ export default function ContactPage() {
                     <Mail className="w-6 h-6 text-orange-600 flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-                      <a
-                        href="mailto:beautifulrims@outlook.com"
-                        className="text-zinc-300 hover:text-orange-600 transition-colors"
-                      >
-                        beautifulrims@outlook.com
-                      </a>
+                      <p className="text-zinc-300">support@marceli.online</p>
                     </div>
                   </div>
                 </CardContent>
@@ -89,14 +86,19 @@ export default function ContactPage() {
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-2">Phone Contact</h3>
                       <p className="text-zinc-300 leading-relaxed">
-                        Call or email us for questions or to make an appointment. We are happy to help you!
+                        Call or email us for questions or to make an appointment. We are happy to
+                        help you!
                       </p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              <Button asChild size="lg" className="w-full bg-orange-600 hover:bg-orange-700 text-white">
+              <Button
+                asChild
+                size="lg"
+                className="w-full bg-orange-600 hover:bg-orange-700 text-white"
+              >
                 <Link href="/quote">Request Quote Directly</Link>
               </Button>
             </div>
@@ -108,14 +110,22 @@ export default function ContactPage() {
                     <div className="text-center text-zinc-400">
                       <div className="w-16 h-16 mx-auto mb-4 bg-zinc-600 rounded-full flex items-center justify-center">
                         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                          <path
+                            fillRule="evenodd"
+                            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                            clipRule="evenodd"
+                          />
                         </svg>
                       </div>
                       <h3 className="text-lg font-semibold text-zinc-300 mb-2">Location</h3>
-                      <p className="text-sm">Mockstreet 10<br />1010MM Mocktown<br />Netherlands</p>
-                      <div className="mt-4 text-xs text-zinc-500">
-                        Interactive map placeholder
-                      </div>
+                      <p className="text-sm">
+                        Mockstreet 10
+                        <br />
+                        1010MM Mocktown
+                        <br />
+                        Netherlands
+                      </p>
+                      <div className="mt-4 text-xs text-zinc-500">Interactive map placeholder</div>
                     </div>
                   </div>
                 </CardContent>
@@ -133,15 +143,15 @@ export default function ContactPage() {
                 <h2 className="text-2xl font-bold text-white mb-4">Directions</h2>
                 <div className="text-zinc-300 leading-relaxed space-y-3">
                   <p>
-                    BeautifulRims is easily accessible from the A15 and A50. Take the Andelst exit and follow the signs
-                    towards the industrial area.
+                    ThemeFaaast is easily accessible from the A15 and A50. Take the Andelst exit
+                    and follow the signs towards the industrial area.
                   </p>
                   <p>
-                    We are located at Expeditieweg 8F, a modern business location with ample parking for our customers.
+                    We are located at Expeditieweg 8F, a modern business location with ample parking
+                    for our customers.
                   </p>
                   <p className="font-semibold text-white">
-                    Tip: Make an appointment in advance, so we can reserve enough time for you and you can be helped
-                    immediately.
+                    Tip: Schedule a consultation in advance for personalized attention and immediate assistance.
                   </p>
                 </div>
               </CardContent>
@@ -154,10 +164,10 @@ export default function ContactPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <div>
-              <h3 className="text-2xl font-bold text-white mb-4">BeautifulRims</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">ThemeFaaast</h3>
               <p className="text-zinc-400 leading-relaxed">
-                Your reliable partner for all wheel services. With years of experience and craftsmanship, we ensure your
-                wheels look like new again.
+                Your reliable partner for all digital solutions. With years of experience and
+                craftsmanship, we create stunning digital experiences.
               </p>
             </div>
 
@@ -165,28 +175,40 @@ export default function ContactPage() {
               <h4 className="text-lg font-semibold text-white mb-4">Sitemap</h4>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/services" className="text-zinc-400 hover:text-orange-600 transition-colors">
+                  <Link
+                    href="/services"
+                    className="text-zinc-400 hover:text-orange-600 transition-colors"
+                  >
                     Services
                   </Link>
                 </li>
                 <li>
-                  <Link href="/projects" className="text-zinc-400 hover:text-orange-600 transition-colors">
+                  <Link
+                    href="/projects"
+                    className="text-zinc-400 hover:text-orange-600 transition-colors"
+                  >
                     Projects
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about" className="text-zinc-400 hover:text-orange-600 transition-colors">
+                  <Link
+                    href="/about"
+                    className="text-zinc-400 hover:text-orange-600 transition-colors"
+                  >
                     About Us
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact" className="text-zinc-400 hover:text-orange-600 transition-colors">
+                  <Link
+                    href="/contact"
+                    className="text-zinc-400 hover:text-orange-600 transition-colors"
+                  >
                     Contact
                   </Link>
                 </li>
                 <li>
                   <a
-                    href="https://www.marktplaats.nl/u/beautifulrims/47376108/"
+                    href="marceli.online"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-zinc-400 hover:text-orange-600 transition-colors"
@@ -210,19 +232,17 @@ export default function ContactPage() {
                 <p>
                   <span className="font-semibold text-white">Email:</span>
                   <br />
-                  <a href="mailto:beautifulrims@outlook.com" className="hover:text-orange-600 transition-colors">
-                    beautifulrims@outlook.com
-                  </a>
+                  support@marceli.online
                 </p>
               </div>
             </div>
           </div>
 
           <div className="border-t border-zinc-800 mt-8 pt-8 text-center text-zinc-500">
-            <p>&copy; {new Date().getFullYear()} BeautifulRims. All rights reserved.</p>
+            <p>&copy; 2025 Design System. All rights reserved.</p>
           </div>
         </div>
       </footer>
     </div>
-  )
+  );
 }

@@ -1,0 +1,46 @@
+import { redirect } from 'next/navigation'
+import { createClient } from '@/lib/supabase/server'
+import { checkDownloadStatus } from '@/lib/supabase/utils'
+import { ProfileContent } from './profile-content'
+import { Navigation } from '@/components/navigation'
+
+export default async function ProfilePage() {
+  const supabase = await createClient()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+
+  if (!user) {
+    redirect('/auth/login')
+  }
+
+  const downloadStatus = await checkDownloadStatus(user.id)
+
+  // Get user's themes
+  const { data: themes } = await supabase
+    .from('themes')
+    .select('*')
+    .eq('user_id', user.id)
+    .order('created_at', { ascending: false })
+
+  // Get payment status
+  const { data: payments } = await supabase
+    .from('payments')
+    .select('*')
+    .eq('user_id', user.id)
+    .eq('status', 'completed')
+    .order('created_at', { ascending: false })
+
+  return (
+    <div className="min-h-screen bg-zinc-900">
+      <Navigation />
+      <ProfileContent
+        user={user}
+        themes={themes || []}
+        downloadStatus={downloadStatus}
+        hasPaid={payments && payments.length > 0}
+      />
+    </div>
+  )
+}
+

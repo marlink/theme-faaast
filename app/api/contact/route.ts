@@ -1,5 +1,5 @@
-import { NextRequest, NextResponse } from 'next/server'
-import { z } from 'zod'
+import { NextRequest, NextResponse } from 'next/server';
+import { z } from 'zod';
 
 // Contact form validation schema
 const ContactFormSchema = z.object({
@@ -7,28 +7,28 @@ const ContactFormSchema = z.object({
   email: z.string().email('Invalid email address'),
   phone: z.string().optional(),
   subject: z.string().min(5, 'Subject must be at least 5 characters'),
-  message: z.string().min(10, 'Message must be at least 10 characters')
-})
+  message: z.string().min(10, 'Message must be at least 10 characters'),
+});
 
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json()
+    const body = await request.json();
 
     // Validate the form data
-    const validation = ContactFormSchema.safeParse(body)
+    const validation = ContactFormSchema.safeParse(body);
 
     if (!validation.success) {
       return NextResponse.json(
         {
           success: false,
           error: 'Invalid form data',
-          details: validation.error.issues
+          details: validation.error.issues,
         },
         { status: 400 }
-      )
+      );
     }
 
-    const { name, email, phone, subject, message } = validation.data
+    const { name, email, phone, subject, message } = validation.data;
 
     // In a real app, you'd send an email or save to a database
     // For now, just log the contact form submission
@@ -38,21 +38,18 @@ export async function POST(request: NextRequest) {
       phone,
       subject,
       message,
-      timestamp: new Date().toISOString()
-    })
+      timestamp: new Date().toISOString(),
+    });
 
     // Simulate email sending delay
-    await new Promise(resolve => setTimeout(resolve, 1000))
+    await new Promise(resolve => setTimeout(resolve, 1000));
 
     return NextResponse.json({
       success: true,
-      message: 'Thank you for your message. We\'ll get back to you soon!'
-    })
+      message: "Thank you for your message. We'll get back to you soon!",
+    });
   } catch (error) {
-    console.error('Contact form error:', error)
-    return NextResponse.json(
-      { success: false, error: 'Failed to send message' },
-      { status: 500 }
-    )
+    console.error('Contact form error:', error);
+    return NextResponse.json({ success: false, error: 'Failed to send message' }, { status: 500 });
   }
 }

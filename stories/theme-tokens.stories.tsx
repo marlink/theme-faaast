@@ -1,20 +1,20 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { defaultColors, defaultSpacing, defaultTypography } from '@/lib/theme-engine/tokens'
+import type { Meta, StoryObj } from '@storybook/react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { defaultColors, defaultSpacing, defaultTypography } from '@/lib/theme-engine/tokens';
 
 const meta: Meta = {
   title: 'Theme/Tokens',
   parameters: {
     docs: {
       description: {
-        component: 'Display of all theme design tokens used in the system.'
-      }
-    }
-  }
-}
+        component: 'Display of all theme design tokens used in the system.',
+      },
+    },
+  },
+};
 
-export default meta
+export default meta;
 
 // Color Tokens Story
 export const ColorTokens: StoryObj = {
@@ -25,10 +25,7 @@ export const ColorTokens: StoryObj = {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {Object.entries(defaultColors).map(([key, token]) => (
             <Card key={key} className="overflow-hidden">
-              <div
-                className="h-20 w-full"
-                style={{ backgroundColor: token.value }}
-              />
+              <div className="h-20 w-full" style={{ backgroundColor: token.value }} />
               <CardContent className="p-3">
                 <div className="text-sm font-medium">{key}</div>
                 <div className="text-xs text-muted-foreground">{token.value}</div>
@@ -41,8 +38,8 @@ export const ColorTokens: StoryObj = {
         </div>
       </div>
     </div>
-  )
-}
+  ),
+};
 
 // Spacing Scale Story
 export const SpacingScale: StoryObj = {
@@ -55,10 +52,7 @@ export const SpacingScale: StoryObj = {
             <div key={key} className="flex items-center gap-4">
               <div className="w-20 text-sm font-medium">{key}</div>
               <div className="flex-1">
-                <div
-                  className="bg-primary h-4 rounded"
-                  style={{ width: value }}
-                />
+                <div className="bg-primary h-4 rounded" style={{ width: value }} />
               </div>
               <div className="text-sm text-muted-foreground w-16">{value}</div>
             </div>
@@ -66,8 +60,8 @@ export const SpacingScale: StoryObj = {
         </div>
       </div>
     </div>
-  )
-}
+  ),
+};
 
 // Typography Scale Story
 export const TypographyScale: StoryObj = {
@@ -82,10 +76,7 @@ export const TypographyScale: StoryObj = {
               {Object.entries(defaultTypography.fontSize).map(([key, value]) => (
                 <div key={key} className="flex items-center gap-4">
                   <div className="w-16 text-sm font-medium">{key}</div>
-                  <div
-                    className="flex-1 text-primary"
-                    style={{ fontSize: value }}
-                  >
+                  <div className="flex-1 text-primary" style={{ fontSize: value }}>
                     The quick brown fox jumps over the lazy dog
                   </div>
                   <div className="text-sm text-muted-foreground w-16">{value}</div>
@@ -98,11 +89,7 @@ export const TypographyScale: StoryObj = {
             <h3 className="text-lg font-semibold mb-2">Font Weights</h3>
             <div className="space-y-2">
               {Object.entries(defaultTypography.fontWeight).map(([key, value]) => (
-                <div
-                  key={key}
-                  className="flex items-center gap-4"
-                  style={{ fontWeight: value }}
-                >
+                <div key={key} className="flex items-center gap-4" style={{ fontWeight: value }}>
                   <div className="w-20 text-sm">{key}</div>
                   <div className="flex-1">The quick brown fox jumps over the lazy dog</div>
                   <div className="text-sm text-muted-foreground w-12">{value}</div>
@@ -113,8 +100,8 @@ export const TypographyScale: StoryObj = {
         </div>
       </div>
     </div>
-  )
-}
+  ),
+};
 
 // Component with Theme Variables
 export const ThemedComponents: StoryObj = {
@@ -132,7 +119,7 @@ export const ThemedComponents: StoryObj = {
                 className="px-4 py-2 rounded-md text-primary-foreground"
                 style={{
                   backgroundColor: 'var(--color-primary)',
-                  border: '1px solid var(--color-primary)'
+                  border: '1px solid var(--color-primary)',
                 }}
               >
                 Primary Button
@@ -150,7 +137,7 @@ export const ThemedComponents: StoryObj = {
                 style={{
                   backgroundColor: 'var(--color-card)',
                   color: 'var(--color-card-foreground)',
-                  border: '1px solid var(--color-border)'
+                  border: '1px solid var(--color-border)',
                 }}
               >
                 This card uses theme variables for colors and spacing.
@@ -177,27 +164,15 @@ export const ThemedComponents: StoryObj = {
             </CardHeader>
             <CardContent>
               <div className="space-y-2">
-                <div
-                  className="bg-primary h-4 rounded"
-                  style={{ width: 'var(--space-xs)' }}
-                />
-                <div
-                  className="bg-primary h-4 rounded"
-                  style={{ width: 'var(--space-sm)' }}
-                />
-                <div
-                  className="bg-primary h-4 rounded"
-                  style={{ width: 'var(--space-md)' }}
-                />
-                <div
-                  className="bg-primary h-4 rounded"
-                  style={{ width: 'var(--space-lg)' }}
-                />
+                <div className="bg-primary h-4 rounded" style={{ width: 'var(--space-xs)' }} />
+                <div className="bg-primary h-4 rounded" style={{ width: 'var(--space-sm)' }} />
+                <div className="bg-primary h-4 rounded" style={{ width: 'var(--space-md)' }} />
+                <div className="bg-primary h-4 rounded" style={{ width: 'var(--space-lg)' }} />
               </div>
             </CardContent>
           </Card>
         </div>
       </div>
     </div>
-  )
-}
+  ),
+};

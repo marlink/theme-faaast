@@ -1,89 +1,90 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Navigation } from "@/components/navigation"
-import { Wrench, Cog, Target, Droplet, Hammer, ShoppingCart, CheckCircle } from "lucide-react"
-import Link from "next/link"
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Navigation } from '@/components/navigation';
+import { Wrench, Cog, Target, Droplet, Hammer, ShoppingCart, CheckCircle } from 'lucide-react';
+import Link from 'next/link';
 
 export default function ServicesPage() {
   const services = [
     {
       icon: Droplet,
-      title: "Powder Coating",
-      description: "High-quality powder coating in any desired color for a durable and stylish finish on your wheels.",
+      title: 'Theme Design & Customization',
+      description:
+        'Custom website themes with unlimited color schemes and branding for a modern and professional digital presence.',
       features: [
-        "Choice of hundreds of RAL colors",
-        "Matte, glossy or metallic finish",
-        "Durable protection against corrosion",
-        "Environmentally friendly process",
-        "Fast delivery time",
+        'Unlimited color schemes',
+        'Brand-consistent design',
+        'Mobile-responsive layouts',
+        'Modern UI/UX principles',
+        'Custom branding integration',
       ],
     },
     {
       icon: Cog,
-      title: "CNC Machining",
+      title: 'Custom Development',
       description:
-        "Precision CNC operations for perfect wheels. We machine your wheels with the latest CNC technology for a factory-like finish.",
+        'Tailored web solutions and custom functionality development. We build bespoke features and integrations to meet your specific business needs.',
       features: [
-        "High-quality CNC machines",
-        "Precision to the micron",
-        "Diamond finish possible",
-        "Suitable for all wheel types",
-        "Professional post-treatment",
+        'Custom functionality development',
+        'Third-party integrations',
+        'API development',
+        'Database design',
+        'Performance optimization',
       ],
     },
     {
       icon: Target,
-      title: "Wheel Straightening",
+      title: 'Performance Optimization',
       description:
-        "Professional straightening of damaged wheels. We have modern straightening equipment to make your wheels perfectly round again.",
+        'Website speed optimization and performance tuning. We ensure your website loads fast and performs optimally across all devices.',
       features: [
-        "Radial and axial straightening",
-        "Suitable for steel and alloy wheels",
-        "Check on balancing machine",
-        "No warranty loss",
-        "Also for heavily damaged wheels",
+        'Core Web Vitals optimization',
+        'Image optimization',
+        'Code minification',
+        'Caching implementation',
+        'Mobile performance tuning',
       ],
     },
     {
       icon: Wrench,
-      title: "Stripping & Blasting",
+      title: 'Code Refactoring',
       description:
-        "Thorough stripping and blasting for a perfect base. We completely remove old paint and corrosion for optimal results.",
+        'Complete code cleanup and modernization services. We refactor legacy code to improve maintainability, security, and performance.',
       features: [
-        "Chemical stripping",
-        "Sandblasting or glass bead blasting",
-        "Removal of all old coating",
-        "Perfect adhesion for new coating",
-        "Environmentally friendly process",
+        'Code modernization',
+        'Technical debt reduction',
+        'Best practices implementation',
+        'Security improvements',
+        'Performance enhancements',
       ],
     },
     {
       icon: Hammer,
-      title: "Wheel Repair",
+      title: 'Bug Fixes & Maintenance',
       description:
-        "Expert repair of all types of wheel damage. From small scratches to heavy damage, we make your wheels look like new again.",
+        'Comprehensive debugging and website maintenance. We identify and fix issues while keeping your website running smoothly.',
       features: [
-        "Repair of scratches and dents",
-        "Welding of cracks",
-        "Repair of rim damage",
-        "Removal of corrosion",
-        "Complete restoration possible",
+        'Bug identification and fixing',
+        'Regular maintenance',
+        'Security updates',
+        'Compatibility testing',
+        'Performance monitoring',
       ],
     },
     {
       icon: ShoppingCart,
-      title: "Wheel Sales & Purchase",
+      title: 'Template Marketplace',
       description:
-        "Wide selection of wheels in various sizes and styles. We also buy your used wheels for a fair price.",
+        'Premium theme templates and digital assets marketplace. Access our collection of high-quality, customizable templates.',
       features: [
-        "Large stock of used wheels",
-        "Various brands and sizes",
-        "Purchase of used wheels",
-        "Fair prices",
-        "View our inventory on Marketplace",
+        'Premium theme collection',
+        'Customizable templates',
+        'Digital asset marketplace',
+        'Regular updates',
+        'Community support',
       ],
     },
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-zinc-900">
@@ -94,16 +95,19 @@ export default function ServicesPage() {
           className="absolute inset-0 z-0"
           style={{
             background: 'var(--bg-hero)',
-            filter: 'var(--bg-hero-blur) ? blur(var(--bg-hero-blur)) : none'
+            filter: 'var(--bg-hero-blur) ? blur(var(--bg-hero-blur)) : none',
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-zinc-900 via-zinc-900/90 to-zinc-900" />
 
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 text-balance">Our Services</h1>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 text-balance">
+            Our Services
+          </h1>
           <p className="text-xl text-zinc-300 max-w-3xl mx-auto text-balance leading-relaxed">
-            At BeautifulRims we offer a complete package of wheel services. From repair and powder coating to CNC
-            machining and sales and purchase. Everything under one roof with years of experience and craftsmanship.
+            At ThemeFaaast we offer a complete package of digital services. From custom themes to
+            development and marketplace solutions. Everything under one roof with years of
+            experience and craftsmanship.
           </p>
         </div>
       </section>
@@ -130,10 +134,13 @@ export default function ServicesPage() {
                           </li>
                         ))}
                       </ul>
-                      {service.title === "Wheel Sales & Purchase" && (
-                        <Button asChild className="mt-6 bg-orange-600 hover:bg-orange-700 text-white">
+                      {service.title === 'Wheel Sales & Purchase' && (
+                        <Button
+                          asChild
+                          className="mt-6 bg-orange-600 hover:bg-orange-700 text-white"
+                        >
                           <a
-                            href="https://www.marktplaats.nl/u/beautifulrims/47376108/"
+                            href="marceli.online"
                             target="_blank"
                             rel="noopener noreferrer"
                           >
@@ -158,7 +165,11 @@ export default function ServicesPage() {
           <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto">
             Request a free quote today and discover what we can do for you.
           </p>
-          <Button asChild size="lg" className="bg-orange-600 hover:bg-orange-700 text-white text-lg px-8">
+          <Button
+            asChild
+            size="lg"
+            className="bg-orange-600 hover:bg-orange-700 text-white text-lg px-8"
+          >
             <Link href="/quote">Request Quote</Link>
           </Button>
         </div>
@@ -168,10 +179,10 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <div>
-              <h3 className="text-2xl font-bold text-white mb-4">BeautifulRims</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">ThemeFaaast</h3>
               <p className="text-zinc-400 leading-relaxed">
-                Your reliable partner for all wheel services. With years of experience and craftsmanship, we ensure your
-                wheels look like new again.
+                Your reliable partner for all digital solutions. With years of experience and
+                craftsmanship, we create stunning digital experiences.
               </p>
             </div>
 
@@ -179,22 +190,34 @@ export default function ServicesPage() {
               <h4 className="text-lg font-semibold text-white mb-4">Sitemap</h4>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/services" className="text-zinc-400 hover:text-orange-600 transition-colors">
+                  <Link
+                    href="/services"
+                    className="text-zinc-400 hover:text-orange-600 transition-colors"
+                  >
                     Services
                   </Link>
                 </li>
                 <li>
-                  <Link href="/projects" className="text-zinc-400 hover:text-orange-600 transition-colors">
+                  <Link
+                    href="/projects"
+                    className="text-zinc-400 hover:text-orange-600 transition-colors"
+                  >
                     Projects
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about" className="text-zinc-400 hover:text-orange-600 transition-colors">
+                  <Link
+                    href="/about"
+                    className="text-zinc-400 hover:text-orange-600 transition-colors"
+                  >
                     About Us
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact" className="text-zinc-400 hover:text-orange-600 transition-colors">
+                  <Link
+                    href="/contact"
+                    className="text-zinc-400 hover:text-orange-600 transition-colors"
+                  >
                     Contact
                   </Link>
                 </li>
@@ -224,19 +247,17 @@ export default function ServicesPage() {
                 <p>
                   <span className="font-semibold text-white">Email:</span>
                   <br />
-                  <a href="mailto:beautifulrims@outlook.com" className="hover:text-orange-600 transition-colors">
-                    beautifulrims@outlook.com
-                  </a>
+                  support@marceli.online
                 </p>
               </div>
             </div>
           </div>
 
           <div className="border-t border-zinc-800 mt-8 pt-8 text-center text-zinc-500">
-            <p>&copy; {new Date().getFullYear()} BeautifulRims. All rights reserved.</p>
+            <p>&copy; 2025 Design System. All rights reserved.</p>
           </div>
         </div>
       </footer>
     </div>
-  )
+  );
 }

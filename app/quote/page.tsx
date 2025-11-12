@@ -1,33 +1,39 @@
-"use client"
+'use client';
 
-import type React from "react"
+import type React from 'react';
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
-import { Checkbox } from "@/components/ui/checkbox"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Navigation } from "@/components/navigation"
-import { Upload } from "lucide-react"
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
+import { Checkbox } from '@/components/ui/checkbox';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
+import { Navigation } from '@/components/navigation';
+import { Upload } from 'lucide-react';
 
 export default function QuotePage() {
-  const [showOtherService, setShowOtherService] = useState(false)
-  const [selectedFiles, setSelectedFiles] = useState<File[]>([])
+  const [showOtherService, setShowOtherService] = useState(false);
+  const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
-      const filesArray = Array.from(e.target.files).slice(0, 5)
-      setSelectedFiles(filesArray)
+      const filesArray = Array.from(e.target.files).slice(0, 5);
+      setSelectedFiles(filesArray);
     }
-  }
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log("Form submitted")
-  }
+    e.preventDefault();
+    console.log('Form submitted');
+  };
 
   return (
     <div className="min-h-screen bg-zinc-900">
@@ -36,9 +42,12 @@ export default function QuotePage() {
       <div className="container mx-auto px-4 pt-32 pb-20">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-8">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Request your free quote</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Request your free quote
+            </h1>
             <p className="text-zinc-400 text-lg">
-              Fill in the details below and upload photos of your wheels for an accurate price quote.
+              Fill in the details below and upload photos of your wheels for an accurate price
+              quote.
             </p>
           </div>
 
@@ -70,7 +79,7 @@ export default function QuotePage() {
                       type="email"
                       required
                       className="bg-white border-zinc-300 text-zinc-900"
-                      placeholder="your.email@example.com"
+                      placeholder="support@marceli.online"
                     />
                   </div>
 
@@ -92,7 +101,9 @@ export default function QuotePage() {
                   <h2 className="text-2xl font-semibold text-zinc-900 mb-4">Service Details</h2>
 
                   <div>
-                    <Label className="text-zinc-900 mb-3 block">Choose the desired service(s)</Label>
+                    <Label className="text-zinc-900 mb-3 block">
+                      Choose the desired service(s)
+                    </Label>
                     <div className="space-y-3">
                       <div className="flex items-center space-x-2">
                         <Checkbox id="powder-coating" />
@@ -114,7 +125,10 @@ export default function QuotePage() {
                       </div>
                       <div className="flex items-center space-x-2">
                         <Checkbox id="stripping-blasting" />
-                        <label htmlFor="stripping-blasting" className="text-zinc-900 cursor-pointer">
+                        <label
+                          htmlFor="stripping-blasting"
+                          className="text-zinc-900 cursor-pointer"
+                        >
                           Stripping & Blasting
                         </label>
                       </div>
@@ -125,7 +139,10 @@ export default function QuotePage() {
                         </label>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <Checkbox id="anders" onCheckedChange={(checked) => setShowOtherService(checked as boolean)} />
+                        <Checkbox
+                          id="anders"
+                          onCheckedChange={checked => setShowOtherService(checked as boolean)}
+                        />
                         <label htmlFor="anders" className="text-zinc-900 cursor-pointer">
                           Other
                         </label>
@@ -142,14 +159,19 @@ export default function QuotePage() {
                 </div>
 
                 <div className="space-y-4">
-                  <h2 className="text-2xl font-semibold text-zinc-900 mb-4">Wheel Specifications</h2>
+                  <h2 className="text-2xl font-semibold text-zinc-900 mb-4">
+                    Wheel Specifications
+                  </h2>
 
                   <div>
                     <Label htmlFor="quantity" className="text-zinc-900">
                       Number of wheels
                     </Label>
                     <Select>
-                      <SelectTrigger id="quantity" className="bg-white border-zinc-300 text-zinc-900">
+                      <SelectTrigger
+                        id="quantity"
+                        className="bg-white border-zinc-300 text-zinc-900"
+                      >
                         <SelectValue placeholder="Select number" />
                       </SelectTrigger>
                       <SelectContent>
@@ -212,7 +234,8 @@ export default function QuotePage() {
                         <div className="flex flex-col items-center justify-center pt-5 pb-6">
                           <Upload className="w-10 h-10 mb-2 text-zinc-500" />
                           <p className="mb-2 text-sm text-zinc-700">
-                            <span className="font-semibold">Click to upload</span> or drag files here
+                            <span className="font-semibold">Click to upload</span> or drag files
+                            here
                           </p>
                           <p className="text-xs text-zinc-500">PNG, JPG or JPEG (MAX. 5 files)</p>
                         </div>
@@ -228,7 +251,9 @@ export default function QuotePage() {
                     </div>
                     {selectedFiles.length > 0 && (
                       <div className="mt-2">
-                        <p className="text-sm text-zinc-700">{selectedFiles.length} file(s) selected:</p>
+                        <p className="text-sm text-zinc-700">
+                          {selectedFiles.length} file(s) selected:
+                        </p>
                         <ul className="text-xs text-zinc-600 mt-1">
                           {selectedFiles.map((file, index) => (
                             <li key={index}>{file.name}</li>
@@ -236,7 +261,9 @@ export default function QuotePage() {
                         </ul>
                       </div>
                     )}
-                    <p className="text-sm text-zinc-600 mt-2">Clear photos help us make the best quote.</p>
+                    <p className="text-sm text-zinc-600 mt-2">
+                      Clear photos help us make the best quote.
+                    </p>
                   </div>
                 </div>
 
@@ -256,7 +283,10 @@ export default function QuotePage() {
                   </div>
                 </div>
 
-                <Button type="submit" className="w-full bg-orange-600 hover:bg-orange-700 text-white text-lg py-6">
+                <Button
+                  type="submit"
+                  className="w-full bg-orange-600 hover:bg-orange-700 text-white text-lg py-6"
+                >
                   Request Quote
                 </Button>
               </form>
@@ -265,5 +295,5 @@ export default function QuotePage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

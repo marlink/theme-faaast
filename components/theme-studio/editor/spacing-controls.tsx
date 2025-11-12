@@ -1,10 +1,10 @@
-'use client'
+'use client';
 
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { useTheme } from '@/lib/theme-engine/theme-context'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { useTheme } from '@/lib/theme-engine/theme-context';
 
 export function SpacingControls() {
-  const { theme } = useTheme()
+  const { theme } = useTheme();
 
   return (
     <Card>
@@ -12,9 +12,7 @@ export function SpacingControls() {
         <CardTitle>Spacing Controls</CardTitle>
       </CardHeader>
       <CardContent>
-        <p className="text-muted-foreground">
-          Spacing controls will be implemented here.
-        </p>
+        <p className="text-muted-foreground">Spacing controls will be implemented here.</p>
         <div className="mt-4 space-y-2">
           {Object.entries(theme.spacing).map(([key, value]) => (
             <div key={key} className="flex items-center justify-between">
@@ -25,5 +23,5 @@ export function SpacingControls() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

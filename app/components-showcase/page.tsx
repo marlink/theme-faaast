@@ -1,27 +1,181 @@
-'use client'
+'use client';
 
-import { useState } from 'react'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
-import { Textarea } from '@/components/ui/textarea'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { Checkbox } from '@/components/ui/checkbox'
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
-import { Switch } from '@/components/ui/switch'
-import { Slider } from '@/components/ui/slider'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
-import { Badge } from '@/components/ui/badge'
-import { Progress } from '@/components/ui/progress'
-import { Alert, AlertDescription } from '@/components/ui/alert'
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
-import { Navigation } from '@/components/navigation'
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger } from '@/components/ui/navigation-menu'
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
+import { Checkbox } from '@/components/ui/checkbox';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+import { Switch } from '@/components/ui/switch';
+import { Slider } from '@/components/ui/slider';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '@/components/ui/dialog';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { Badge } from '@/components/ui/badge';
+import { Progress } from '@/components/ui/progress';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table';
+import { Navigation } from '@/components/navigation';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from '@/components/ui/navigation-menu';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
+import { ScrollArea } from '@/components/ui/scroll-area';
+import { Separator } from '@/components/ui/separator';
+import { Toggle } from '@/components/ui/toggle';
+import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from '@/components/ui/alert-dialog';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from '@/components/ui/breadcrumb';
+import { ButtonGroup } from '@/components/ui/button-group';
+import { Calendar as CalendarComponent } from '@/components/ui/calendar';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandSeparator,
+  CommandShortcut,
+} from '@/components/ui/command';
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from '@/components/ui/drawer';
+import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card';
+import {
+  InputOTP,
+  InputOTPGroup,
+  InputOTPSeparator,
+  InputOTPSlot,
+} from '@/components/ui/input-otp';
+import {
+  Menubar,
+  MenubarCheckboxItem,
+  MenubarContent,
+  MenubarItem,
+  MenubarLabel,
+  MenubarMenu,
+  MenubarRadioGroup,
+  MenubarRadioItem,
+  MenubarSeparator,
+  MenubarShortcut,
+  MenubarSub,
+  MenubarSubContent,
+  MenubarSubTrigger,
+  MenubarTrigger,
+} from '@/components/ui/menubar';
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from '@/components/ui/pagination';
+import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from '@/components/ui/resizable';
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet';
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarFooter,
+  SidebarGroup,
+  SidebarGroupAction,
+  SidebarGroupContent,
+  SidebarGroupLabel,
+  SidebarHeader,
+  SidebarInset,
+  SidebarMenu,
+  SidebarMenuAction,
+  SidebarMenuBadge,
+  SidebarMenuButton,
+  SidebarMenuItem,
+  SidebarMenuSkeleton,
+  SidebarMenuSub,
+  SidebarMenuSubButton,
+  SidebarMenuSubItem,
+  SidebarProvider,
+  SidebarRail,
+  SidebarSeparator,
+  SidebarTrigger,
+} from '@/components/ui/sidebar';
+import { Skeleton } from '@/components/ui/skeleton';
+import { Spinner } from '@/components/ui/spinner';
+import { Switch as SwitchComponent } from '@/components/ui/switch';
 import {
   Play,
   Pause,
@@ -47,13 +201,26 @@ import {
   Calendar,
   Clock,
   Cog,
-  Droplet
-} from 'lucide-react'
+  Droplet,
+  ChevronDown,
+  ChevronRight,
+  Eye,
+  EyeOff,
+  Smile,
+  Calculator,
+  CreditCard,
+} from 'lucide-react';
 
 export default function ComponentsShowcasePage() {
-  const [dialogOpen, setDialogOpen] = useState(false)
-  const [switchChecked, setSwitchChecked] = useState(true)
-  const [sliderValue, setSliderValue] = useState([50])
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const [switchChecked, setSwitchChecked] = useState(true);
+  const [sliderValue, setSliderValue] = useState([50]);
+  const [isOpen, setIsOpen] = useState(false);
+  const [alertDialogOpen, setAlertDialogOpen] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [sheetOpen, setSheetOpen] = useState(false);
+  const [commandOpen, setCommandOpen] = useState(false);
+  const [selectedDate, setSelectedDate] = useState<Date | undefined>(new Date());
 
   return (
     <div className="min-h-screen bg-background">
@@ -72,12 +239,10 @@ export default function ComponentsShowcasePage() {
       </header>
 
       <div className="container mx-auto px-4 py-8 space-y-12">
-
         {/* Form Elements Section */}
         <section>
           <h2 className="text-3xl font-bold mb-6">Form Elements</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
             {/* Basic Inputs */}
             <Card>
               <CardHeader>
@@ -147,15 +312,21 @@ export default function ComponentsShowcasePage() {
                   <div className="space-y-2">
                     <div className="flex items-center space-x-2">
                       <Checkbox id="repair" />
-                      <label htmlFor="repair" className="text-sm">Wheel Repair</label>
+                      <label htmlFor="repair" className="text-sm">
+                        Wheel Repair
+                      </label>
                     </div>
                     <div className="flex items-center space-x-2">
                       <Checkbox id="coating" />
-                      <label htmlFor="coating" className="text-sm">Powder Coating</label>
+                      <label htmlFor="coating" className="text-sm">
+                        Powder Coating
+                      </label>
                     </div>
                     <div className="flex items-center space-x-2">
                       <Checkbox id="cnc" />
-                      <label htmlFor="cnc" className="text-sm">CNC Machining</label>
+                      <label htmlFor="cnc" className="text-sm">
+                        CNC Machining
+                      </label>
                     </div>
                   </div>
                 </div>
@@ -179,7 +350,6 @@ export default function ComponentsShowcasePage() {
                 </div>
               </CardContent>
             </Card>
-
           </div>
         </section>
 
@@ -187,7 +357,6 @@ export default function ComponentsShowcasePage() {
         <section>
           <h2 className="text-3xl font-bold mb-6">Interactive Elements</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-
             {/* Buttons */}
             <Card>
               <CardHeader>
@@ -284,7 +453,9 @@ export default function ComponentsShowcasePage() {
                   <h4 className="text-sm font-medium mb-3">Destructive</h4>
                   <div className="flex flex-wrap gap-2">
                     <Button variant="destructive">Delete</Button>
-                    <Button variant="destructive" size="sm">Remove</Button>
+                    <Button variant="destructive" size="sm">
+                      Remove
+                    </Button>
                   </div>
                 </div>
               </CardContent>
@@ -306,12 +477,7 @@ export default function ComponentsShowcasePage() {
                 </div>
                 <div className="space-y-2">
                   <Label>Volume: {sliderValue[0]}%</Label>
-                  <Slider
-                    value={sliderValue}
-                    onValueChange={setSliderValue}
-                    max={100}
-                    step={1}
-                  />
+                  <Slider value={sliderValue} onValueChange={setSliderValue} max={100} step={1} />
                 </div>
                 <div className="space-y-2">
                   <Label>Progress</Label>
@@ -334,9 +500,7 @@ export default function ComponentsShowcasePage() {
                 </div>
                 <Alert>
                   <Info className="h-4 w-4" />
-                  <AlertDescription>
-                    This is an informational alert.
-                  </AlertDescription>
+                  <AlertDescription>This is an informational alert.</AlertDescription>
                 </Alert>
                 <Alert className="border-destructive">
                   <AlertCircle className="h-4 w-4" />
@@ -405,7 +569,6 @@ export default function ComponentsShowcasePage() {
                 </Dialog>
               </CardContent>
             </Card>
-
           </div>
         </section>
 
@@ -426,7 +589,9 @@ export default function ComponentsShowcasePage() {
                   <TabsTrigger value="contact">Contact</TabsTrigger>
                 </TabsList>
                 <TabsContent value="services" className="mt-4">
-                  <p>Explore our wheel services including repair, powder coating, and CNC machining.</p>
+                  <p>
+                    Explore our wheel services including repair, powder coating, and CNC machining.
+                  </p>
                 </TabsContent>
                 <TabsContent value="portfolio" className="mt-4">
                   <p>View our before and after transformations and completed projects.</p>
@@ -448,22 +613,24 @@ export default function ComponentsShowcasePage() {
                 <AccordionItem value="wheel-repair">
                   <AccordionTrigger>Wheel Repair Services</AccordionTrigger>
                   <AccordionContent>
-                    We specialize in repairing all types of wheel damage including cracks, bends, and cosmetic issues.
-                    Our expert technicians use advanced equipment to restore your wheels to factory condition.
+                    We specialize in repairing all types of wheel damage including cracks, bends,
+                    and cosmetic issues. Our expert technicians use advanced equipment to restore
+                    your wheels to factory condition.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="powder-coating">
                   <AccordionTrigger>Powder Coating</AccordionTrigger>
                   <AccordionContent>
-                    Professional powder coating in hundreds of colors with matte, glossy, and metallic finishes.
-                    Our coating provides superior protection against corrosion and UV damage.
+                    Professional powder coating in hundreds of colors with matte, glossy, and
+                    metallic finishes. Our coating provides superior protection against corrosion
+                    and UV damage.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="cnc-machining">
                   <AccordionTrigger>CNC Machining</AccordionTrigger>
                   <AccordionContent>
-                    Precision CNC operations for custom wheel modifications. We can machine any design
-                    with micron-level accuracy using state-of-the-art equipment.
+                    Precision CNC operations for custom wheel modifications. We can machine any
+                    design with micron-level accuracy using state-of-the-art equipment.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
@@ -490,19 +657,25 @@ export default function ComponentsShowcasePage() {
                     <TableCell>Wheel Repair</TableCell>
                     <TableCell>2-5 days</TableCell>
                     <TableCell>€50-€200</TableCell>
-                    <TableCell><Badge variant="secondary">Available</Badge></TableCell>
+                    <TableCell>
+                      <Badge variant="secondary">Available</Badge>
+                    </TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell>Powder Coating</TableCell>
                     <TableCell>3-7 days</TableCell>
                     <TableCell>€100-€400</TableCell>
-                    <TableCell><Badge>Available</Badge></TableCell>
+                    <TableCell>
+                      <Badge>Available</Badge>
+                    </TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell>CNC Machining</TableCell>
                     <TableCell>5-10 days</TableCell>
                     <TableCell>€200-€800</TableCell>
-                    <TableCell><Badge variant="outline">Limited</Badge></TableCell>
+                    <TableCell>
+                      <Badge variant="outline">Limited</Badge>
+                    </TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
@@ -576,7 +749,9 @@ export default function ComponentsShowcasePage() {
                   <p className="text-muted-foreground text-sm">
                     Expert repair of all wheel damage types with warranty.
                   </p>
-                  <Button className="mt-4" size="sm">Learn More</Button>
+                  <Button className="mt-4" size="sm">
+                    Learn More
+                  </Button>
                 </CardContent>
               </Card>
 
@@ -587,7 +762,9 @@ export default function ComponentsShowcasePage() {
                   <p className="text-muted-foreground text-sm">
                     Professional coating in hundreds of colors and finishes.
                   </p>
-                  <Button className="mt-4" size="sm">Learn More</Button>
+                  <Button className="mt-4" size="sm">
+                    Learn More
+                  </Button>
                 </CardContent>
               </Card>
 
@@ -598,7 +775,9 @@ export default function ComponentsShowcasePage() {
                   <p className="text-muted-foreground text-sm">
                     Precision machining with micron-level accuracy.
                   </p>
-                  <Button className="mt-4" size="sm">Learn More</Button>
+                  <Button className="mt-4" size="sm">
+                    Learn More
+                  </Button>
                 </CardContent>
               </Card>
             </div>
@@ -614,7 +793,8 @@ export default function ComponentsShowcasePage() {
                   <h4 className="font-semibold text-lg mb-2">About Our Process</h4>
                   <p className="text-muted-foreground mb-4">
                     We follow a meticulous process to ensure every wheel meets our high standards.
-                    From initial inspection to final quality check, every step is carefully executed.
+                    From initial inspection to final quality check, every step is carefully
+                    executed.
                   </p>
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <CheckCircle className="w-4 h-4 text-green-500" />
@@ -637,7 +817,8 @@ export default function ComponentsShowcasePage() {
                 <CardContent className="p-6">
                   <h4 className="font-semibold text-lg mb-2">Our Workshop in Action</h4>
                   <p className="text-muted-foreground text-sm">
-                    Watch our team in action as we transform damaged wheels into perfect restorations.
+                    Watch our team in action as we transform damaged wheels into perfect
+                    restorations.
                   </p>
                 </CardContent>
               </Card>
@@ -695,7 +876,9 @@ export default function ComponentsShowcasePage() {
             <CardContent className="space-y-4">
               <div>
                 <h1 className="text-4xl font-bold mb-2">Heading 1 (h1) - 4xl bold</h1>
-                <p className="text-sm text-muted-foreground">Used for main page titles and hero sections</p>
+                <p className="text-sm text-muted-foreground">
+                  Used for main page titles and hero sections
+                </p>
               </div>
               <div>
                 <h2 className="text-3xl font-bold mb-2">Heading 2 (h2) - 3xl bold</h2>
@@ -707,7 +890,9 @@ export default function ComponentsShowcasePage() {
               </div>
               <div>
                 <h4 className="text-xl font-semibold mb-2">Heading 4 (h4) - xl semibold</h4>
-                <p className="text-sm text-muted-foreground">Used for card titles and smaller sections</p>
+                <p className="text-sm text-muted-foreground">
+                  Used for card titles and smaller sections
+                </p>
               </div>
               <div>
                 <h5 className="text-lg font-semibold mb-2">Heading 5 (h5) - lg semibold</h5>
@@ -728,7 +913,9 @@ export default function ComponentsShowcasePage() {
             <CardContent className="space-y-6">
               <div>
                 <div className="text-5xl font-bold mb-2">Display 5xl - Jumbo Large</div>
-                <p className="text-sm text-muted-foreground">Perfect for hero banners and major announcements</p>
+                <p className="text-sm text-muted-foreground">
+                  Perfect for hero banners and major announcements
+                </p>
               </div>
               <div>
                 <div className="text-6xl font-bold mb-2">Display 6xl - Extra Jumbo</div>
@@ -736,7 +923,9 @@ export default function ComponentsShowcasePage() {
               </div>
               <div>
                 <div className="text-7xl font-bold mb-2">Display 7xl - Ultimate Jumbo</div>
-                <p className="text-sm text-muted-foreground">Reserved for the most important messages</p>
+                <p className="text-sm text-muted-foreground">
+                  Reserved for the most important messages
+                </p>
               </div>
               <div>
                 <div className="text-8xl font-bold mb-2">Display 8xl - Mega Jumbo</div>
@@ -797,12 +986,14 @@ export default function ComponentsShowcasePage() {
                     Transform Your <span className="text-blue-600">Wheels</span>
                   </h1>
                   <p className="text-lg md:text-xl text-muted-foreground mb-6 max-w-2xl mx-auto">
-                    Professional wheel restoration services that bring your vehicle back to its original glory.
-                    From powder coating to CNC machining, we handle it all.
+                    Professional wheel restoration services that bring your vehicle back to its
+                    original glory. From powder coating to CNC machining, we handle it all.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3 justify-center">
                     <Button size="lg">Get Started</Button>
-                    <Button variant="outline" size="lg">View Portfolio</Button>
+                    <Button variant="outline" size="lg">
+                      View Portfolio
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -812,7 +1003,8 @@ export default function ComponentsShowcasePage() {
                 <div>
                   <h3 className="text-2xl font-bold mb-3">Why Choose Us?</h3>
                   <p className="text-muted-foreground mb-4">
-                    With over 15 years of experience, we provide top-quality wheel services that exceed expectations.
+                    With over 15 years of experience, we provide top-quality wheel services that
+                    exceed expectations.
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-center gap-2">
@@ -832,8 +1024,8 @@ export default function ComponentsShowcasePage() {
                 <div className="bg-muted/50 rounded-lg p-6">
                   <h4 className="font-semibold mb-2">Service Highlights</h4>
                   <p className="text-sm text-muted-foreground">
-                    Our comprehensive approach ensures every wheel receives the attention it deserves,
-                    from initial assessment to final quality check.
+                    Our comprehensive approach ensures every wheel receives the attention it
+                    deserves, from initial assessment to final quality check.
                   </p>
                 </div>
               </div>
@@ -863,13 +1055,15 @@ export default function ComponentsShowcasePage() {
                 <div className="space-y-4">
                   <h3 className="text-2xl font-bold">Precision CNC Machining</h3>
                   <p className="text-muted-foreground">
-                    Our state-of-the-art CNC machines deliver unparalleled precision and consistency.
-                    Each wheel is machined to exact specifications, ensuring perfect fitment and performance.
+                    Our state-of-the-art CNC machines deliver unparalleled precision and
+                    consistency. Each wheel is machined to exact specifications, ensuring perfect
+                    fitment and performance.
                   </p>
                   <p className="text-muted-foreground">
-                    We use advanced computer-aided design software combined with high-precision machining
-                    equipment to create custom wheel modifications that other shops simply can't match.
-                    Our CNC capabilities allow us to work with any alloy, any design, and any complexity level.
+                    We use advanced computer-aided design software combined with high-precision
+                    machining equipment to create custom wheel modifications that other shops simply
+                    can't match. Our CNC capabilities allow us to work with any alloy, any design,
+                    and any complexity level.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <Button>Learn More</Button>
@@ -891,12 +1085,14 @@ export default function ComponentsShowcasePage() {
                   <h3 className="text-2xl font-bold">Powder Coating Excellence</h3>
                   <p className="text-muted-foreground">
                     Our powder coating process provides superior protection and stunning aesthetics.
-                    Available in hundreds of colors and finishes, including matte, glossy, and metallic options.
+                    Available in hundreds of colors and finishes, including matte, glossy, and
+                    metallic options.
                   </p>
                   <p className="text-muted-foreground">
-                    Unlike traditional paint, powder coating creates a durable, chip-resistant finish
-                    that withstands harsh weather conditions and road debris. The electrostatic application
-                    ensures even coverage and professional results every time.
+                    Unlike traditional paint, powder coating creates a durable, chip-resistant
+                    finish that withstands harsh weather conditions and road debris. The
+                    electrostatic application ensures even coverage and professional results every
+                    time.
                   </p>
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
@@ -952,7 +1148,11 @@ export default function ComponentsShowcasePage() {
                         <Button size="lg" className="bg-white text-black hover:bg-white/90">
                           Get Free Quote
                         </Button>
-                        <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-black">
+                        <Button
+                          size="lg"
+                          variant="outline"
+                          className="border-white text-white hover:bg-white hover:text-black"
+                        >
                           View Our Work
                         </Button>
                       </div>
@@ -982,17 +1182,17 @@ export default function ComponentsShowcasePage() {
                   <h3 className="text-xl font-semibold">Wheel Repair Process</h3>
                   <p className="text-muted-foreground">
                     Our wheel repair process begins with a thorough inspection of the damaged wheel.
-                    We assess the extent of the damage, including cracks, bends, and structural issues
-                    that may affect the wheel's integrity and safety.
+                    We assess the extent of the damage, including cracks, bends, and structural
+                    issues that may affect the wheel's integrity and safety.
                   </p>
                   <p className="text-muted-foreground">
-                    Once we've identified all damage, we create a detailed repair plan. This includes
-                    determining the best repair techniques, materials needed, and estimated timeline
-                    for completion. We always prioritize safety and structural integrity.
+                    Once we've identified all damage, we create a detailed repair plan. This
+                    includes determining the best repair techniques, materials needed, and estimated
+                    timeline for completion. We always prioritize safety and structural integrity.
                   </p>
                   <p className="text-muted-foreground">
-                    After repair, each wheel undergoes rigorous quality control testing to ensure
-                    it meets our high standards and is safe for road use. We provide warranty coverage
+                    After repair, each wheel undergoes rigorous quality control testing to ensure it
+                    meets our high standards and is safe for road use. We provide warranty coverage
                     on all our repair work.
                   </p>
                 </div>
@@ -1009,8 +1209,8 @@ export default function ComponentsShowcasePage() {
                     accountability and helps us continuously improve our processes.
                   </p>
                   <p className="text-muted-foreground">
-                    Customer satisfaction is our ultimate goal. We work closely with each client
-                    to understand their needs and deliver results that exceed expectations.
+                    Customer satisfaction is our ultimate goal. We work closely with each client to
+                    understand their needs and deliver results that exceed expectations.
                   </p>
                 </div>
               </div>
@@ -1027,12 +1227,13 @@ export default function ComponentsShowcasePage() {
                 <div className="space-y-3">
                   <h4 className="font-semibold text-lg">Powder Coating</h4>
                   <p className="text-sm text-muted-foreground">
-                    Professional powder coating in any color you desire. Our electrostatic application
-                    ensures even coverage and superior durability compared to traditional paint.
+                    Professional powder coating in any color you desire. Our electrostatic
+                    application ensures even coverage and superior durability compared to
+                    traditional paint.
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    Available in matte, glossy, and metallic finishes. UV-resistant and chip-resistant
-                    for long-lasting protection against the elements.
+                    Available in matte, glossy, and metallic finishes. UV-resistant and
+                    chip-resistant for long-lasting protection against the elements.
                   </p>
                 </div>
                 <div className="space-y-3">
@@ -1042,19 +1243,19 @@ export default function ComponentsShowcasePage() {
                     can handle any design complexity with micron-level accuracy.
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    From simple lip machining to complex custom designs, we bring your vision to life
-                    with computer-controlled precision and consistency.
+                    From simple lip machining to complex custom designs, we bring your vision to
+                    life with computer-controlled precision and consistency.
                   </p>
                 </div>
                 <div className="space-y-3">
                   <h4 className="font-semibold text-lg">Wheel Straightening</h4>
                   <p className="text-sm text-muted-foreground">
-                    Professional wheel straightening using hydraulic presses and specialized equipment.
-                    We can restore bent wheels to factory specifications.
+                    Professional wheel straightening using hydraulic presses and specialized
+                    equipment. We can restore bent wheels to factory specifications.
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    Advanced measurement techniques ensure perfect alignment and balance.
-                    Restored wheels perform as well as new ones.
+                    Advanced measurement techniques ensure perfect alignment and balance. Restored
+                    wheels perform as well as new ones.
                   </p>
                 </div>
               </div>
@@ -1071,7 +1272,8 @@ export default function ComponentsShowcasePage() {
                 <div className="space-y-2">
                   <h5 className="font-medium">Stripping</h5>
                   <p className="text-xs text-muted-foreground">
-                    Complete removal of old paint and coatings using environmentally friendly methods.
+                    Complete removal of old paint and coatings using environmentally friendly
+                    methods.
                   </p>
                 </div>
                 <div className="space-y-2">
@@ -1119,14 +1321,18 @@ export default function ComponentsShowcasePage() {
                 </div>
                 <div className="text-center space-y-2">
                   <div className="w-8 h-8 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mx-auto">
-                    <span className="text-xs font-bold text-orange-600 dark:text-orange-400">3</span>
+                    <span className="text-xs font-bold text-orange-600 dark:text-orange-400">
+                      3
+                    </span>
                   </div>
                   <h6 className="text-xs font-medium">Processing</h6>
                   <p className="text-xs text-muted-foreground">Repair and coating application</p>
                 </div>
                 <div className="text-center space-y-2">
                   <div className="w-8 h-8 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mx-auto">
-                    <span className="text-xs font-bold text-purple-600 dark:text-purple-400">4</span>
+                    <span className="text-xs font-bold text-purple-600 dark:text-purple-400">
+                      4
+                    </span>
                   </div>
                   <h6 className="text-xs font-medium">Quality Check</h6>
                   <p className="text-xs text-muted-foreground">Final inspection and testing</p>
@@ -1157,15 +1363,36 @@ export default function ComponentsShowcasePage() {
                 <h4 className="text-lg font-semibold mb-3">Inline Text Links</h4>
                 <div className="space-y-3">
                   <p className="text-muted-foreground">
-                    This is a paragraph with a <a href="#" className="text-primary hover:text-primary/80 underline underline-offset-4">primary link</a> that demonstrates how links appear within body text.
-                    Links should be clearly distinguishable from regular text while maintaining readability.
+                    This is a paragraph with a{' '}
+                    <a
+                      href="#"
+                      className="text-primary hover:text-primary/80 underline underline-offset-4"
+                    >
+                      primary link
+                    </a>{' '}
+                    that demonstrates how links appear within body text. Links should be clearly
+                    distinguishable from regular text while maintaining readability.
                   </p>
                   <p className="text-muted-foreground">
-                    For external links, we use the <a href="#" className="text-blue-600 hover:text-blue-700 underline underline-offset-4">blue color scheme</a> to indicate they lead outside our site.
-                    This helps users understand the context of where the link will take them.
+                    For external links, we use the{' '}
+                    <a
+                      href="#"
+                      className="text-blue-600 hover:text-blue-700 underline underline-offset-4"
+                    >
+                      blue color scheme
+                    </a>{' '}
+                    to indicate they lead outside our site. This helps users understand the context
+                    of where the link will take them.
                   </p>
                   <p className="text-muted-foreground">
-                    Some links might be <a href="#" className="text-muted-foreground hover:text-foreground underline underline-offset-4">subtle and muted</a> to de-emphasize secondary actions or less important information.
+                    Some links might be{' '}
+                    <a
+                      href="#"
+                      className="text-muted-foreground hover:text-foreground underline underline-offset-4"
+                    >
+                      subtle and muted
+                    </a>{' '}
+                    to de-emphasize secondary actions or less important information.
                   </p>
                 </div>
               </div>
@@ -1177,19 +1404,75 @@ export default function ComponentsShowcasePage() {
                   <div>
                     <h5 className="font-medium mb-3">Footer Style Links</h5>
                     <ul className="space-y-2">
-                      <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Services</a></li>
-                      <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Portfolio</a></li>
-                      <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">About Us</a></li>
-                      <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Contact</a></li>
+                      <li>
+                        <a
+                          href="#"
+                          className="text-muted-foreground hover:text-foreground transition-colors"
+                        >
+                          Services
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          className="text-muted-foreground hover:text-foreground transition-colors"
+                        >
+                          Portfolio
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          className="text-muted-foreground hover:text-foreground transition-colors"
+                        >
+                          About Us
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          className="text-muted-foreground hover:text-foreground transition-colors"
+                        >
+                          Contact
+                        </a>
+                      </li>
                     </ul>
                   </div>
                   <div>
                     <h5 className="font-medium mb-3">Navigation Style Links</h5>
                     <ul className="space-y-2">
-                      <li><a href="#" className="text-foreground hover:text-primary transition-colors font-medium">Wheel Repair</a></li>
-                      <li><a href="#" className="text-foreground hover:text-primary transition-colors font-medium">Powder Coating</a></li>
-                      <li><a href="#" className="text-foreground hover:text-primary transition-colors font-medium">CNC Machining</a></li>
-                      <li><a href="#" className="text-foreground hover:text-primary transition-colors font-medium">Wheel Sales</a></li>
+                      <li>
+                        <a
+                          href="#"
+                          className="text-foreground hover:text-primary transition-colors font-medium"
+                        >
+                          Wheel Repair
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          className="text-foreground hover:text-primary transition-colors font-medium"
+                        >
+                          Powder Coating
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          className="text-foreground hover:text-primary transition-colors font-medium"
+                        >
+                          CNC Machining
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          className="text-foreground hover:text-primary transition-colors font-medium"
+                        >
+                          Wheel Sales
+                        </a>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -1201,7 +1484,10 @@ export default function ComponentsShowcasePage() {
                 <div className="space-y-4">
                   <div className="p-4 bg-gradient-to-r from-orange-50 to-orange-100 dark:from-orange-950/20 dark:to-orange-900/20 rounded-lg">
                     <p className="text-sm text-muted-foreground mb-2">Primary CTA</p>
-                    <a href="#" className="text-orange-600 hover:text-orange-700 font-semibold text-lg">
+                    <a
+                      href="#"
+                      className="text-orange-600 hover:text-orange-700 font-semibold text-lg"
+                    >
                       Get Your Free Quote Today →
                     </a>
                   </div>
@@ -1220,19 +1506,35 @@ export default function ComponentsShowcasePage() {
                 <div className="space-y-3">
                   <div>
                     <p className="text-sm text-muted-foreground mb-2">Default state:</p>
-                    <a href="#" className="text-primary underline underline-offset-4">Default link</a>
+                    <a href="#" className="text-primary underline underline-offset-4">
+                      Default link
+                    </a>
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground mb-2">Hover state (hover over this link):</p>
-                    <a href="#" className="text-primary hover:text-primary/80 underline underline-offset-4 transition-colors">Hover link</a>
+                    <p className="text-sm text-muted-foreground mb-2">
+                      Hover state (hover over this link):
+                    </p>
+                    <a
+                      href="#"
+                      className="text-primary hover:text-primary/80 underline underline-offset-4 transition-colors"
+                    >
+                      Hover link
+                    </a>
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground mb-2">Visited state simulation:</p>
-                    <a href="#" className="text-purple-600 underline underline-offset-4">Visited link</a>
+                    <a href="#" className="text-purple-600 underline underline-offset-4">
+                      Visited link
+                    </a>
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground mb-2">Active/Focus state:</p>
-                    <a href="#" className="text-primary underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-sm px-1">Focus link</a>
+                    <a
+                      href="#"
+                      className="text-primary underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-sm px-1"
+                    >
+                      Focus link
+                    </a>
                   </div>
                 </div>
               </div>
@@ -1242,19 +1544,31 @@ export default function ComponentsShowcasePage() {
                 <h4 className="text-lg font-semibold mb-3">Links with Icons</h4>
                 <div className="space-y-3">
                   <div className="flex flex-wrap gap-4">
-                    <a href="#" className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors">
+                    <a
+                      href="#"
+                      className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+                    >
                       <Mail className="w-4 h-4" />
                       Contact Us
                     </a>
-                    <a href="#" className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors">
+                    <a
+                      href="#"
+                      className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+                    >
                       <Phone className="w-4 h-4" />
                       Call Now
                     </a>
-                    <a href="#" className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors">
+                    <a
+                      href="#"
+                      className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+                    >
                       <MapPin className="w-4 h-4" />
                       Find Location
                     </a>
-                    <a href="#" className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors">
+                    <a
+                      href="#"
+                      className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+                    >
                       <Download className="w-4 h-4" />
                       Download Brochure
                     </a>
@@ -1265,6 +1579,462 @@ export default function ComponentsShowcasePage() {
           </Card>
         </section>
 
+        {/* Missing Components Showcase */}
+        <section>
+          <h2 className="text-3xl font-bold mb-6">Additional Components Available</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Scroll Area */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">Scroll Area</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ScrollArea className="h-32 w-full rounded-md border p-4">
+                  <div className="space-y-4">
+                    <p>This is a scrollable area with custom scrollbar styling.</p>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+                      incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <p>
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                      aliquip ex ea commodo consequat.
+                    </p>
+                    <p>
+                      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                      eu fugiat nulla pariatur.
+                    </p>
+                    <p>
+                      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                      deserunt mollit anim id est laborum.
+                    </p>
+                  </div>
+                </ScrollArea>
+              </CardContent>
+            </Card>
+
+            {/* Separator */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">Separator</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="space-y-2">
+                  <p className="text-sm">Horizontal separator:</p>
+                  <Separator />
+                  <p className="text-sm">Vertical separator:</p>
+                  <div className="flex items-center space-x-4">
+                    <span>Item 1</span>
+                    <Separator orientation="vertical" className="h-4" />
+                    <span>Item 2</span>
+                    <Separator orientation="vertical" className="h-4" />
+                    <span>Item 3</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Toggle Group */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">Toggle Group</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <p className="text-sm">Single selection:</p>
+                  <ToggleGroup type="single" defaultValue="bold">
+                    <ToggleGroupItem value="bold" aria-label="Bold">
+                      <span className="font-bold">B</span>
+                    </ToggleGroupItem>
+                    <ToggleGroupItem value="italic" aria-label="Italic">
+                      <span className="italic">I</span>
+                    </ToggleGroupItem>
+                    <ToggleGroupItem value="underline" aria-label="Underline">
+                      <span className="underline">U</span>
+                    </ToggleGroupItem>
+                  </ToggleGroup>
+
+                  <p className="text-sm">Multiple selection:</p>
+                  <ToggleGroup type="multiple" defaultValue={['bold']}>
+                    <ToggleGroupItem value="bold" aria-label="Bold">
+                      Bold
+                    </ToggleGroupItem>
+                    <ToggleGroupItem value="italic" aria-label="Italic">
+                      Italic
+                    </ToggleGroupItem>
+                    <ToggleGroupItem value="underline" aria-label="Underline">
+                      Underline
+                    </ToggleGroupItem>
+                  </ToggleGroup>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Toast */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">Toast Notifications</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <Button
+                    onClick={() =>
+                      alert('Toast notifications are available via the useToast hook!')
+                    }
+                    className="w-full"
+                  >
+                    Show Alert (Toast Demo)
+                  </Button>
+                  <p className="text-sm text-muted-foreground">
+                    Toast notifications are implemented using the useToast hook and appear in the
+                    top-right corner.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Alert Dialog */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">Alert Dialog</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <AlertDialog open={alertDialogOpen} onOpenChange={setAlertDialogOpen}>
+                  <AlertDialogTrigger asChild>
+                    <Button variant="outline" className="w-full">
+                      Open Alert Dialog
+                    </Button>
+                  </AlertDialogTrigger>
+                  <AlertDialogContent>
+                    <AlertDialogHeader>
+                      <AlertDialogTitle>Are you sure?</AlertDialogTitle>
+                      <AlertDialogDescription>
+                        This action cannot be undone. This will permanently delete your account and
+                        remove your data from our servers.
+                      </AlertDialogDescription>
+                    </AlertDialogHeader>
+                    <AlertDialogFooter>
+                      <AlertDialogCancel>Cancel</AlertDialogCancel>
+                      <AlertDialogAction>Continue</AlertDialogAction>
+                    </AlertDialogFooter>
+                  </AlertDialogContent>
+                </AlertDialog>
+              </CardContent>
+            </Card>
+
+            {/* Avatar */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">Avatar</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center space-x-4">
+                  <Avatar>
+                    <AvatarImage src="/placeholder-user.jpg" alt="User" />
+                    <AvatarFallback>JD</AvatarFallback>
+                  </Avatar>
+                  <Avatar>
+                    <AvatarFallback>AB</AvatarFallback>
+                  </Avatar>
+                  <Avatar className="w-12 h-12">
+                    <AvatarImage src="/placeholder-user.jpg" alt="User" />
+                    <AvatarFallback>XL</AvatarFallback>
+                  </Avatar>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Calendar */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">Calendar</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CalendarComponent
+                  mode="single"
+                  selected={selectedDate}
+                  onSelect={setSelectedDate}
+                  className="rounded-md border w-fit"
+                />
+              </CardContent>
+            </Card>
+
+            {/* Breadcrumb */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">Breadcrumb</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <Breadcrumb>
+                  <BreadcrumbList>
+                    <BreadcrumbItem>
+                      <BreadcrumbLink href="/">Home</BreadcrumbLink>
+                    </BreadcrumbItem>
+                    <BreadcrumbSeparator />
+                    <BreadcrumbItem>
+                      <BreadcrumbLink href="/services">Services</BreadcrumbLink>
+                    </BreadcrumbItem>
+                    <BreadcrumbSeparator />
+                    <BreadcrumbItem>
+                      <BreadcrumbPage>Wheel Repair</BreadcrumbPage>
+                    </BreadcrumbItem>
+                  </BreadcrumbList>
+                </Breadcrumb>
+              </CardContent>
+            </Card>
+
+            {/* Collapsible */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">Collapsible</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <Collapsible open={isOpen} onOpenChange={setIsOpen}>
+                  <CollapsibleTrigger asChild>
+                    <Button variant="outline" className="w-full justify-between">
+                      Toggle Content
+                      {isOpen ? (
+                        <ChevronDown className="h-4 w-4" />
+                      ) : (
+                        <ChevronRight className="h-4 w-4" />
+                      )}
+                    </Button>
+                  </CollapsibleTrigger>
+                  <CollapsibleContent className="mt-2">
+                    <p className="text-sm text-muted-foreground">
+                      This content is collapsible. You can show or hide it by clicking the button
+                      above. This is useful for expandable sections and accordions.
+                    </p>
+                  </CollapsibleContent>
+                </Collapsible>
+              </CardContent>
+            </Card>
+
+            {/* Hover Card */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">Hover Card</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <HoverCard>
+                  <HoverCardTrigger asChild>
+                    <Button variant="link">@themefaaast</Button>
+                  </HoverCardTrigger>
+                  <HoverCardContent className="w-80">
+                    <div className="flex justify-between space-x-4">
+                      <Avatar>
+                        <AvatarImage src="/placeholder-user.jpg" />
+                        <AvatarFallback>TF</AvatarFallback>
+                      </Avatar>
+                      <div className="space-y-1">
+                        <h4 className="text-sm font-semibold">@themefaaast</h4>
+                        <p className="text-sm">
+                          Professional website development and digital solutions.
+                        </p>
+                        <div className="flex items-center pt-2">
+                          <Calendar className="mr-2 h-4 w-4 opacity-70" />
+                          <span className="text-xs text-muted-foreground">
+                            Joined December 2020
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </HoverCardContent>
+                </HoverCard>
+              </CardContent>
+            </Card>
+
+            {/* Input OTP */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">Input OTP</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2">
+                  <Label htmlFor="otp">Enter verification code</Label>
+                  <InputOTP maxLength={6} id="otp">
+                    <InputOTPGroup>
+                      <InputOTPSlot index={0} />
+                      <InputOTPSlot index={1} />
+                      <InputOTPSlot index={2} />
+                    </InputOTPGroup>
+                    <InputOTPSeparator />
+                    <InputOTPGroup>
+                      <InputOTPSlot index={3} />
+                      <InputOTPSlot index={4} />
+                      <InputOTPSlot index={5} />
+                    </InputOTPGroup>
+                  </InputOTP>
+                  <p className="text-xs text-muted-foreground">
+                    Enter the 6-digit code sent to your device.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Pagination */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">Pagination</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <Pagination>
+                  <PaginationContent>
+                    <PaginationItem>
+                      <PaginationPrevious href="#" />
+                    </PaginationItem>
+                    <PaginationItem>
+                      <PaginationLink href="#" isActive>
+                        1
+                      </PaginationLink>
+                    </PaginationItem>
+                    <PaginationItem>
+                      <PaginationLink href="#">2</PaginationLink>
+                    </PaginationItem>
+                    <PaginationItem>
+                      <PaginationLink href="#">3</PaginationLink>
+                    </PaginationItem>
+                    <PaginationItem>
+                      <PaginationEllipsis />
+                    </PaginationItem>
+                    <PaginationItem>
+                      <PaginationNext href="#" />
+                    </PaginationItem>
+                  </PaginationContent>
+                </Pagination>
+              </CardContent>
+            </Card>
+
+            {/* Skeleton */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">Skeleton Loading</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="flex items-center space-x-4">
+                  <Skeleton className="h-12 w-12 rounded-full" />
+                  <div className="space-y-2">
+                    <Skeleton className="h-4 w-[250px]" />
+                    <Skeleton className="h-4 w-[200px]" />
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <Skeleton className="h-4 w-full" />
+                  <Skeleton className="h-4 w-full" />
+                  <Skeleton className="h-4 w-3/4" />
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Spinner */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">Spinner</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center justify-center p-8">
+                  <Spinner className="h-8 w-8" />
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Switch */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">Switch</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center space-x-2">
+                  <SwitchComponent
+                    id="airplane-mode"
+                    checked={switchChecked}
+                    onCheckedChange={setSwitchChecked}
+                  />
+                  <Label htmlFor="airplane-mode">Airplane Mode</Label>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Sheet */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">Sheet (Drawer)</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>
+                  <SheetTrigger asChild>
+                    <Button variant="outline" className="w-full">
+                      Open Sheet
+                    </Button>
+                  </SheetTrigger>
+                  <SheetContent>
+                    <SheetHeader>
+                      <SheetTitle>Sheet Example</SheetTitle>
+                      <SheetDescription>
+                        This is a sheet component that slides in from the side.
+                      </SheetDescription>
+                    </SheetHeader>
+                    <div className="mt-4">
+                      <p>
+                        Sheet content goes here. You can put forms, navigation, or any other
+                        content.
+                      </p>
+                    </div>
+                    <SheetFooter>
+                      <SheetClose asChild>
+                        <Button>Close</Button>
+                      </SheetClose>
+                    </SheetFooter>
+                  </SheetContent>
+                </Sheet>
+              </CardContent>
+            </Card>
+
+            {/* Command */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">Command Palette</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <Command>
+                  <CommandInput placeholder="Type a command or search..." />
+                  <CommandList>
+                    <CommandEmpty>No results found.</CommandEmpty>
+                    <CommandGroup heading="Suggestions">
+                      <CommandItem>
+                        <Calendar className="mr-2 h-4 w-4" />
+                        <span>Calendar</span>
+                      </CommandItem>
+                      <CommandItem>
+                        <Smile className="mr-2 h-4 w-4" />
+                        <span>Search Emoji</span>
+                      </CommandItem>
+                      <CommandItem>
+                        <Calculator className="mr-2 h-4 w-4" />
+                        <span>Calculator</span>
+                      </CommandItem>
+                    </CommandGroup>
+                    <CommandSeparator />
+                    <CommandGroup heading="Settings">
+                      <CommandItem>
+                        <User className="mr-2 h-4 w-4" />
+                        <span>Profile</span>
+                      </CommandItem>
+                      <CommandItem>
+                        <CreditCard className="mr-2 h-4 w-4" />
+                        <span>Billing</span>
+                      </CommandItem>
+                      <CommandItem>
+                        <Settings className="mr-2 h-4 w-4" />
+                        <span>Settings</span>
+                      </CommandItem>
+                    </CommandGroup>
+                  </CommandList>
+                </Command>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
       </div>
 
       {/* Footer */}
@@ -1272,11 +2042,11 @@ export default function ComponentsShowcasePage() {
         <div className="container mx-auto px-4 py-8">
           <div className="text-center">
             <p className="text-muted-foreground">
-              Component showcase for BeautifulRims design system
+              Component showcase for ThemeFaaast design system
             </p>
           </div>
         </div>
       </footer>
     </div>
-  )
+  );
 }

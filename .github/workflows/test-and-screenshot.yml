@@ -1,0 +1,107 @@
+name: Test & Screenshot Automation
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  workflow_dispatch:
+    inputs:
+      test_type:
+        description: 'Type of tests to run'
+        required: false
+        default: 'full'
+        type: choice
+        options:
+        - full
+        - critical-only
+        - screenshots-only
+
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'pnpm'
+
+    - name: Install dependencies
+      run: pnpm install
+
+    - name: Install Playwright Browsers
+      run: pnpm exec playwright install --with-deps
+
+    - name: Setup test database
+      run: |
+        # Create test environment variables
+        echo "NEXT_PUBLIC_APP_URL=http://localhost:3000" >> .env.test.local
+        echo "NODE_ENV=test" >> .env.test.local
+        # Add other test environment variables as needed
+
+    - name: Run type checking
+      run: pnpm run type-check
+
+    - name: Run linting
+      run: pnpm run lint
+
+    - name: Build application
+      run: pnpm run build
+
+    - name: Run critical user journey tests
+      if: github.event.inputs.test_type == 'critical-only' || github.event.inputs.test_type == '' || github.event_name == 'push' || github.event_name == 'pull_request'
+      run: pnpm exec playwright test --grep "quote-request-journey|authentication-journey" --project=chromium
+
+    - name: Run full test suite
+      if: github.event.inputs.test_type == 'full'
+      run: pnpm exec playwright test
+
+    - name: Run screenshot regression tests
+      if: github.event.inputs.test_type == 'screenshots-only'
+      run: pnpm exec playwright test --grep "screenshot" --project=chromium
+
+    - name: Upload test results
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: test-results-${{ github.run_number }}
+        path: |
+          test-results/
+          tests/screenshots/
+        retention-days: 30
+
+    - name: Upload test reports to GitHub Pages
+      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: test-results/
+
+  deploy-reports:
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
+
+  notify:
+    if: failure()
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+    - name: Notify on failure
+      run: |
+        echo "Tests failed! Check the test results and screenshots for details."
+        # Add notification logic here (Slack, Discord, etc.)

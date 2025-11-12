@@ -1,0 +1,165 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e5]:
+        - link "ThemeFaaast" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e7]: ThemeFaaast
+        - button "Toggle menu" [ref=e9]:
+          - img [ref=e10]
+      - generic [ref=e15]:
+        - link "Home" [ref=e16] [cursor=pointer]:
+          - /url: /pages/home
+        - link "Services" [ref=e17] [cursor=pointer]:
+          - /url: /services
+        - link "Projects" [ref=e18] [cursor=pointer]:
+          - /url: /projects
+        - link "About Us" [ref=e19] [cursor=pointer]:
+          - /url: /about
+        - link "Contact" [ref=e20] [cursor=pointer]:
+          - /url: /contact
+        - link "Theme Studio" [ref=e21] [cursor=pointer]:
+          - /url: /theme-studio
+        - link "Sign In" [ref=e22] [cursor=pointer]:
+          - /url: /auth/login
+        - link "Request Quote" [ref=e24] [cursor=pointer]:
+          - /url: /quote
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - img [ref=e31]
+        - generic [ref=e34]: Specialist since 2010
+      - heading "Your Brand specialist." [level=1] [ref=e35]
+      - paragraph [ref=e36]: Open, navigate, and love a fresh, high‑speed site. Enter, click, and enjoy your new, ultra‑fast website. Browse, click, and discover your new, lightning‑fast website.
+      - generic [ref=e37]:
+        - link "Request a Quote" [ref=e38] [cursor=pointer]:
+          - /url: /quote
+        - link "View Our Services" [ref=e39] [cursor=pointer]:
+          - /url: /services
+    - generic [ref=e42]:
+      - generic [ref=e43]:
+        - generic [ref=e44]:
+          - img [ref=e45]
+          - generic [ref=e48]: 5000+
+        - paragraph [ref=e49]: Websites Serviced
+      - generic [ref=e50]:
+        - generic [ref=e51]:
+          - img [ref=e52]
+          - generic [ref=e55]: 15+
+        - paragraph [ref=e56]: Years Experience
+      - generic [ref=e57]:
+        - generic [ref=e58]:
+          - img [ref=e59]
+          - generic [ref=e62]: 100%
+        - paragraph [ref=e63]: Customer Satisfaction
+    - generic [ref=e67]:
+      - generic [ref=e68]:
+        - text: What We Do
+        - heading "Our Expertise" [level=2] [ref=e69]
+        - paragraph [ref=e70]: Professional website service with years of experience
+      - generic [ref=e71]:
+        - generic [ref=e73]:
+          - img [ref=e75]
+          - heading "Theme Design & Customization" [level=3] [ref=e77]
+          - paragraph [ref=e78]: Custom website themes with unlimited color schemes and branding
+        - generic [ref=e80]:
+          - img [ref=e82]
+          - heading "Custom Development" [level=3] [ref=e97]
+          - paragraph [ref=e98]: Tailored web solutions and custom functionality development
+        - generic [ref=e100]:
+          - img [ref=e102]
+          - heading "Performance Optimization" [level=3] [ref=e106]
+          - paragraph [ref=e107]: Website speed optimization and performance tuning
+        - generic [ref=e109]:
+          - img [ref=e111]
+          - heading "Code Refactoring" [level=3] [ref=e113]
+          - paragraph [ref=e114]: Complete code cleanup and modernization services
+        - generic [ref=e116]:
+          - img [ref=e118]
+          - heading "Bug Fixes & Maintenance" [level=3] [ref=e122]
+          - paragraph [ref=e123]: Comprehensive debugging and website maintenance
+        - generic [ref=e125]:
+          - img [ref=e127]
+          - heading "Template Marketplace" [level=3] [ref=e131]
+          - paragraph [ref=e132]: Premium theme templates and digital assets marketplace
+          - link "View Inventory" [ref=e133] [cursor=pointer]:
+            - /url: marceli.online
+    - generic [ref=e135]:
+      - generic [ref=e136]:
+        - text: Portfolio
+        - heading "Recent Work" [level=2] [ref=e137]
+        - paragraph [ref=e138]: View our transformations
+      - generic [ref=e139]:
+        - generic [ref=e140]:
+          - img "Website Redesign Project" [ref=e141]
+          - generic [ref=e143]:
+            - generic [ref=e144]: FEATURED PROJECT
+            - paragraph [ref=e145]: "Before & After: Website Redesign"
+            - paragraph [ref=e146]: Complete digital transformation with modern theme
+        - generic [ref=e147]:
+          - img "E-commerce Website Theme" [ref=e148]
+          - generic [ref=e150]:
+            - text: CUSTOM THEME
+            - paragraph [ref=e151]: Modern E-commerce
+        - generic [ref=e152]:
+          - img "Custom Web Application Development" [ref=e153]
+          - generic [ref=e155]:
+            - text: CUSTOM DEVELOPMENT
+            - paragraph [ref=e156]: Web Application
+        - generic [ref=e157]:
+          - img "Corporate Branding Website Redesign" [ref=e158]
+          - generic [ref=e160]:
+            - text: BRAND THEME
+            - paragraph [ref=e161]: Corporate Redesign
+      - link "View all projects" [ref=e163] [cursor=pointer]:
+        - /url: /projects
+    - generic [ref=e167]:
+      - heading "Ready to transform your digital presence?" [level=2] [ref=e168]
+      - paragraph [ref=e169]: Contact us today for a free quote
+      - link "Start Your Quote Today" [ref=e170] [cursor=pointer]:
+        - /url: /quote
+    - contentinfo [ref=e171]:
+      - generic [ref=e172]:
+        - generic [ref=e173]:
+          - generic [ref=e174]:
+            - heading "ThemeFaaast" [level=3] [ref=e175]
+            - paragraph [ref=e176]: Your reliable partner for all digital solutions. With years of experience and craftsmanship, we create stunning digital experiences.
+          - generic [ref=e177]:
+            - heading "Sitemap" [level=4] [ref=e178]
+            - list [ref=e179]:
+              - listitem [ref=e180]:
+                - link "Services" [ref=e181] [cursor=pointer]:
+                  - /url: /services
+              - listitem [ref=e182]:
+                - link "Projects" [ref=e183] [cursor=pointer]:
+                  - /url: /projects
+              - listitem [ref=e184]:
+                - link "About Us" [ref=e185] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e186]:
+                - link "Contact" [ref=e187] [cursor=pointer]:
+                  - /url: /contact
+              - listitem [ref=e188]:
+                - link "Marketplace" [ref=e189] [cursor=pointer]:
+                  - /url: https://www.marktplaats.nl/u/beautifulrims/47376108/
+              - listitem [ref=e190]:
+                - link "Theme Studio" [ref=e191] [cursor=pointer]:
+                  - /url: /theme-studio
+          - generic [ref=e192]:
+            - heading "Contact Information" [level=4] [ref=e193]
+            - generic [ref=e194]:
+              - paragraph [ref=e195]:
+                - text: "Address:"
+                - text: Mockstreet 10
+                - text: 1010MM Mocktown
+              - paragraph [ref=e196]:
+                - text: "Email:"
+                - text: support@marceli.online
+        - paragraph [ref=e198]: © 2025 Design System. All rights reserved.
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=e204] [cursor=pointer]:
+    - img [ref=e205]
+  - alert [ref=e209]
+```

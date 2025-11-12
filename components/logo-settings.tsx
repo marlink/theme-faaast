@@ -1,62 +1,62 @@
-'use client'
+'use client';
 
-import { useState } from 'react'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { useLogo } from '@/lib/logo-context'
-import { Upload, Type, RotateCcw } from 'lucide-react'
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { useLogo } from '@/lib/logo-context';
+import { Upload, Type, RotateCcw } from 'lucide-react';
 
 export function LogoSettings() {
-  const { logo, updateLogo, resetLogo } = useLogo()
-  const [logoText, setLogoText] = useState(logo.text || '')
-  const [imageUrl, setImageUrl] = useState(logo.imageUrl || '')
-  const [altText, setAltText] = useState(logo.altText || '')
-  const [logoType, setLogoType] = useState<'text' | 'image'>(logo.type)
+  const { logo, updateLogo, resetLogo } = useLogo();
+  const [logoText, setLogoText] = useState(logo.text || '');
+  const [imageUrl, setImageUrl] = useState(logo.imageUrl || '');
+  const [altText, setAltText] = useState(logo.altText || '');
+  const [logoType, setLogoType] = useState<'text' | 'image'>(logo.type);
 
   const handleSave = () => {
     if (logoType === 'text') {
       updateLogo({
         type: 'text',
         text: logoText,
-        altText: logoText
-      })
+        altText: logoText,
+      });
     } else {
       updateLogo({
         type: 'image',
         imageUrl: imageUrl,
-        altText: altText
-      })
+        altText: altText,
+      });
     }
-  }
+  };
 
   const handleImageUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0]
+    const file = event.target.files?.[0];
     if (file) {
       try {
-        const formData = new FormData()
-        formData.append('file', file)
+        const formData = new FormData();
+        formData.append('file', file);
 
         const response = await fetch('/api/upload', {
           method: 'POST',
-          body: formData
-        })
+          body: formData,
+        });
 
-        const result = await response.json()
+        const result = await response.json();
 
         if (result.success) {
-          setImageUrl(result.data.url)
+          setImageUrl(result.data.url);
         } else {
-          alert(result.error || 'Failed to upload image')
+          alert(result.error || 'Failed to upload image');
         }
       } catch (error) {
-        console.error('Upload error:', error)
-        alert('Failed to upload image')
+        console.error('Upload error:', error);
+        alert('Failed to upload image');
       }
     }
-  }
+  };
 
   return (
     <Card>
@@ -98,7 +98,7 @@ export function LogoSettings() {
               <Input
                 id="logo-text"
                 value={logoText}
-                onChange={(e) => setLogoText(e.target.value)}
+                onChange={e => setLogoText(e.target.value)}
                 placeholder="Enter your website name"
                 className="mt-1"
               />
@@ -132,7 +132,7 @@ export function LogoSettings() {
               <Input
                 id="alt-text"
                 value={altText}
-                onChange={(e) => setAltText(e.target.value)}
+                onChange={e => setAltText(e.target.value)}
                 placeholder="Describe your logo for accessibility"
                 className="mt-1"
               />
@@ -144,16 +144,12 @@ export function LogoSettings() {
           <Button onClick={handleSave} className="bg-orange-600 hover:bg-orange-700">
             Save Logo
           </Button>
-          <Button
-            variant="outline"
-            onClick={resetLogo}
-            className="flex items-center gap-2"
-          >
+          <Button variant="outline" onClick={resetLogo} className="flex items-center gap-2">
             <RotateCcw className="w-4 h-4" />
             Reset to Default
           </Button>
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

@@ -1,11 +1,11 @@
-'use client'
+'use client';
 
-import { useLogo } from '@/lib/logo-context'
-import Link from 'next/link'
-import Image from 'next/image'
+import { useLogo } from '@/lib/logo-context';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export function Logo() {
-  const { logo } = useLogo()
+  const { logo } = useLogo();
 
   return (
     <Link href="/" className="flex items-center">
@@ -22,9 +22,9 @@ export function Logo() {
         </div>
       ) : (
         <span className="text-2xl font-bold text-white hover:text-orange-500 transition-colors">
-          {logo.text || 'BeautifulRims'}
+          {logo.text || 'ThemeFaaast'}
         </span>
       )}
     </Link>
-  )
+  );
 }
