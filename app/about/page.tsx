@@ -4,7 +4,7 @@ import { Navigation } from "@/components/navigation"
 import { Award, Users, Wrench, Heart } from "lucide-react"
 import Link from "next/link"
 
-export default function OverOnsPage() {
+export default function AboutPage() {
   const values = [
     {
       icon: Award,
@@ -154,7 +154,7 @@ export default function OverOnsPage() {
           <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto">Contact us or request a free quote directly.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-orange-600 hover:bg-orange-700 text-white text-lg px-8">
-              <Link href="/offerte">Request Quote</Link>
+              <Link href="/quote">Request Quote</Link>
             </Button>
             <Button
               asChild
@@ -183,17 +183,17 @@ export default function OverOnsPage() {
               <h4 className="text-lg font-semibold text-white mb-4">Sitemap</h4>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/diensten" className="text-zinc-400 hover:text-orange-600 transition-colors">
+                  <Link href="/services" className="text-zinc-400 hover:text-orange-600 transition-colors">
                     Services
                   </Link>
                 </li>
                 <li>
-                  <Link href="/projecten" className="text-zinc-400 hover:text-orange-600 transition-colors">
+                  <Link href="/projects" className="text-zinc-400 hover:text-orange-600 transition-colors">
                     Projects
                   </Link>
                 </li>
                 <li>
-                  <Link href="/over-ons" className="text-zinc-400 hover:text-orange-600 transition-colors">
+                  <Link href="/about" className="text-zinc-400 hover:text-orange-600 transition-colors">
                     About Us
                   </Link>
                 </li>

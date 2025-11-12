@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
+import { Logo } from "@/components/logo"
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -30,25 +31,23 @@ export function Navigation() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="text-2xl font-bold text-white">
-            BeautifulRims
-          </Link>
+          <Logo />
 
           <div className="hidden md:flex items-center gap-8">
-            <Link href="/diensten" className="text-zinc-300 hover:text-white transition-colors">
+            <Link href="/services" className="text-zinc-300 hover:text-white transition-colors">
               Services
             </Link>
-            <Link href="/projecten" className="text-zinc-300 hover:text-white transition-colors">
+            <Link href="/projects" className="text-zinc-300 hover:text-white transition-colors">
               Projects
             </Link>
-            <Link href="/over-ons" className="text-zinc-300 hover:text-white transition-colors">
+            <Link href="/about" className="text-zinc-300 hover:text-white transition-colors">
               About Us
             </Link>
             <Link href="/contact" className="text-zinc-300 hover:text-white transition-colors">
               Contact
             </Link>
-            <Link href="/components-showcase" className="text-zinc-300 hover:text-white transition-colors">
-              Components
+            <Link href="/settings" className="text-zinc-300 hover:text-white transition-colors">
+              Settings
             </Link>
           </div>
 
@@ -63,7 +62,7 @@ export function Navigation() {
               </Link>
             </Button>
             <Button asChild className="hidden sm:inline-flex bg-orange-600 hover:bg-orange-700 text-white">
-              <Link href="/offerte">Button</Link>
+              <Link href="/quote">Request Quote</Link>
             </Button>
 
             <button
@@ -88,21 +87,21 @@ export function Navigation() {
       >
         <div className="flex flex-col p-6 gap-6">
           <Link
-            href="/diensten"
+            href="/services"
             className="text-zinc-300 hover:text-white transition-colors text-lg"
             onClick={closeMobileMenu}
           >
             Services
           </Link>
           <Link
-            href="/projecten"
+            href="/projects"
             className="text-zinc-300 hover:text-white transition-colors text-lg"
             onClick={closeMobileMenu}
           >
             Projects
           </Link>
           <Link
-            href="/over-ons"
+            href="/about"
             className="text-zinc-300 hover:text-white transition-colors text-lg"
             onClick={closeMobileMenu}
           >
@@ -116,11 +115,11 @@ export function Navigation() {
             Contact
           </Link>
           <Link
-            href="/components-showcase"
+            href="/settings"
             className="text-zinc-300 hover:text-white transition-colors text-lg"
             onClick={closeMobileMenu}
           >
-            Components
+            Settings
           </Link>
 
           <div className="border-t border-zinc-700 pt-6 flex flex-col gap-3">
@@ -134,8 +133,8 @@ export function Navigation() {
               </Link>
             </Button>
             <Button asChild className="w-full bg-orange-600 hover:bg-orange-700 text-white">
-              <Link href="/offerte" onClick={closeMobileMenu}>
-                Button
+              <Link href="/quote" onClick={closeMobileMenu}>
+                Request Quote
               </Link>
             </Button>
           </div>

@@ -13,7 +13,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Navigation } from "@/components/navigation"
 import { Upload } from "lucide-react"
 
-export default function OffertePage() {
+export default function QuotePage() {
   const [showOtherService, setShowOtherService] = useState(false)
   const [selectedFiles, setSelectedFiles] = useState<File[]>([])
 
@@ -95,8 +95,8 @@ export default function OffertePage() {
                     <Label className="text-zinc-900 mb-3 block">Choose the desired service(s)</Label>
                     <div className="space-y-3">
                       <div className="flex items-center space-x-2">
-                        <Checkbox id="poedercoaten" />
-                        <label htmlFor="poedercoaten" className="text-zinc-900 cursor-pointer">
+                        <Checkbox id="powder-coating" />
+                        <label htmlFor="powder-coating" className="text-zinc-900 cursor-pointer">
                           Powder Coating
                         </label>
                       </div>
@@ -107,20 +107,20 @@ export default function OffertePage() {
                         </label>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <Checkbox id="richten" />
-                        <label htmlFor="richten" className="text-zinc-900 cursor-pointer">
+                        <Checkbox id="straightening" />
+                        <label htmlFor="straightening" className="text-zinc-900 cursor-pointer">
                           Straightening
                         </label>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <Checkbox id="ontlakken" />
-                        <label htmlFor="ontlakken" className="text-zinc-900 cursor-pointer">
+                        <Checkbox id="stripping-blasting" />
+                        <label htmlFor="stripping-blasting" className="text-zinc-900 cursor-pointer">
                           Stripping & Blasting
                         </label>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <Checkbox id="reparatie" />
-                        <label htmlFor="reparatie" className="text-zinc-900 cursor-pointer">
+                        <Checkbox id="repair" />
+                        <label htmlFor="repair" className="text-zinc-900 cursor-pointer">
                           Repair
                         </label>
                       </div>
@@ -145,11 +145,11 @@ export default function OffertePage() {
                   <h2 className="text-2xl font-semibold text-zinc-900 mb-4">Wheel Specifications</h2>
 
                   <div>
-                    <Label htmlFor="aantal" className="text-zinc-900">
+                    <Label htmlFor="quantity" className="text-zinc-900">
                       Number of wheels
                     </Label>
                     <Select>
-                      <SelectTrigger id="aantal" className="bg-white border-zinc-300 text-zinc-900">
+                      <SelectTrigger id="quantity" className="bg-white border-zinc-300 text-zinc-900">
                         <SelectValue placeholder="Select number" />
                       </SelectTrigger>
                       <SelectContent>
@@ -163,11 +163,11 @@ export default function OffertePage() {
                   </div>
 
                   <div>
-                    <Label htmlFor="maat" className="text-zinc-900">
+                    <Label htmlFor="size" className="text-zinc-900">
                       Wheel size (in inches)
                     </Label>
                     <Select>
-                      <SelectTrigger id="maat" className="bg-white border-zinc-300 text-zinc-900">
+                      <SelectTrigger id="size" className="bg-white border-zinc-300 text-zinc-900">
                         <SelectValue placeholder="Select size" />
                       </SelectTrigger>
                       <SelectContent>
@@ -185,11 +185,11 @@ export default function OffertePage() {
                   </div>
 
                   <div>
-                    <Label htmlFor="merk" className="text-zinc-900">
+                    <Label htmlFor="brand" className="text-zinc-900">
                       Car/wheel brand and type (optional)
                     </Label>
                     <Input
-                      id="merk"
+                      id="brand"
                       type="text"
                       className="bg-white border-zinc-300 text-zinc-900"
                       placeholder="E.g. BMW 3-series, OZ Racing"

@@ -73,7 +73,7 @@ export default function Home() {
               size="lg"
               className="bg-orange-600 hover:bg-orange-700 text-white text-base sm:text-lg px-6 sm:px-8 shadow-lg shadow-orange-600/30 hover:shadow-orange-600/50 transition-all hover:scale-105 w-full sm:w-auto"
             >
-              <Link href="/offerte">Request a Quote</Link>
+              <Link href="/quote">Request a Quote</Link>
             </Button>
             <Button
               asChild
@@ -81,7 +81,7 @@ export default function Home() {
               variant="outline"
               className="border-zinc-600 text-white hover:bg-zinc-800 text-base sm:text-lg px-6 sm:px-8 bg-transparent hover:border-orange-600 transition-all w-full sm:w-auto"
             >
-              <Link href="/diensten">View Our Services</Link>
+              <Link href="/services">View Our Services</Link>
             </Button>
           </div>
         </div>
@@ -246,7 +246,7 @@ export default function Home() {
               size="lg"
               className="border-zinc-600 text-white hover:bg-zinc-800 bg-transparent hover:border-orange-600 transition-all w-full sm:w-auto"
             >
-              <Link href="/projecten">View all projects</Link>
+              <Link href="/projects">View all projects</Link>
             </Button>
           </div>
         </div>
@@ -274,7 +274,7 @@ export default function Home() {
             size="lg"
             className="bg-orange-600 hover:bg-orange-700 text-white text-lg sm:text-xl px-8 sm:px-12 py-5 sm:py-6 shadow-2xl shadow-orange-600/40 hover:shadow-orange-600/60 transition-all hover:scale-105 w-full sm:w-auto mx-4"
           >
-            <Link href="/offerte">Start Your Quote Today</Link>
+            <Link href="/quote">Start Your Quote Today</Link>
           </Button>
         </div>
       </section>
@@ -295,7 +295,7 @@ export default function Home() {
               <ul className="space-y-2">
                 <li>
                   <Link
-                    href="/diensten"
+                    href="/services"
                     className="text-sm sm:text-base text-zinc-400 hover:text-orange-600 transition-colors"
                   >
                     Services
@@ -303,7 +303,7 @@ export default function Home() {
                 </li>
                 <li>
                   <Link
-                    href="/projecten"
+                    href="/projects"
                     className="text-sm sm:text-base text-zinc-400 hover:text-orange-600 transition-colors"
                   >
                     Projects
@@ -311,7 +311,7 @@ export default function Home() {
                 </li>
                 <li>
                   <Link
-                    href="/over-ons"
+                    href="/about"
                     className="text-sm sm:text-base text-zinc-400 hover:text-orange-600 transition-colors"
                   >
                     About Us
