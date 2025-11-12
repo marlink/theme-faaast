@@ -4,13 +4,43 @@
       <stop offset="0%" style="stop-color:#ff6b35;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#f7931e;stop-opacity:1" />
     </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
   </defs>
+
+  <!-- Background -->
   <rect width="100%" height="100%" fill="url(#grad1)"/>
-  <text x="50%" y="40%" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white" text-anchor="middle">
+
+  <!-- "Before" section -->
+  <rect x="50" y="50" width="300" height="200" fill="rgba(0,0,0,0.3)" rx="10"/>
+  <text x="200" y="100" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">BEFORE</text>
+  <rect x="70" y="120" width="60" height="4" fill="white"/>
+  <rect x="70" y="140" width="80" height="4" fill="white"/>
+  <rect x="70" y="160" width="50" height="4" fill="white"/>
+  <rect x="70" y="180" width="70" height="4" fill="white"/>
+  <rect x="70" y="200" width="40" height="4" fill="white"/>
+
+  <!-- Arrow -->
+  <polygon points="400,175 380,165 380,170 350,170 350,180 380,180 380,185" fill="white"/>
+
+  <!-- "After" section -->
+  <rect x="450" y="50" width="300" height="200" fill="url(#grad2)" rx="10"/>
+  <text x="600" y="100" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">AFTER</text>
+  <circle cx="520" cy="140" r="15" fill="rgba(255,255,255,0.8)"/>
+  <circle cx="560" cy="140" r="12" fill="rgba(255,255,255,0.6)"/>
+  <rect x="470" y="170" width="120" height="6" fill="white" rx="3"/>
+  <rect x="470" y="185" width="80" height="6" fill="white" rx="3"/>
+
+  <!-- Main title -->
+  <text x="50%" y="320" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="white" text-anchor="middle">
     Website Redesign
   </text>
-  <text x="50%" y="60%" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle">
-    Before & After Transformation
+  <text x="50%" y="360" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle">
+    Complete Digital Transformation
   </text>
+
+  <!-- Border -->
   <rect x="10" y="10" width="780" height="580" fill="none" stroke="white" stroke-width="2" rx="10"/>
 </svg>
