@@ -1,38 +1,38 @@
 # Feature Inventory
 
-*Generated on 2025-11-17T22:19:48.907Z*
+*Generated on 2025-11-17T22:42:43.959Z*
 
 ## Components (102)
 
 ### component-LogoSettings
 - **File**: undefined
 - **Exports**: None
-- **Last Modified**: 2025-11-17T22:19:10.164Z
+- **Last Modified**: 2025-11-17T22:20:10.168Z
 
 ### LogoSettings
 - **File**: undefined
 - **Exports**: None
-- **Last Modified**: 2025-11-17T22:19:10.164Z
+- **Last Modified**: 2025-11-17T22:20:10.168Z
 
 ### logo-settings
 - **File**: components/logo-settings.tsx
 - **Exports**: LogoSettings
-- **Last Modified**: 2025-11-17T22:19:10.164Z
+- **Last Modified**: 2025-11-17T22:20:10.168Z
 
 ### component-Logo
 - **File**: undefined
 - **Exports**: None
-- **Last Modified**: 2025-11-17T22:19:10.164Z
+- **Last Modified**: 2025-11-17T22:20:10.146Z
 
 ### Logo
 - **File**: undefined
 - **Exports**: None
-- **Last Modified**: 2025-11-17T22:19:10.164Z
+- **Last Modified**: 2025-11-17T22:20:10.146Z
 
 ### logo
 - **File**: components/logo.tsx
 - **Exports**: Logo
-- **Last Modified**: 2025-11-17T22:19:10.164Z
+- **Last Modified**: 2025-11-17T22:20:10.146Z
 
 ### component-Navigation
 - **File**: undefined
@@ -67,17 +67,17 @@
 ### component-ColorPicker
 - **File**: undefined
 - **Exports**: None
-- **Last Modified**: 2025-11-17T22:19:10.207Z
+- **Last Modified**: 2025-11-17T22:20:10.226Z
 
 ### ColorPicker
 - **File**: undefined
 - **Exports**: None
-- **Last Modified**: 2025-11-17T22:19:10.207Z
+- **Last Modified**: 2025-11-17T22:20:10.226Z
 
 ### color-picker
 - **File**: components/theme-studio/editor/color-picker.tsx
 - **Exports**: ColorPicker
-- **Last Modified**: 2025-11-17T22:19:10.207Z
+- **Last Modified**: 2025-11-17T22:20:10.226Z
 
 ### spacing-controls
 - **File**: components/theme-studio/editor/spacing-controls.tsx
@@ -508,12 +508,12 @@
 ### component-ThemeProvider
 - **File**: undefined
 - **Exports**: None
-- **Last Modified**: 2025-11-17T22:19:10.186Z
+- **Last Modified**: 2025-11-17T22:20:28.934Z
 
 ### ThemeProvider
 - **File**: undefined
 - **Exports**: None
-- **Last Modified**: 2025-11-17T22:19:10.186Z
+- **Last Modified**: 2025-11-17T22:20:28.934Z
 
 ## Pages (14)
 
