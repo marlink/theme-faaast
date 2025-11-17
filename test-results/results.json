@@ -1,0 +1,1792 @@
+{
+  "config": {
+    "configFile": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/playwright.config.ts",
+    "rootDir": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/utils/global-setup.ts",
+    "globalTeardown": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/utils/global-teardown.ts",
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "project": "SmartWheels Landing Page",
+      "version": "1.0.0",
+      "environment": "development",
+      "actualWorkers": 4
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "test-results/junit.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "project": "SmartWheels Landing Page",
+          "version": "1.0.0",
+          "environment": "development",
+          "actualWorkers": 4
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "project": "SmartWheels Landing Page",
+          "version": "1.0.0",
+          "environment": "development",
+          "actualWorkers": 4
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "project": "SmartWheels Landing Page",
+          "version": "1.0.0",
+          "environment": "development",
+          "actualWorkers": 4
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "project": "SmartWheels Landing Page",
+          "version": "1.0.0",
+          "environment": "development",
+          "actualWorkers": 4
+        },
+        "id": "Mobile Chrome",
+        "name": "Mobile Chrome",
+        "testDir": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "project": "SmartWheels Landing Page",
+          "version": "1.0.0",
+          "environment": "development",
+          "actualWorkers": 4
+        },
+        "id": "Mobile Safari",
+        "name": "Mobile Safari",
+        "testDir": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.1",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "user-journeys/authentication-journey.spec.ts",
+      "file": "user-journeys/authentication-journey.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Authentication Journey - US-005, US-006",
+          "file": "user-journeys/authentication-journey.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Complete user registration process",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 43225,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/utils/test-helpers.ts",
+                            "column": 27,
+                            "line": 149
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('input[name=\"email\"]')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[name=\"email\"]')\u001b[22m\n\n\n   at utils/test-helpers.ts:149\n\n  147 |   async expectElementVisible(selector: string, description?: string) {\n  148 |     const element = this.page.locator(selector);\n> 149 |     await expect(element).toBeVisible();\n      |                           ^\n  150 |     if (description) {\n  151 |       console.log(`✅ ${description} is visible`);\n  152 |     }\n    at ValidationHelper.expectElementVisible (/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/utils/test-helpers.ts:149:27)\n    at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:21:22"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "📍 Step 1: Accessing registration page\n"
+                        },
+                        {
+                          "text": "✅ Registration form should be visible is visible\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-12T20:20:58.202Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-b2bbc-e-user-registration-process-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-b2bbc-e-user-registration-process-chromium/error-context.md"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "83c61fe46a1760f2bf9d-f57dcb963c163d2d736a",
+              "file": "user-journeys/authentication-journey.spec.ts",
+              "line": 11,
+              "column": 7
+            },
+            {
+              "title": "User login and logout process",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "timedOut",
+                      "duration": 42801,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/utils/test-helpers.ts",
+                            "column": 27,
+                            "line": 149
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('input[name=\"email\"]')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[name=\"email\"]')\u001b[22m\n\n\n   at utils/test-helpers.ts:149\n\n  147 |   async expectElementVisible(selector: string, description?: string) {\n  148 |     const element = this.page.locator(selector);\n> 149 |     await expect(element).toBeVisible();\n      |                           ^\n  150 |     if (description) {\n  151 |       console.log(`✅ ${description} is visible`);\n  152 |     }\n    at ValidationHelper.expectElementVisible (/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/utils/test-helpers.ts:149:27)\n    at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:107:22"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "📍 Step 1: Accessing login page\n"
+                        },
+                        {
+                          "text": "✅ Login form should be visible is visible\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-12T20:20:58.155Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-2e12b-er-login-and-logout-process-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-2e12b-er-login-and-logout-process-chromium/error-context.md"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "83c61fe46a1760f2bf9d-4ed56170958a8ba6f113",
+              "file": "user-journeys/authentication-journey.spec.ts",
+              "line": 97,
+              "column": 7
+            },
+            {
+              "title": "Protected page access control",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "timedOut",
+                      "duration": 55994,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts",
+                            "column": 16,
+                            "line": 194
+                          },
+                          "message": "Error: page.goto: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/theme-studio\", waiting until \"load\"\u001b[22m\n\n\n  192 |     // Step 2: Try to access theme studio (admin only)\n  193 |     console.log('📍 Step 2: Testing admin-only page access');\n> 194 |     await page.goto('/theme-studio');\n      |                ^\n  195 |     await helpers.wait.waitForNetworkIdle();\n  196 |\n  197 |     // Should redirect to login or show access denied\n    at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:194:16"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "📍 Step 1: Testing access to protected page without authentication\n"
+                        },
+                        {
+                          "text": "📸 Screenshot saved: tests/screenshots/happy-paths/10-protected-page-redirect.png\n"
+                        },
+                        {
+                          "text": "✅ Protected page correctly redirects to login\n"
+                        },
+                        {
+                          "text": "📍 Step 2: Testing admin-only page access\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-12T20:20:57.968Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-1b423-otected-page-access-control-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-1b423-otected-page-access-control-chromium/error-context.md"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "83c61fe46a1760f2bf9d-6e1a60e0f828c83dd9b4",
+              "file": "user-journeys/authentication-journey.spec.ts",
+              "line": 171,
+              "column": 7
+            },
+            {
+              "title": "Password reset flow",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "timedOut",
+                      "duration": 53516,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "📍 Step 1: Accessing password reset\n"
+                        },
+                        {
+                          "text": "ℹ️ Forgot password link not found - functionality may not be implemented\n"
+                        },
+                        {
+                          "text": "📸 Screenshot saved: tests/screenshots/unhappy-paths/12-no-password-reset-link.png\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-12T20:20:58.522Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-e52b7--US-006-Password-reset-flow-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-e52b7--US-006-Password-reset-flow-chromium/error-context.md"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "83c61fe46a1760f2bf9d-5ab2c00fbb7ca72021cf",
+              "file": "user-journeys/authentication-journey.spec.ts",
+              "line": 210,
+              "column": 7
+            },
+            {
+              "title": "Mobile authentication experience",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 44286,
+                      "error": {
+                        "message": "Error: page.tap: The page does not support tap. Use hasTouch context option to enable touch support.",
+                        "stack": "Error: page.tap: The page does not support tap. Use hasTouch context option to enable touch support.\n    at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:263:16",
+                        "location": {
+                          "file": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts",
+                          "column": 16,
+                          "line": 263
+                        },
+                        "snippet": "  261 |\n  262 |     // Test mobile form interaction\n> 263 |     await page.tap('input[name=\"email\"]');\n      |                ^\n  264 |     await page.keyboard.type(TEST_DATA.users.testUser.email);\n  265 |     await page.tap('input[name=\"password\"]');\n  266 |     await page.keyboard.type(TEST_DATA.users.testUser.password);"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts",
+                            "column": 16,
+                            "line": 263
+                          },
+                          "message": "Error: page.tap: The page does not support tap. Use hasTouch context option to enable touch support.\n\n  261 |\n  262 |     // Test mobile form interaction\n> 263 |     await page.tap('input[name=\"email\"]');\n      |                ^\n  264 |     await page.keyboard.type(TEST_DATA.users.testUser.email);\n  265 |     await page.tap('input[name=\"password\"]');\n  266 |     await page.keyboard.type(TEST_DATA.users.testUser.password);\n    at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:263:16"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "📍 Step 1: Testing mobile login experience\n"
+                        },
+                        {
+                          "text": "📸 Screenshot saved: tests/screenshots/happy-paths/14-mobile-login-form.png\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-12T20:22:51.410Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-62d6a-e-authentication-experience-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-62d6a-e-authentication-experience-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts",
+                        "column": 16,
+                        "line": 263
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "83c61fe46a1760f2bf9d-85b331e06b2e57bf19f8",
+              "file": "user-journeys/authentication-journey.spec.ts",
+              "line": 248,
+              "column": 7
+            },
+            {
+              "title": "Complete user registration process",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 3,
+                      "status": "timedOut",
+                      "duration": 39182,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts",
+                            "column": 16,
+                            "line": 16
+                          },
+                          "message": "Error: page.goto: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/auth/signup\", waiting until \"load\"\u001b[22m\n\n\n  14 |     // Step 1: Access registration page\n  15 |     console.log('📍 Step 1: Accessing registration page');\n> 16 |     await page.goto('/auth/signup');\n     |                ^\n  17 |     await helpers.wait.waitForNetworkIdle();\n  18 |\n  19 |     // Verify registration form loads\n    at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:16:16"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "📍 Step 1: Accessing registration page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-12T20:22:51.440Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-b2bbc-e-user-registration-process-firefox/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-b2bbc-e-user-registration-process-firefox/error-context.md"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "83c61fe46a1760f2bf9d-0754d44404905db60e9b",
+              "file": "user-journeys/authentication-journey.spec.ts",
+              "line": 11,
+              "column": 7
+            },
+            {
+              "title": "User login and logout process",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 38550,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts",
+                            "column": 16,
+                            "line": 102
+                          },
+                          "message": "Error: page.goto: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/auth/login\", waiting until \"load\"\u001b[22m\n\n\n  100 |     // Step 1: Access login page\n  101 |     console.log('📍 Step 1: Accessing login page');\n> 102 |     await page.goto('/auth/login');\n      |                ^\n  103 |     await helpers.wait.waitForNetworkIdle();\n  104 |\n  105 |     // Verify login form loads\n    at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:102:16"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "📍 Step 1: Accessing login page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-12T20:22:51.866Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-2e12b-er-login-and-logout-process-firefox/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-2e12b-er-login-and-logout-process-firefox/error-context.md"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "83c61fe46a1760f2bf9d-6ae5c1fdc770d7d56229",
+              "file": "user-journeys/authentication-journey.spec.ts",
+              "line": 97,
+              "column": 7
+            },
+            {
+              "title": "Protected page access control",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 1,
+                      "status": "timedOut",
+                      "duration": 42389,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts",
+                            "column": 16,
+                            "line": 176
+                          },
+                          "message": "Error: page.goto: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/profile\", waiting until \"load\"\u001b[22m\n\n\n  174 |     // Step 1: Try to access protected profile page without authentication\n  175 |     console.log('📍 Step 1: Testing access to protected page without authentication');\n> 176 |     await page.goto('/profile');\n      |                ^\n  177 |     await helpers.wait.waitForNetworkIdle();\n  178 |\n  179 |     // Should redirect to login or show access denied\n    at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:176:16"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "📍 Step 1: Testing access to protected page without authentication\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-12T20:22:51.990Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-1b423-otected-page-access-control-firefox/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-1b423-otected-page-access-control-firefox/error-context.md"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "83c61fe46a1760f2bf9d-acf6243ebe2afacb707d",
+              "file": "user-journeys/authentication-journey.spec.ts",
+              "line": 171,
+              "column": 7
+            },
+            {
+              "title": "Password reset flow",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 35941,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts",
+                            "column": 16,
+                            "line": 215
+                          },
+                          "message": "Error: page.goto: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/auth/login\", waiting until \"load\"\u001b[22m\n\n\n  213 |     // Step 1: Access password reset from login page\n  214 |     console.log('📍 Step 1: Accessing password reset');\n> 215 |     await page.goto('/auth/login');\n      |                ^\n  216 |     await helpers.wait.waitForNetworkIdle();\n  217 |\n  218 |     // Look for \"Forgot Password\" link\n    at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:215:16"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "📍 Step 1: Accessing password reset\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-12T20:24:04.765Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-e52b7--US-006-Password-reset-flow-firefox/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-e52b7--US-006-Password-reset-flow-firefox/video.webm"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "83c61fe46a1760f2bf9d-6c146b9c4d96f2ed95f3",
+              "file": "user-journeys/authentication-journey.spec.ts",
+              "line": 210,
+              "column": 7
+            },
+            {
+              "title": "Mobile authentication experience",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 3,
+                      "status": "timedOut",
+                      "duration": 34241,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts",
+                            "column": 16,
+                            "line": 256
+                          },
+                          "message": "Error: page.goto: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/auth/login\", waiting until \"load\"\u001b[22m\n\n\n  254 |     // Step 1: Test mobile login form\n  255 |     console.log('📍 Step 1: Testing mobile login experience');\n> 256 |     await page.goto('/auth/login');\n      |                ^\n  257 |     await helpers.wait.waitForNetworkIdle();\n  258 |\n  259 |     // Take screenshot of mobile login form\n    at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:256:16"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "📍 Step 1: Testing mobile login experience\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-12T20:24:04.746Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-62d6a-e-authentication-experience-firefox/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-62d6a-e-authentication-experience-firefox/video.webm"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "83c61fe46a1760f2bf9d-ff4f93de039afa3bec2e",
+              "file": "user-journeys/authentication-journey.spec.ts",
+              "line": 248,
+              "column": 7
+            },
+            {
+              "title": "Complete user registration process",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 1,
+                      "status": "timedOut",
+                      "duration": 60019,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts",
+                            "column": 16,
+                            "line": 16
+                          },
+                          "message": "Error: page.goto: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/auth/signup\", waiting until \"load\"\u001b[22m\n\n\n  14 |     // Step 1: Access registration page\n  15 |     console.log('📍 Step 1: Accessing registration page');\n> 16 |     await page.goto('/auth/signup');\n     |                ^\n  17 |     await helpers.wait.waitForNetworkIdle();\n  18 |\n  19 |     // Verify registration form loads\n    at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:16:16"
+                        },
+                        {
+                          "message": "\u001b[31mTearing down \"context\" exceeded the test timeout of 30000ms.\u001b[39m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "📍 Step 1: Accessing registration page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-12T20:24:04.705Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "83c61fe46a1760f2bf9d-348b414b623669a7b1c7",
+              "file": "user-journeys/authentication-journey.spec.ts",
+              "line": 11,
+              "column": 7
+            },
+            {
+              "title": "User login and logout process",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 2,
+                      "status": "timedOut",
+                      "duration": 60025,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts",
+                            "column": 16,
+                            "line": 102
+                          },
+                          "message": "Error: page.goto: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/auth/login\", waiting until \"load\"\u001b[22m\n\n\n  100 |     // Step 1: Access login page\n  101 |     console.log('📍 Step 1: Accessing login page');\n> 102 |     await page.goto('/auth/login');\n      |                ^\n  103 |     await helpers.wait.waitForNetworkIdle();\n  104 |\n  105 |     // Verify login form loads\n    at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:102:16"
+                        },
+                        {
+                          "message": "\u001b[31mTearing down \"context\" exceeded the test timeout of 30000ms.\u001b[39m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "📍 Step 1: Accessing login page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-12T20:24:06.979Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "83c61fe46a1760f2bf9d-da4e477bf4dd132d7282",
+              "file": "user-journeys/authentication-journey.spec.ts",
+              "line": 97,
+              "column": 7
+            },
+            {
+              "title": "Protected page access control",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 12,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 28210,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "📍 Step 1: Testing access to protected page without authentication\n"
+                        },
+                        {
+                          "text": "📸 Screenshot saved: tests/screenshots/happy-paths/10-protected-page-redirect.png\n"
+                        },
+                        {
+                          "text": "✅ Protected page correctly redirects to login\n"
+                        },
+                        {
+                          "text": "📍 Step 2: Testing admin-only page access\n"
+                        },
+                        {
+                          "text": "📸 Screenshot saved: tests/screenshots/happy-paths/11-admin-page-redirect.png\n"
+                        },
+                        {
+                          "text": "✅ Admin page correctly redirects unauthorized users\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-12T20:25:05.561Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "83c61fe46a1760f2bf9d-27be05819c88a24349f1",
+              "file": "user-journeys/authentication-journey.spec.ts",
+              "line": 171,
+              "column": 7
+            },
+            {
+              "title": "Password reset flow",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 13,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 23558,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "📍 Step 1: Accessing password reset\n"
+                        },
+                        {
+                          "text": "ℹ️ Forgot password link not found - functionality may not be implemented\n"
+                        },
+                        {
+                          "text": "📸 Screenshot saved: tests/screenshots/unhappy-paths/12-no-password-reset-link.png\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-12T20:25:05.575Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "83c61fe46a1760f2bf9d-47de3d2421bd93d0effc",
+              "file": "user-journeys/authentication-journey.spec.ts",
+              "line": 210,
+              "column": 7
+            },
+            {
+              "title": "Mobile authentication experience",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 14,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 15247,
+                      "error": {
+                        "message": "Error: page.tap: The page does not support tap. Use hasTouch context option to enable touch support.",
+                        "stack": "Error: page.tap: The page does not support tap. Use hasTouch context option to enable touch support.\n    at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:263:16",
+                        "location": {
+                          "file": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts",
+                          "column": 16,
+                          "line": 263
+                        },
+                        "snippet": "  261 |\n  262 |     // Test mobile form interaction\n> 263 |     await page.tap('input[name=\"email\"]');\n      |                ^\n  264 |     await page.keyboard.type(TEST_DATA.users.testUser.email);\n  265 |     await page.tap('input[name=\"password\"]');\n  266 |     await page.keyboard.type(TEST_DATA.users.testUser.password);"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts",
+                            "column": 16,
+                            "line": 263
+                          },
+                          "message": "Error: page.tap: The page does not support tap. Use hasTouch context option to enable touch support.\n\n  261 |\n  262 |     // Test mobile form interaction\n> 263 |     await page.tap('input[name=\"email\"]');\n      |                ^\n  264 |     await page.keyboard.type(TEST_DATA.users.testUser.email);\n  265 |     await page.tap('input[name=\"password\"]');\n  266 |     await page.keyboard.type(TEST_DATA.users.testUser.password);\n    at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:263:16"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "📍 Step 1: Testing mobile login experience\n"
+                        },
+                        {
+                          "text": "📸 Screenshot saved: tests/screenshots/happy-paths/14-mobile-login-form.png\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-12T20:25:10.891Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-62d6a-e-authentication-experience-webkit/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-62d6a-e-authentication-experience-webkit/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-62d6a-e-authentication-experience-webkit/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts",
+                        "column": 16,
+                        "line": 263
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "83c61fe46a1760f2bf9d-6d61099cd9885a330a9d",
+              "file": "user-journeys/authentication-journey.spec.ts",
+              "line": 248,
+              "column": 7
+            },
+            {
+              "title": "Complete user registration process",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 15,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 22906,
+                      "error": {
+                        "message": "TimeoutError: page.waitForLoadState: Timeout 5000ms exceeded.",
+                        "stack": "TimeoutError: page.waitForLoadState: Timeout 5000ms exceeded.\n    at WaitHelper.waitForNetworkIdle (/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/utils/test-helpers.ts:195:21)\n    at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:17:24",
+                        "location": {
+                          "file": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/utils/test-helpers.ts",
+                          "column": 21,
+                          "line": 195
+                        },
+                        "snippet": "   at utils/test-helpers.ts:195\n\n  193 |\n  194 |   async waitForNetworkIdle(timeout = 5000) {\n> 195 |     await this.page.waitForLoadState('networkidle', { timeout });\n      |                     ^\n  196 |   }\n  197 |\n  198 |   async waitForElement(selector: string, timeout = 5000) {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/utils/test-helpers.ts",
+                            "column": 21,
+                            "line": 195
+                          },
+                          "message": "TimeoutError: page.waitForLoadState: Timeout 5000ms exceeded.\n\n   at utils/test-helpers.ts:195\n\n  193 |\n  194 |   async waitForNetworkIdle(timeout = 5000) {\n> 195 |     await this.page.waitForLoadState('networkidle', { timeout });\n      |                     ^\n  196 |   }\n  197 |\n  198 |   async waitForElement(selector: string, timeout = 5000) {\n    at WaitHelper.waitForNetworkIdle (/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/utils/test-helpers.ts:195:21)\n    at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:17:24"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "📍 Step 1: Accessing registration page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-12T20:25:11.110Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-b2bbc-e-user-registration-process-Mobile-Chrome/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-b2bbc-e-user-registration-process-Mobile-Chrome/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/utils/test-helpers.ts",
+                        "column": 21,
+                        "line": 195
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "83c61fe46a1760f2bf9d-b2536a084e1c7e09bffd",
+              "file": "user-journeys/authentication-journey.spec.ts",
+              "line": 11,
+              "column": 7
+            },
+            {
+              "title": "User login and logout process",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 16,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 20376,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('input[name=\"email\"]')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[name=\"email\"]')\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('input[name=\"email\"]')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[name=\"email\"]')\u001b[22m\n\n    at ValidationHelper.expectElementVisible (/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/utils/test-helpers.ts:149:27)\n    at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:107:22",
+                        "location": {
+                          "file": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/utils/test-helpers.ts",
+                          "column": 27,
+                          "line": 149
+                        },
+                        "snippet": "   at utils/test-helpers.ts:149\n\n  147 |   async expectElementVisible(selector: string, description?: string) {\n  148 |     const element = this.page.locator(selector);\n> 149 |     await expect(element).toBeVisible();\n      |                           ^\n  150 |     if (description) {\n  151 |       console.log(`✅ ${description} is visible`);\n  152 |     }"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/utils/test-helpers.ts",
+                            "column": 27,
+                            "line": 149
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('input[name=\"email\"]')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[name=\"email\"]')\u001b[22m\n\n\n   at utils/test-helpers.ts:149\n\n  147 |   async expectElementVisible(selector: string, description?: string) {\n  148 |     const element = this.page.locator(selector);\n> 149 |     await expect(element).toBeVisible();\n      |                           ^\n  150 |     if (description) {\n  151 |       console.log(`✅ ${description} is visible`);\n  152 |     }\n    at ValidationHelper.expectElementVisible (/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/utils/test-helpers.ts:149:27)\n    at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:107:22"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "📍 Step 1: Accessing login page\n"
+                        },
+                        {
+                          "text": "✅ Login form should be visible is visible\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-12T20:25:35.351Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-2e12b-er-login-and-logout-process-Mobile-Chrome/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-2e12b-er-login-and-logout-process-Mobile-Chrome/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/utils/test-helpers.ts",
+                        "column": 27,
+                        "line": 149
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "83c61fe46a1760f2bf9d-e8aaa9c1c84e7cbb24e9",
+              "file": "user-journeys/authentication-journey.spec.ts",
+              "line": 97,
+              "column": 7
+            },
+            {
+              "title": "Protected page access control",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 17,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 19383,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "📍 Step 1: Testing access to protected page without authentication\n"
+                        },
+                        {
+                          "text": "📸 Screenshot saved: tests/screenshots/happy-paths/10-protected-page-redirect.png\n"
+                        },
+                        {
+                          "text": "✅ Protected page correctly redirects to login\n"
+                        },
+                        {
+                          "text": "📍 Step 2: Testing admin-only page access\n"
+                        },
+                        {
+                          "text": "📸 Screenshot saved: tests/screenshots/happy-paths/11-admin-page-redirect.png\n"
+                        },
+                        {
+                          "text": "✅ Admin page correctly redirects unauthorized users\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-12T20:25:35.552Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "83c61fe46a1760f2bf9d-d3cc729607b1b594fe34",
+              "file": "user-journeys/authentication-journey.spec.ts",
+              "line": 171,
+              "column": 7
+            },
+            {
+              "title": "Password reset flow",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 18,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 14452,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "📍 Step 1: Accessing password reset\n"
+                        },
+                        {
+                          "text": "ℹ️ Forgot password link not found - functionality may not be implemented\n"
+                        },
+                        {
+                          "text": "📸 Screenshot saved: tests/screenshots/unhappy-paths/12-no-password-reset-link.png\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-12T20:25:41.505Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "83c61fe46a1760f2bf9d-359b57fcf5fcd3281b4b",
+              "file": "user-journeys/authentication-journey.spec.ts",
+              "line": 210,
+              "column": 7
+            },
+            {
+              "title": "Mobile authentication experience",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 19,
+                      "parallelIndex": 2,
+                      "status": "timedOut",
+                      "duration": 33050,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts",
+                            "column": 16,
+                            "line": 263
+                          },
+                          "message": "Error: page.tap: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"email\"]')\u001b[22m\n\n\n  261 |\n  262 |     // Test mobile form interaction\n> 263 |     await page.tap('input[name=\"email\"]');\n      |                ^\n  264 |     await page.keyboard.type(TEST_DATA.users.testUser.email);\n  265 |     await page.tap('input[name=\"password\"]');\n  266 |     await page.keyboard.type(TEST_DATA.users.testUser.password);\n    at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:263:16"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "📍 Step 1: Testing mobile login experience\n"
+                        },
+                        {
+                          "text": "📸 Screenshot saved: tests/screenshots/happy-paths/14-mobile-login-form.png\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-12T20:25:48.727Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-62d6a-e-authentication-experience-Mobile-Chrome/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-62d6a-e-authentication-experience-Mobile-Chrome/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-62d6a-e-authentication-experience-Mobile-Chrome/error-context.md"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "83c61fe46a1760f2bf9d-70ff2abf445e539829e5",
+              "file": "user-journeys/authentication-journey.spec.ts",
+              "line": 248,
+              "column": 7
+            },
+            {
+              "title": "Complete user registration process",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [
+                    {
+                      "workerIndex": 20,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 14212,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('input[name=\"email\"]')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[name=\"email\"]')\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('input[name=\"email\"]')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[name=\"email\"]')\u001b[22m\n\n    at ValidationHelper.expectElementVisible (/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/utils/test-helpers.ts:149:27)\n    at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:21:22",
+                        "location": {
+                          "file": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/utils/test-helpers.ts",
+                          "column": 27,
+                          "line": 149
+                        },
+                        "snippet": "   at utils/test-helpers.ts:149\n\n  147 |   async expectElementVisible(selector: string, description?: string) {\n  148 |     const element = this.page.locator(selector);\n> 149 |     await expect(element).toBeVisible();\n      |                           ^\n  150 |     if (description) {\n  151 |       console.log(`✅ ${description} is visible`);\n  152 |     }"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/utils/test-helpers.ts",
+                            "column": 27,
+                            "line": 149
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('input[name=\"email\"]')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[name=\"email\"]')\u001b[22m\n\n\n   at utils/test-helpers.ts:149\n\n  147 |   async expectElementVisible(selector: string, description?: string) {\n  148 |     const element = this.page.locator(selector);\n> 149 |     await expect(element).toBeVisible();\n      |                           ^\n  150 |     if (description) {\n  151 |       console.log(`✅ ${description} is visible`);\n  152 |     }\n    at ValidationHelper.expectElementVisible (/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/utils/test-helpers.ts:149:27)\n    at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:21:22"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "📍 Step 1: Accessing registration page\n"
+                        },
+                        {
+                          "text": "✅ Registration form should be visible is visible\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-12T20:25:59.683Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-b2bbc-e-user-registration-process-Mobile-Safari/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-b2bbc-e-user-registration-process-Mobile-Safari/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-b2bbc-e-user-registration-process-Mobile-Safari/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/utils/test-helpers.ts",
+                        "column": 27,
+                        "line": 149
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "83c61fe46a1760f2bf9d-46a9ec18a4bcc5e3ec05",
+              "file": "user-journeys/authentication-journey.spec.ts",
+              "line": 11,
+              "column": 7
+            },
+            {
+              "title": "User login and logout process",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [
+                    {
+                      "workerIndex": 21,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 14171,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('input[name=\"email\"]')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[name=\"email\"]')\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('input[name=\"email\"]')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[name=\"email\"]')\u001b[22m\n\n    at ValidationHelper.expectElementVisible (/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/utils/test-helpers.ts:149:27)\n    at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:107:22",
+                        "location": {
+                          "file": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/utils/test-helpers.ts",
+                          "column": 27,
+                          "line": 149
+                        },
+                        "snippet": "   at utils/test-helpers.ts:149\n\n  147 |   async expectElementVisible(selector: string, description?: string) {\n  148 |     const element = this.page.locator(selector);\n> 149 |     await expect(element).toBeVisible();\n      |                           ^\n  150 |     if (description) {\n  151 |       console.log(`✅ ${description} is visible`);\n  152 |     }"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/utils/test-helpers.ts",
+                            "column": 27,
+                            "line": 149
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('input[name=\"email\"]')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[name=\"email\"]')\u001b[22m\n\n\n   at utils/test-helpers.ts:149\n\n  147 |   async expectElementVisible(selector: string, description?: string) {\n  148 |     const element = this.page.locator(selector);\n> 149 |     await expect(element).toBeVisible();\n      |                           ^\n  150 |     if (description) {\n  151 |       console.log(`✅ ${description} is visible`);\n  152 |     }\n    at ValidationHelper.expectElementVisible (/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/utils/test-helpers.ts:149:27)\n    at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:107:22"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "📍 Step 1: Accessing login page\n"
+                        },
+                        {
+                          "text": "✅ Login form should be visible is visible\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-12T20:26:00.015Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-2e12b-er-login-and-logout-process-Mobile-Safari/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-2e12b-er-login-and-logout-process-Mobile-Safari/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-2e12b-er-login-and-logout-process-Mobile-Safari/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/utils/test-helpers.ts",
+                        "column": 27,
+                        "line": 149
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "83c61fe46a1760f2bf9d-d1f5830e266b188df985",
+              "file": "user-journeys/authentication-journey.spec.ts",
+              "line": 97,
+              "column": 7
+            },
+            {
+              "title": "Protected page access control",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [
+                    {
+                      "workerIndex": 22,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 10697,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "📍 Step 1: Testing access to protected page without authentication\n"
+                        },
+                        {
+                          "text": "📸 Screenshot saved: tests/screenshots/happy-paths/10-protected-page-redirect.png\n"
+                        },
+                        {
+                          "text": "✅ Protected page correctly redirects to login\n"
+                        },
+                        {
+                          "text": "📍 Step 2: Testing admin-only page access\n"
+                        },
+                        {
+                          "text": "📸 Screenshot saved: tests/screenshots/happy-paths/11-admin-page-redirect.png\n"
+                        },
+                        {
+                          "text": "✅ Admin page correctly redirects unauthorized users\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-12T20:26:02.828Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "83c61fe46a1760f2bf9d-b7e202fd435b8c2e6f3a",
+              "file": "user-journeys/authentication-journey.spec.ts",
+              "line": 171,
+              "column": 7
+            },
+            {
+              "title": "Password reset flow",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [
+                    {
+                      "workerIndex": 22,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 16720,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "📍 Step 1: Accessing password reset\n"
+                        },
+                        {
+                          "text": "ℹ️ Forgot password link not found - functionality may not be implemented\n"
+                        },
+                        {
+                          "text": "📸 Screenshot saved: tests/screenshots/unhappy-paths/12-no-password-reset-link.png\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-12T20:26:18.974Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "83c61fe46a1760f2bf9d-3d4dd98c423134ec68a1",
+              "file": "user-journeys/authentication-journey.spec.ts",
+              "line": 210,
+              "column": 7
+            },
+            {
+              "title": "Mobile authentication experience",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [
+                    {
+                      "workerIndex": 23,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 30211,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts",
+                            "column": 16,
+                            "line": 263
+                          },
+                          "message": "Error: page.tap: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"email\"]')\u001b[22m\n\n\n  261 |\n  262 |     // Test mobile form interaction\n> 263 |     await page.tap('input[name=\"email\"]');\n      |                ^\n  264 |     await page.keyboard.type(TEST_DATA.users.testUser.email);\n  265 |     await page.tap('input[name=\"password\"]');\n  266 |     await page.keyboard.type(TEST_DATA.users.testUser.password);\n    at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:263:16"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "📍 Step 1: Testing mobile login experience\n"
+                        },
+                        {
+                          "text": "📸 Screenshot saved: tests/screenshots/happy-paths/14-mobile-login-form.png\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-12T20:26:27.621Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-62d6a-e-authentication-experience-Mobile-Safari/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-62d6a-e-authentication-experience-Mobile-Safari/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/ciepolml/Projects/simple-3/smartwheels-landing/test-results/user-journeys-authenticati-62d6a-e-authentication-experience-Mobile-Safari/error-context.md"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "83c61fe46a1760f2bf9d-3976faeb200b9724d085",
+              "file": "user-journeys/authentication-journey.spec.ts",
+              "line": 248,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-11-12T20:20:50.069Z",
+    "duration": 369020.818,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 19,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,803 @@
+<testsuites id="" name="" tests="25" failures="19" skipped="0" errors="0" time="369.020818">
+<testsuite name="user-journeys/authentication-journey.spec.ts" timestamp="2025-11-12T20:20:54.810Z" hostname="chromium" tests="5" failures="5" skipped="0" time="239.822" errors="0">
+<testcase name="Authentication Journey - US-005, US-006 › Complete user registration process" classname="user-journeys/authentication-journey.spec.ts" time="43.225">
+<failure message="authentication-journey.spec.ts:11:7 Complete user registration process" type="FAILURE">
+<![CDATA[  [chromium] › user-journeys/authentication-journey.spec.ts:11:7 › Authentication Journey - US-005, US-006 › Complete user registration process 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('input[name="email"]')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('input[name="email"]')
+
+
+       at utils/test-helpers.ts:149
+
+      147 |   async expectElementVisible(selector: string, description?: string) {
+      148 |     const element = this.page.locator(selector);
+    > 149 |     await expect(element).toBeVisible();
+          |                           ^
+      150 |     if (description) {
+      151 |       console.log(`✅ ${description} is visible`);
+      152 |     }
+        at ValidationHelper.expectElementVisible (/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/utils/test-helpers.ts:149:27)
+        at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:21:22
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/user-journeys-authenticati-b2bbc-e-user-registration-process-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../test-results/user-journeys-authenticati-b2bbc-e-user-registration-process-chromium/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[📍 Step 1: Accessing registration page
+✅ Registration form should be visible is visible
+
+[[ATTACHMENT|user-journeys-authenticati-b2bbc-e-user-registration-process-chromium/video.webm]]
+
+[[ATTACHMENT|user-journeys-authenticati-b2bbc-e-user-registration-process-chromium/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Authentication Journey - US-005, US-006 › User login and logout process" classname="user-journeys/authentication-journey.spec.ts" time="42.801">
+<failure message="authentication-journey.spec.ts:97:7 User login and logout process" type="FAILURE">
+<![CDATA[  [chromium] › user-journeys/authentication-journey.spec.ts:97:7 › Authentication Journey - US-005, US-006 › User login and logout process 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('input[name="email"]')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('input[name="email"]')
+
+
+       at utils/test-helpers.ts:149
+
+      147 |   async expectElementVisible(selector: string, description?: string) {
+      148 |     const element = this.page.locator(selector);
+    > 149 |     await expect(element).toBeVisible();
+          |                           ^
+      150 |     if (description) {
+      151 |       console.log(`✅ ${description} is visible`);
+      152 |     }
+        at ValidationHelper.expectElementVisible (/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/utils/test-helpers.ts:149:27)
+        at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:107:22
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/user-journeys-authenticati-2e12b-er-login-and-logout-process-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../test-results/user-journeys-authenticati-2e12b-er-login-and-logout-process-chromium/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[📍 Step 1: Accessing login page
+✅ Login form should be visible is visible
+
+[[ATTACHMENT|user-journeys-authenticati-2e12b-er-login-and-logout-process-chromium/video.webm]]
+
+[[ATTACHMENT|user-journeys-authenticati-2e12b-er-login-and-logout-process-chromium/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Authentication Journey - US-005, US-006 › Protected page access control" classname="user-journeys/authentication-journey.spec.ts" time="55.994">
+<failure message="authentication-journey.spec.ts:171:7 Protected page access control" type="FAILURE">
+<![CDATA[  [chromium] › user-journeys/authentication-journey.spec.ts:171:7 › Authentication Journey - US-005, US-006 › Protected page access control 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.goto: net::ERR_ABORTED; maybe frame was detached?
+    Call log:
+      - navigating to "http://localhost:3000/theme-studio", waiting until "load"
+
+
+      192 |     // Step 2: Try to access theme studio (admin only)
+      193 |     console.log('📍 Step 2: Testing admin-only page access');
+    > 194 |     await page.goto('/theme-studio');
+          |                ^
+      195 |     await helpers.wait.waitForNetworkIdle();
+      196 |
+      197 |     // Should redirect to login or show access denied
+        at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:194:16
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/user-journeys-authenticati-1b423-otected-page-access-control-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../test-results/user-journeys-authenticati-1b423-otected-page-access-control-chromium/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[📍 Step 1: Testing access to protected page without authentication
+📸 Screenshot saved: tests/screenshots/happy-paths/10-protected-page-redirect.png
+✅ Protected page correctly redirects to login
+📍 Step 2: Testing admin-only page access
+
+[[ATTACHMENT|user-journeys-authenticati-1b423-otected-page-access-control-chromium/video.webm]]
+
+[[ATTACHMENT|user-journeys-authenticati-1b423-otected-page-access-control-chromium/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Authentication Journey - US-005, US-006 › Password reset flow" classname="user-journeys/authentication-journey.spec.ts" time="53.516">
+<failure message="authentication-journey.spec.ts:210:7 Password reset flow" type="FAILURE">
+<![CDATA[  [chromium] › user-journeys/authentication-journey.spec.ts:210:7 › Authentication Journey - US-005, US-006 › Password reset flow 
+
+    Test timeout of 30000ms exceeded.
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/user-journeys-authenticati-e52b7--US-006-Password-reset-flow-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../test-results/user-journeys-authenticati-e52b7--US-006-Password-reset-flow-chromium/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[📍 Step 1: Accessing password reset
+ℹ️ Forgot password link not found - functionality may not be implemented
+📸 Screenshot saved: tests/screenshots/unhappy-paths/12-no-password-reset-link.png
+
+[[ATTACHMENT|user-journeys-authenticati-e52b7--US-006-Password-reset-flow-chromium/video.webm]]
+
+[[ATTACHMENT|user-journeys-authenticati-e52b7--US-006-Password-reset-flow-chromium/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Authentication Journey - US-005, US-006 › Mobile authentication experience" classname="user-journeys/authentication-journey.spec.ts" time="44.286">
+<failure message="authentication-journey.spec.ts:248:7 Mobile authentication experience" type="FAILURE">
+<![CDATA[  [chromium] › user-journeys/authentication-journey.spec.ts:248:7 › Authentication Journey - US-005, US-006 › Mobile authentication experience 
+
+    Error: page.tap: The page does not support tap. Use hasTouch context option to enable touch support.
+
+      261 |
+      262 |     // Test mobile form interaction
+    > 263 |     await page.tap('input[name="email"]');
+          |                ^
+      264 |     await page.keyboard.type(TEST_DATA.users.testUser.email);
+      265 |     await page.tap('input[name="password"]');
+      266 |     await page.keyboard.type(TEST_DATA.users.testUser.password);
+        at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:263:16
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/user-journeys-authenticati-62d6a-e-authentication-experience-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../test-results/user-journeys-authenticati-62d6a-e-authentication-experience-chromium/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[📍 Step 1: Testing mobile login experience
+📸 Screenshot saved: tests/screenshots/happy-paths/14-mobile-login-form.png
+
+[[ATTACHMENT|user-journeys-authenticati-62d6a-e-authentication-experience-chromium/video.webm]]
+
+[[ATTACHMENT|user-journeys-authenticati-62d6a-e-authentication-experience-chromium/error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="user-journeys/authentication-journey.spec.ts" timestamp="2025-11-12T20:20:54.810Z" hostname="firefox" tests="5" failures="5" skipped="0" time="190.303" errors="0">
+<testcase name="Authentication Journey - US-005, US-006 › Complete user registration process" classname="user-journeys/authentication-journey.spec.ts" time="39.182">
+<failure message="authentication-journey.spec.ts:11:7 Complete user registration process" type="FAILURE">
+<![CDATA[  [firefox] › user-journeys/authentication-journey.spec.ts:11:7 › Authentication Journey - US-005, US-006 › Complete user registration process 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+      - navigating to "http://localhost:3000/auth/signup", waiting until "load"
+
+
+      14 |     // Step 1: Access registration page
+      15 |     console.log('📍 Step 1: Accessing registration page');
+    > 16 |     await page.goto('/auth/signup');
+         |                ^
+      17 |     await helpers.wait.waitForNetworkIdle();
+      18 |
+      19 |     // Verify registration form loads
+        at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:16:16
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/user-journeys-authenticati-b2bbc-e-user-registration-process-firefox/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../test-results/user-journeys-authenticati-b2bbc-e-user-registration-process-firefox/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[📍 Step 1: Accessing registration page
+
+[[ATTACHMENT|user-journeys-authenticati-b2bbc-e-user-registration-process-firefox/video.webm]]
+
+[[ATTACHMENT|user-journeys-authenticati-b2bbc-e-user-registration-process-firefox/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Authentication Journey - US-005, US-006 › User login and logout process" classname="user-journeys/authentication-journey.spec.ts" time="38.55">
+<failure message="authentication-journey.spec.ts:97:7 User login and logout process" type="FAILURE">
+<![CDATA[  [firefox] › user-journeys/authentication-journey.spec.ts:97:7 › Authentication Journey - US-005, US-006 › User login and logout process 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+      - navigating to "http://localhost:3000/auth/login", waiting until "load"
+
+
+      100 |     // Step 1: Access login page
+      101 |     console.log('📍 Step 1: Accessing login page');
+    > 102 |     await page.goto('/auth/login');
+          |                ^
+      103 |     await helpers.wait.waitForNetworkIdle();
+      104 |
+      105 |     // Verify login form loads
+        at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:102:16
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/user-journeys-authenticati-2e12b-er-login-and-logout-process-firefox/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../test-results/user-journeys-authenticati-2e12b-er-login-and-logout-process-firefox/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[📍 Step 1: Accessing login page
+
+[[ATTACHMENT|user-journeys-authenticati-2e12b-er-login-and-logout-process-firefox/video.webm]]
+
+[[ATTACHMENT|user-journeys-authenticati-2e12b-er-login-and-logout-process-firefox/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Authentication Journey - US-005, US-006 › Protected page access control" classname="user-journeys/authentication-journey.spec.ts" time="42.389">
+<failure message="authentication-journey.spec.ts:171:7 Protected page access control" type="FAILURE">
+<![CDATA[  [firefox] › user-journeys/authentication-journey.spec.ts:171:7 › Authentication Journey - US-005, US-006 › Protected page access control 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+      - navigating to "http://localhost:3000/profile", waiting until "load"
+
+
+      174 |     // Step 1: Try to access protected profile page without authentication
+      175 |     console.log('📍 Step 1: Testing access to protected page without authentication');
+    > 176 |     await page.goto('/profile');
+          |                ^
+      177 |     await helpers.wait.waitForNetworkIdle();
+      178 |
+      179 |     // Should redirect to login or show access denied
+        at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:176:16
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/user-journeys-authenticati-1b423-otected-page-access-control-firefox/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../test-results/user-journeys-authenticati-1b423-otected-page-access-control-firefox/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[📍 Step 1: Testing access to protected page without authentication
+
+[[ATTACHMENT|user-journeys-authenticati-1b423-otected-page-access-control-firefox/video.webm]]
+
+[[ATTACHMENT|user-journeys-authenticati-1b423-otected-page-access-control-firefox/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Authentication Journey - US-005, US-006 › Password reset flow" classname="user-journeys/authentication-journey.spec.ts" time="35.941">
+<failure message="authentication-journey.spec.ts:210:7 Password reset flow" type="FAILURE">
+<![CDATA[  [firefox] › user-journeys/authentication-journey.spec.ts:210:7 › Authentication Journey - US-005, US-006 › Password reset flow 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+      - navigating to "http://localhost:3000/auth/login", waiting until "load"
+
+
+      213 |     // Step 1: Access password reset from login page
+      214 |     console.log('📍 Step 1: Accessing password reset');
+    > 215 |     await page.goto('/auth/login');
+          |                ^
+      216 |     await helpers.wait.waitForNetworkIdle();
+      217 |
+      218 |     // Look for "Forgot Password" link
+        at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:215:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/user-journeys-authenticati-e52b7--US-006-Password-reset-flow-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/user-journeys-authenticati-e52b7--US-006-Password-reset-flow-firefox/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[📍 Step 1: Accessing password reset
+
+[[ATTACHMENT|user-journeys-authenticati-e52b7--US-006-Password-reset-flow-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|user-journeys-authenticati-e52b7--US-006-Password-reset-flow-firefox/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Authentication Journey - US-005, US-006 › Mobile authentication experience" classname="user-journeys/authentication-journey.spec.ts" time="34.241">
+<failure message="authentication-journey.spec.ts:248:7 Mobile authentication experience" type="FAILURE">
+<![CDATA[  [firefox] › user-journeys/authentication-journey.spec.ts:248:7 › Authentication Journey - US-005, US-006 › Mobile authentication experience 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+      - navigating to "http://localhost:3000/auth/login", waiting until "load"
+
+
+      254 |     // Step 1: Test mobile login form
+      255 |     console.log('📍 Step 1: Testing mobile login experience');
+    > 256 |     await page.goto('/auth/login');
+          |                ^
+      257 |     await helpers.wait.waitForNetworkIdle();
+      258 |
+      259 |     // Take screenshot of mobile login form
+        at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:256:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/user-journeys-authenticati-62d6a-e-authentication-experience-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/user-journeys-authenticati-62d6a-e-authentication-experience-firefox/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[📍 Step 1: Testing mobile login experience
+
+[[ATTACHMENT|user-journeys-authenticati-62d6a-e-authentication-experience-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|user-journeys-authenticati-62d6a-e-authentication-experience-firefox/video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="user-journeys/authentication-journey.spec.ts" timestamp="2025-11-12T20:20:54.810Z" hostname="webkit" tests="5" failures="3" skipped="0" time="187.059" errors="0">
+<testcase name="Authentication Journey - US-005, US-006 › Complete user registration process" classname="user-journeys/authentication-journey.spec.ts" time="60.019">
+<failure message="authentication-journey.spec.ts:11:7 Complete user registration process" type="FAILURE">
+<![CDATA[  [webkit] › user-journeys/authentication-journey.spec.ts:11:7 › Authentication Journey - US-005, US-006 › Complete user registration process 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+      - navigating to "http://localhost:3000/auth/signup", waiting until "load"
+
+
+      14 |     // Step 1: Access registration page
+      15 |     console.log('📍 Step 1: Accessing registration page');
+    > 16 |     await page.goto('/auth/signup');
+         |                ^
+      17 |     await helpers.wait.waitForNetworkIdle();
+      18 |
+      19 |     // Verify registration form loads
+        at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:16:16
+
+    Tearing down "context" exceeded the test timeout of 30000ms.
+]]>
+</failure>
+<system-out>
+<![CDATA[📍 Step 1: Accessing registration page
+]]>
+</system-out>
+</testcase>
+<testcase name="Authentication Journey - US-005, US-006 › User login and logout process" classname="user-journeys/authentication-journey.spec.ts" time="60.025">
+<failure message="authentication-journey.spec.ts:97:7 User login and logout process" type="FAILURE">
+<![CDATA[  [webkit] › user-journeys/authentication-journey.spec.ts:97:7 › Authentication Journey - US-005, US-006 › User login and logout process 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+      - navigating to "http://localhost:3000/auth/login", waiting until "load"
+
+
+      100 |     // Step 1: Access login page
+      101 |     console.log('📍 Step 1: Accessing login page');
+    > 102 |     await page.goto('/auth/login');
+          |                ^
+      103 |     await helpers.wait.waitForNetworkIdle();
+      104 |
+      105 |     // Verify login form loads
+        at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:102:16
+
+    Tearing down "context" exceeded the test timeout of 30000ms.
+]]>
+</failure>
+<system-out>
+<![CDATA[📍 Step 1: Accessing login page
+]]>
+</system-out>
+</testcase>
+<testcase name="Authentication Journey - US-005, US-006 › Protected page access control" classname="user-journeys/authentication-journey.spec.ts" time="28.21">
+<system-out>
+<![CDATA[📍 Step 1: Testing access to protected page without authentication
+📸 Screenshot saved: tests/screenshots/happy-paths/10-protected-page-redirect.png
+✅ Protected page correctly redirects to login
+📍 Step 2: Testing admin-only page access
+📸 Screenshot saved: tests/screenshots/happy-paths/11-admin-page-redirect.png
+✅ Admin page correctly redirects unauthorized users
+]]>
+</system-out>
+</testcase>
+<testcase name="Authentication Journey - US-005, US-006 › Password reset flow" classname="user-journeys/authentication-journey.spec.ts" time="23.558">
+<system-out>
+<![CDATA[📍 Step 1: Accessing password reset
+ℹ️ Forgot password link not found - functionality may not be implemented
+📸 Screenshot saved: tests/screenshots/unhappy-paths/12-no-password-reset-link.png
+]]>
+</system-out>
+</testcase>
+<testcase name="Authentication Journey - US-005, US-006 › Mobile authentication experience" classname="user-journeys/authentication-journey.spec.ts" time="15.247">
+<failure message="authentication-journey.spec.ts:248:7 Mobile authentication experience" type="FAILURE">
+<![CDATA[  [webkit] › user-journeys/authentication-journey.spec.ts:248:7 › Authentication Journey - US-005, US-006 › Mobile authentication experience 
+
+    Error: page.tap: The page does not support tap. Use hasTouch context option to enable touch support.
+
+      261 |
+      262 |     // Test mobile form interaction
+    > 263 |     await page.tap('input[name="email"]');
+          |                ^
+      264 |     await page.keyboard.type(TEST_DATA.users.testUser.email);
+      265 |     await page.tap('input[name="password"]');
+      266 |     await page.keyboard.type(TEST_DATA.users.testUser.password);
+        at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:263:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/user-journeys-authenticati-62d6a-e-authentication-experience-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/user-journeys-authenticati-62d6a-e-authentication-experience-webkit/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../test-results/user-journeys-authenticati-62d6a-e-authentication-experience-webkit/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[📍 Step 1: Testing mobile login experience
+📸 Screenshot saved: tests/screenshots/happy-paths/14-mobile-login-form.png
+
+[[ATTACHMENT|user-journeys-authenticati-62d6a-e-authentication-experience-webkit/test-failed-1.png]]
+
+[[ATTACHMENT|user-journeys-authenticati-62d6a-e-authentication-experience-webkit/video.webm]]
+
+[[ATTACHMENT|user-journeys-authenticati-62d6a-e-authentication-experience-webkit/error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="user-journeys/authentication-journey.spec.ts" timestamp="2025-11-12T20:20:54.810Z" hostname="Mobile Chrome" tests="5" failures="3" skipped="0" time="110.167" errors="0">
+<testcase name="Authentication Journey - US-005, US-006 › Complete user registration process" classname="user-journeys/authentication-journey.spec.ts" time="22.906">
+<failure message="authentication-journey.spec.ts:11:7 Complete user registration process" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › user-journeys/authentication-journey.spec.ts:11:7 › Authentication Journey - US-005, US-006 › Complete user registration process 
+
+    TimeoutError: page.waitForLoadState: Timeout 5000ms exceeded.
+
+       at utils/test-helpers.ts:195
+
+      193 |
+      194 |   async waitForNetworkIdle(timeout = 5000) {
+    > 195 |     await this.page.waitForLoadState('networkidle', { timeout });
+          |                     ^
+      196 |   }
+      197 |
+      198 |   async waitForElement(selector: string, timeout = 5000) {
+        at WaitHelper.waitForNetworkIdle (/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/utils/test-helpers.ts:195:21)
+        at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:17:24
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/user-journeys-authenticati-b2bbc-e-user-registration-process-Mobile-Chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../test-results/user-journeys-authenticati-b2bbc-e-user-registration-process-Mobile-Chrome/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[📍 Step 1: Accessing registration page
+
+[[ATTACHMENT|user-journeys-authenticati-b2bbc-e-user-registration-process-Mobile-Chrome/video.webm]]
+
+[[ATTACHMENT|user-journeys-authenticati-b2bbc-e-user-registration-process-Mobile-Chrome/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Authentication Journey - US-005, US-006 › User login and logout process" classname="user-journeys/authentication-journey.spec.ts" time="20.376">
+<failure message="authentication-journey.spec.ts:97:7 User login and logout process" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › user-journeys/authentication-journey.spec.ts:97:7 › Authentication Journey - US-005, US-006 › User login and logout process 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('input[name="email"]')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('input[name="email"]')
+
+
+       at utils/test-helpers.ts:149
+
+      147 |   async expectElementVisible(selector: string, description?: string) {
+      148 |     const element = this.page.locator(selector);
+    > 149 |     await expect(element).toBeVisible();
+          |                           ^
+      150 |     if (description) {
+      151 |       console.log(`✅ ${description} is visible`);
+      152 |     }
+        at ValidationHelper.expectElementVisible (/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/utils/test-helpers.ts:149:27)
+        at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:107:22
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/user-journeys-authenticati-2e12b-er-login-and-logout-process-Mobile-Chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../test-results/user-journeys-authenticati-2e12b-er-login-and-logout-process-Mobile-Chrome/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[📍 Step 1: Accessing login page
+✅ Login form should be visible is visible
+
+[[ATTACHMENT|user-journeys-authenticati-2e12b-er-login-and-logout-process-Mobile-Chrome/video.webm]]
+
+[[ATTACHMENT|user-journeys-authenticati-2e12b-er-login-and-logout-process-Mobile-Chrome/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Authentication Journey - US-005, US-006 › Protected page access control" classname="user-journeys/authentication-journey.spec.ts" time="19.383">
+<system-out>
+<![CDATA[📍 Step 1: Testing access to protected page without authentication
+📸 Screenshot saved: tests/screenshots/happy-paths/10-protected-page-redirect.png
+✅ Protected page correctly redirects to login
+📍 Step 2: Testing admin-only page access
+📸 Screenshot saved: tests/screenshots/happy-paths/11-admin-page-redirect.png
+✅ Admin page correctly redirects unauthorized users
+]]>
+</system-out>
+</testcase>
+<testcase name="Authentication Journey - US-005, US-006 › Password reset flow" classname="user-journeys/authentication-journey.spec.ts" time="14.452">
+<system-out>
+<![CDATA[📍 Step 1: Accessing password reset
+ℹ️ Forgot password link not found - functionality may not be implemented
+📸 Screenshot saved: tests/screenshots/unhappy-paths/12-no-password-reset-link.png
+]]>
+</system-out>
+</testcase>
+<testcase name="Authentication Journey - US-005, US-006 › Mobile authentication experience" classname="user-journeys/authentication-journey.spec.ts" time="33.05">
+<failure message="authentication-journey.spec.ts:248:7 Mobile authentication experience" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › user-journeys/authentication-journey.spec.ts:248:7 › Authentication Journey - US-005, US-006 › Mobile authentication experience 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.tap: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[name="email"]')
+
+
+      261 |
+      262 |     // Test mobile form interaction
+    > 263 |     await page.tap('input[name="email"]');
+          |                ^
+      264 |     await page.keyboard.type(TEST_DATA.users.testUser.email);
+      265 |     await page.tap('input[name="password"]');
+      266 |     await page.keyboard.type(TEST_DATA.users.testUser.password);
+        at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:263:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/user-journeys-authenticati-62d6a-e-authentication-experience-Mobile-Chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/user-journeys-authenticati-62d6a-e-authentication-experience-Mobile-Chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../test-results/user-journeys-authenticati-62d6a-e-authentication-experience-Mobile-Chrome/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[📍 Step 1: Testing mobile login experience
+📸 Screenshot saved: tests/screenshots/happy-paths/14-mobile-login-form.png
+
+[[ATTACHMENT|user-journeys-authenticati-62d6a-e-authentication-experience-Mobile-Chrome/test-failed-1.png]]
+
+[[ATTACHMENT|user-journeys-authenticati-62d6a-e-authentication-experience-Mobile-Chrome/video.webm]]
+
+[[ATTACHMENT|user-journeys-authenticati-62d6a-e-authentication-experience-Mobile-Chrome/error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="user-journeys/authentication-journey.spec.ts" timestamp="2025-11-12T20:20:54.810Z" hostname="Mobile Safari" tests="5" failures="3" skipped="0" time="86.011" errors="0">
+<testcase name="Authentication Journey - US-005, US-006 › Complete user registration process" classname="user-journeys/authentication-journey.spec.ts" time="14.212">
+<failure message="authentication-journey.spec.ts:11:7 Complete user registration process" type="FAILURE">
+<![CDATA[  [Mobile Safari] › user-journeys/authentication-journey.spec.ts:11:7 › Authentication Journey - US-005, US-006 › Complete user registration process 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('input[name="email"]')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('input[name="email"]')
+
+
+       at utils/test-helpers.ts:149
+
+      147 |   async expectElementVisible(selector: string, description?: string) {
+      148 |     const element = this.page.locator(selector);
+    > 149 |     await expect(element).toBeVisible();
+          |                           ^
+      150 |     if (description) {
+      151 |       console.log(`✅ ${description} is visible`);
+      152 |     }
+        at ValidationHelper.expectElementVisible (/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/utils/test-helpers.ts:149:27)
+        at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:21:22
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/user-journeys-authenticati-b2bbc-e-user-registration-process-Mobile-Safari/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/user-journeys-authenticati-b2bbc-e-user-registration-process-Mobile-Safari/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../test-results/user-journeys-authenticati-b2bbc-e-user-registration-process-Mobile-Safari/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[📍 Step 1: Accessing registration page
+✅ Registration form should be visible is visible
+
+[[ATTACHMENT|user-journeys-authenticati-b2bbc-e-user-registration-process-Mobile-Safari/test-failed-1.png]]
+
+[[ATTACHMENT|user-journeys-authenticati-b2bbc-e-user-registration-process-Mobile-Safari/video.webm]]
+
+[[ATTACHMENT|user-journeys-authenticati-b2bbc-e-user-registration-process-Mobile-Safari/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Authentication Journey - US-005, US-006 › User login and logout process" classname="user-journeys/authentication-journey.spec.ts" time="14.171">
+<failure message="authentication-journey.spec.ts:97:7 User login and logout process" type="FAILURE">
+<![CDATA[  [Mobile Safari] › user-journeys/authentication-journey.spec.ts:97:7 › Authentication Journey - US-005, US-006 › User login and logout process 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('input[name="email"]')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('input[name="email"]')
+
+
+       at utils/test-helpers.ts:149
+
+      147 |   async expectElementVisible(selector: string, description?: string) {
+      148 |     const element = this.page.locator(selector);
+    > 149 |     await expect(element).toBeVisible();
+          |                           ^
+      150 |     if (description) {
+      151 |       console.log(`✅ ${description} is visible`);
+      152 |     }
+        at ValidationHelper.expectElementVisible (/Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/utils/test-helpers.ts:149:27)
+        at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:107:22
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/user-journeys-authenticati-2e12b-er-login-and-logout-process-Mobile-Safari/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/user-journeys-authenticati-2e12b-er-login-and-logout-process-Mobile-Safari/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../test-results/user-journeys-authenticati-2e12b-er-login-and-logout-process-Mobile-Safari/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[📍 Step 1: Accessing login page
+✅ Login form should be visible is visible
+
+[[ATTACHMENT|user-journeys-authenticati-2e12b-er-login-and-logout-process-Mobile-Safari/test-failed-1.png]]
+
+[[ATTACHMENT|user-journeys-authenticati-2e12b-er-login-and-logout-process-Mobile-Safari/video.webm]]
+
+[[ATTACHMENT|user-journeys-authenticati-2e12b-er-login-and-logout-process-Mobile-Safari/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Authentication Journey - US-005, US-006 › Protected page access control" classname="user-journeys/authentication-journey.spec.ts" time="10.697">
+<system-out>
+<![CDATA[📍 Step 1: Testing access to protected page without authentication
+📸 Screenshot saved: tests/screenshots/happy-paths/10-protected-page-redirect.png
+✅ Protected page correctly redirects to login
+📍 Step 2: Testing admin-only page access
+📸 Screenshot saved: tests/screenshots/happy-paths/11-admin-page-redirect.png
+✅ Admin page correctly redirects unauthorized users
+]]>
+</system-out>
+</testcase>
+<testcase name="Authentication Journey - US-005, US-006 › Password reset flow" classname="user-journeys/authentication-journey.spec.ts" time="16.72">
+<system-out>
+<![CDATA[📍 Step 1: Accessing password reset
+ℹ️ Forgot password link not found - functionality may not be implemented
+📸 Screenshot saved: tests/screenshots/unhappy-paths/12-no-password-reset-link.png
+]]>
+</system-out>
+</testcase>
+<testcase name="Authentication Journey - US-005, US-006 › Mobile authentication experience" classname="user-journeys/authentication-journey.spec.ts" time="30.211">
+<failure message="authentication-journey.spec.ts:248:7 Mobile authentication experience" type="FAILURE">
+<![CDATA[  [Mobile Safari] › user-journeys/authentication-journey.spec.ts:248:7 › Authentication Journey - US-005, US-006 › Mobile authentication experience 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.tap: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[name="email"]')
+
+
+      261 |
+      262 |     // Test mobile form interaction
+    > 263 |     await page.tap('input[name="email"]');
+          |                ^
+      264 |     await page.keyboard.type(TEST_DATA.users.testUser.email);
+      265 |     await page.tap('input[name="password"]');
+      266 |     await page.keyboard.type(TEST_DATA.users.testUser.password);
+        at /Users/ciepolml/Projects/simple-3/smartwheels-landing/tests/user-journeys/authentication-journey.spec.ts:263:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/user-journeys-authenticati-62d6a-e-authentication-experience-Mobile-Safari/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/user-journeys-authenticati-62d6a-e-authentication-experience-Mobile-Safari/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../test-results/user-journeys-authenticati-62d6a-e-authentication-experience-Mobile-Safari/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[📍 Step 1: Testing mobile login experience
+📸 Screenshot saved: tests/screenshots/happy-paths/14-mobile-login-form.png
+
+[[ATTACHMENT|user-journeys-authenticati-62d6a-e-authentication-experience-Mobile-Safari/test-failed-1.png]]
+
+[[ATTACHMENT|user-journeys-authenticati-62d6a-e-authentication-experience-Mobile-Safari/video.webm]]
+
+[[ATTACHMENT|user-journeys-authenticati-62d6a-e-authentication-experience-Mobile-Safari/error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

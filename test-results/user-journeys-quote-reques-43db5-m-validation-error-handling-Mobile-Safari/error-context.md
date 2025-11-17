@@ -1,0 +1,115 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e5]:
+        - link "ThemeFaaast" [ref=e6]:
+          - /url: /
+          - generic [ref=e7]: ThemeFaaast
+        - button "Toggle menu" [ref=e9]:
+          - img [ref=e10]
+      - generic [ref=e12]:
+        - link "Home" [ref=e13]:
+          - /url: /pages/home
+        - link "Services" [ref=e14]:
+          - /url: /services
+        - link "Projects" [ref=e15]:
+          - /url: /projects
+        - link "About Us" [ref=e16]:
+          - /url: /about
+        - link "Contact" [ref=e17]:
+          - /url: /contact
+        - link "Theme Studio" [ref=e18]:
+          - /url: /theme-studio
+        - link "Sign In" [ref=e19]:
+          - /url: /auth/login
+        - link "Request Quote" [ref=e21]:
+          - /url: /quote
+    - generic [ref=e23]:
+      - generic [ref=e24]:
+        - heading "Request your free quote" [level=1] [ref=e25]
+        - paragraph [ref=e26]: Fill in the details below and upload photos of your wheels for an accurate price quote.
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - heading "Contact Information" [level=2] [ref=e31]
+          - generic [ref=e32]:
+            - generic [ref=e33]: Name
+            - textbox "Name" [ref=e34]:
+              - /placeholder: Your full name
+          - generic [ref=e35]:
+            - generic [ref=e36]: Email Address
+            - textbox "Email Address" [ref=e37]:
+              - /placeholder: support@marceli.online
+          - generic [ref=e38]:
+            - generic [ref=e39]: Phone Number
+            - textbox "Phone Number" [ref=e40]:
+              - /placeholder: 06 12345678
+        - generic [ref=e41]:
+          - heading "Service Details" [level=2] [ref=e42]
+          - generic [ref=e43]:
+            - generic [ref=e44]: Choose the desired service(s)
+            - generic [ref=e45]:
+              - generic [ref=e46]:
+                - checkbox "Powder Coating" [ref=e47]
+                - checkbox
+                - generic [ref=e48] [cursor=pointer]: Powder Coating
+              - generic [ref=e49]:
+                - checkbox "CNC Machining" [ref=e50]
+                - checkbox
+                - generic [ref=e51] [cursor=pointer]: CNC Machining
+              - generic [ref=e52]:
+                - checkbox "Straightening" [ref=e53]
+                - checkbox
+                - generic [ref=e54] [cursor=pointer]: Straightening
+              - generic [ref=e55]:
+                - checkbox "Stripping & Blasting" [ref=e56]
+                - checkbox
+                - generic [ref=e57] [cursor=pointer]: Stripping & Blasting
+              - generic [ref=e58]:
+                - checkbox "Repair" [ref=e59]
+                - checkbox
+                - generic [ref=e60] [cursor=pointer]: Repair
+              - generic [ref=e61]:
+                - checkbox "Other" [ref=e62]
+                - checkbox
+                - generic [ref=e63] [cursor=pointer]: Other
+        - generic [ref=e64]:
+          - heading "Wheel Specifications" [level=2] [ref=e65]
+          - generic [ref=e66]:
+            - generic [ref=e67]: Number of wheels
+            - combobox "Number of wheels" [ref=e68]:
+              - generic: Select number
+              - img
+            - combobox [ref=e69]
+          - generic [ref=e70]:
+            - generic [ref=e71]: Wheel size (in inches)
+            - combobox "Wheel size (in inches)" [ref=e72]:
+              - generic: Select size
+              - img
+            - combobox [ref=e73]
+          - generic [ref=e74]:
+            - generic [ref=e75]: Car/wheel brand and type (optional)
+            - textbox "Car/wheel brand and type (optional)" [ref=e76]:
+              - /placeholder: E.g. BMW 3-series, OZ Racing
+        - generic [ref=e77]:
+          - heading "Upload Photos" [level=2] [ref=e78]
+          - generic [ref=e79]:
+            - generic [ref=e80]: Upload photos of the damage or your current wheels (Max. 5 photos)
+            - generic [ref=e83] [cursor=pointer]:
+              - img [ref=e84]
+              - paragraph [ref=e87]: Click to upload or drag files here
+              - paragraph [ref=e88]: PNG, JPG or JPEG (MAX. 5 files)
+            - paragraph [ref=e89]: Clear photos help us make the best quote.
+        - generic [ref=e90]:
+          - heading "Description" [level=2] [ref=e91]
+          - generic [ref=e92]:
+            - generic [ref=e93]: Additional comments or description of the damage/wish
+            - textbox "Additional comments or description of the damage/wish" [ref=e94]:
+              - /placeholder: Describe any specific wishes or details about the damage here...
+        - button "Request Quote" [ref=e95]
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=e101] [cursor=pointer]:
+    - img [ref=e102]
+```
