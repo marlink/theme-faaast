@@ -1,29 +1,15 @@
 # Page snapshot
 
 ```yaml
-- generic [active] [ref=e1]:
+- generic [ref=e2]:
   - generic [ref=e3]:
-    - generic [ref=e4]:
-      - generic [ref=e5]: Create an account
-      - generic [ref=e6]: Sign up to start creating and downloading themes
-    - generic [ref=e7]:
-      - generic [ref=e8]:
-        - generic [ref=e9]:
-          - generic [ref=e10]: Email
-          - textbox "Email" [ref=e11]:
-            - /placeholder: you@example.com
-        - generic [ref=e12]:
-          - generic [ref=e13]: Password
-          - textbox "Password" [ref=e14]:
-            - /placeholder: ••••••••
-        - generic [ref=e15]:
-          - generic [ref=e16]: Confirm Password
-          - textbox "Confirm Password" [ref=e17]:
-            - /placeholder: ••••••••
-        - button "Sign up" [ref=e18]
-      - generic [ref=e19]:
-        - text: Already have an account?
-        - link "Sign in" [ref=e20] [cursor=pointer]:
-          - /url: /auth/login
-  - region "Notifications alt+T"
+    - heading "Unable to connect" [level=1] [ref=e5]
+    - paragraph [ref=e6]: Firefox can’t establish a connection to the server at localhost:3000.
+    - paragraph
+    - list [ref=e8]:
+      - listitem [ref=e9]: The site could be temporarily unavailable or too busy. Try again in a few moments.
+      - listitem [ref=e10]: If you are unable to load any pages, check your computer’s network connection.
+      - listitem [ref=e11]: If your computer or network is protected by a firewall or proxy, make sure that Nightly is permitted to access the web.
+      - listitem [ref=e12]: If you are trying to load a local network page, please check that Nightly has been granted Local Network permissions in the macOS Privacy & Security settings.
+  - button "Try Again" [active] [ref=e14]
 ```

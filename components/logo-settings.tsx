@@ -1,5 +1,15 @@
 'use client';
 
+/**
+ * @component LogoSettings
+ * @description Logo customization interface for theme studio
+ * @category branding
+ * @complexity medium
+ * @feature logo-customization
+ * @user-story US-003
+ * @status implemented
+ */
+
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';

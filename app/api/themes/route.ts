@@ -39,7 +39,7 @@ export async function POST(request: NextRequest) {
     // For now, just return success
     return NextResponse.json({
       success: true,
-      data: validation.data,
+      data: themeData,
       message: 'Theme saved successfully',
     });
   } catch (error) {
@@ -70,7 +70,7 @@ export async function PUT(request: NextRequest) {
     // For now, just return success
     return NextResponse.json({
       success: true,
-      data: validation.data,
+      data: themeData,
       message: 'Theme updated successfully',
     });
   } catch (error) {

@@ -1,5 +1,15 @@
 'use client';
 
+/**
+ * @component ColorPicker
+ * @description Interactive color palette editor for theme customization
+ * @category theme-studio
+ * @complexity medium
+ * @feature theme-customization
+ * @user-story US-007
+ * @status implemented
+ */
+
 import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';

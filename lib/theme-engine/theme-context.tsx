@@ -31,6 +31,7 @@ export const defaultTheme: ThemeConfig = {
   effects: defaultEffects,
   animations: defaultAnimations,
   backgrounds: defaultBackgrounds,
+  responsive: {},
   website: {
     name: 'My Website',
     description: 'A beautiful website built with our theme',
@@ -120,20 +121,20 @@ export function ThemeProvider({ children, initialTheme = defaultTheme }: ThemePr
       const capabilities = {
         touch: 'ontouchstart' in window || navigator.maxTouchPoints > 0,
         hover: window.matchMedia('(hover: hover)').matches,
-        pointer: window.matchMedia('(pointer: fine)').matches ? 'fine' : 'coarse',
+        pointer: (window.matchMedia('(pointer: fine)').matches ? 'fine' : 'coarse') as 'fine' | 'coarse',
         prefersReducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
         prefersColorScheme: (window.matchMedia('(prefers-color-scheme: dark)').matches
           ? 'dark'
           : window.matchMedia('(prefers-color-scheme: light)').matches
             ? 'light'
-            : 'no-preference') as any,
+            : 'no-preference') as 'light' | 'dark' | 'no-preference',
       };
 
       // Performance estimation
       const memory = (navigator as any).deviceMemory || 4;
       const cores = navigator.hardwareConcurrency || 4;
       const performance = {
-        tier: memory >= 8 && cores >= 4 ? 'high' : memory >= 4 && cores >= 2 ? 'medium' : 'low',
+        tier: (memory >= 8 && cores >= 4 ? 'high' : memory >= 4 && cores >= 2 ? 'medium' : 'low') as 'high' | 'medium' | 'low',
         memory,
         cores,
       };

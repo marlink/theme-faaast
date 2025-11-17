@@ -54,7 +54,7 @@ export default async function ProfilePage() {
         user={user}
         themes={themes || []}
         downloadStatus={downloadStatus}
-        hasPaid={payments && payments.length > 0}
+        hasPaid={Boolean(payments && payments.length > 0)}
       />
     </div>
   )

@@ -7,6 +7,7 @@ import type {
   BorderConfig,
   EffectConfig,
   AnimationConfig,
+  BackgroundConfig,
 } from '@/types/theme';
 
 // Default design tokens

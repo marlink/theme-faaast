@@ -444,7 +444,6 @@ export const ColorPicker: Story = {
                 title={color}
               />
             ))}
-          </button>
         </div>
 
           <div className="space-y-2">

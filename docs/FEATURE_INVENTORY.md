@@ -1,18 +1,38 @@
 # Feature Inventory
 
-*Generated on 2025-11-17T22:06:25.400Z*
+*Generated on 2025-11-17T22:19:08.918Z*
 
-## Components (96)
+## Components (102)
+
+### component-LogoSettings
+- **File**: undefined
+- **Exports**: None
+- **Last Modified**: 2025-11-17T22:18:10.626Z
+
+### LogoSettings
+- **File**: undefined
+- **Exports**: None
+- **Last Modified**: 2025-11-17T22:18:10.626Z
 
 ### logo-settings
 - **File**: components/logo-settings.tsx
 - **Exports**: LogoSettings
-- **Last Modified**: 2025-11-12T17:02:56.710Z
+- **Last Modified**: 2025-11-17T22:18:10.626Z
+
+### component-Logo
+- **File**: undefined
+- **Exports**: None
+- **Last Modified**: 2025-11-17T22:18:07.260Z
+
+### Logo
+- **File**: undefined
+- **Exports**: None
+- **Last Modified**: 2025-11-17T22:18:07.260Z
 
 ### logo
 - **File**: components/logo.tsx
 - **Exports**: Logo
-- **Last Modified**: 2025-11-12T18:13:51.643Z
+- **Last Modified**: 2025-11-17T22:18:07.260Z
 
 ### component-Navigation
 - **File**: undefined
@@ -44,10 +64,20 @@
 - **Exports**: BackgroundEditor
 - **Last Modified**: 2025-11-12T17:02:56.931Z
 
+### component-ColorPicker
+- **File**: undefined
+- **Exports**: None
+- **Last Modified**: 2025-11-17T22:18:15.425Z
+
+### ColorPicker
+- **File**: undefined
+- **Exports**: None
+- **Last Modified**: 2025-11-17T22:18:15.425Z
+
 ### color-picker
 - **File**: components/theme-studio/editor/color-picker.tsx
 - **Exports**: ColorPicker
-- **Last Modified**: 2025-11-12T17:02:56.949Z
+- **Last Modified**: 2025-11-17T22:18:15.425Z
 
 ### spacing-controls
 - **File**: components/theme-studio/editor/spacing-controls.tsx
@@ -298,7 +328,7 @@
 ### popover.stories
 - **File**: components/ui/popover.stories.tsx
 - **Exports**: meta, Basic, UserMenu, SettingsPopover, FilterPopover, ShareMenu, ContactPopover, ColorPicker, ActionsMenu, DateTimePicker
-- **Last Modified**: 2025-11-12T18:25:55.022Z
+- **Last Modified**: 2025-11-17T22:13:08.842Z
 
 ### popover
 - **File**: components/ui/popover.tsx
@@ -478,12 +508,12 @@
 ### component-ThemeProvider
 - **File**: undefined
 - **Exports**: None
-- **Last Modified**: 2025-11-12T17:34:03.832Z
+- **Last Modified**: 2025-11-17T22:17:35.086Z
 
 ### ThemeProvider
 - **File**: undefined
 - **Exports**: None
-- **Last Modified**: 2025-11-12T17:34:03.832Z
+- **Last Modified**: 2025-11-17T22:17:35.086Z
 
 ## Pages (14)
 

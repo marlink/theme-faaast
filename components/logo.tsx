@@ -1,5 +1,15 @@
 'use client';
 
+/**
+ * @component Logo
+ * @description Dynamic logo component with text/image support
+ * @category branding
+ * @complexity simple
+ * @feature logo-customization
+ * @user-story US-003
+ * @status implemented
+ */
+
 import { useLogo } from '@/lib/logo-context';
 import Link from 'next/link';
 import Image from 'next/image';

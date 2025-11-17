@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+/* eslint-disable no-console, no-unused-vars, @typescript-eslint/no-unused-vars */
+
 /**
  * Documentation Synchronization System
  *
@@ -30,7 +32,7 @@ const CONFIG = {
 };
 
 // Analysis results
-let analysisResults = {
+const analysisResults = {
   components: new Map(),
   features: new Map(),
   userStories: new Map(),
@@ -80,7 +82,7 @@ function analyzeFile(filePath) {
       let match;
       const originalRegex = new RegExp(regex.source, regex.flags); // Reset regex
       while ((match = originalRegex.exec(content)) !== null) {
-        const [fullMatch, id] = match;
+        const [_fullMatch, id] = match;
         const key = `${type}-${id}`;
 
         const markerInfo = {
@@ -322,7 +324,7 @@ function generateFeatureInventory() {
 
   // User Stories
   content += `## User Stories (${analysisResults.userStories.size})\n\n`;
-  for (const [key, story] of analysisResults.userStories) {
+  for (const [_key, story] of analysisResults.userStories) {
     content += `- **${story.id}**: ${story.description || 'No description'}\n`;
     content += `  - File: ${story.file}:${story.line}\n`;
   }
@@ -330,7 +332,7 @@ function generateFeatureInventory() {
 
   // Features
   content += `## Features (${analysisResults.features.size})\n\n`;
-  for (const [key, feature] of analysisResults.features) {
+  for (const [_key, feature] of analysisResults.features) {
     content += `- **${feature.id}**: ${feature.description || 'No description'}\n`;
     content += `  - File: ${feature.file}:${feature.line}\n`;
   }
@@ -359,7 +361,7 @@ function checkDocumentationDrift() {
   }
 
   // Check if all user stories have implementation
-  for (const [key, story] of analysisResults.userStories) {
+  for (const [_key, story] of analysisResults.userStories) {
     const hasImplementation = Array.from(analysisResults.components.values())
       .some(comp => comp.name.toLowerCase().includes(story.id.toLowerCase()));
 

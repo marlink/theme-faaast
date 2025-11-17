@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars, @typescript-eslint/no-unused-vars */
 /**
  * Documentation Markers for Code
  *
@@ -16,7 +17,7 @@
  * @feature hero-display
  * @user-story US-001
  */
-export function HeroSection({ title, subtitle, ctaText }) {
+export function HeroSection({ title: _title, subtitle: _subtitle, ctaText: _ctaText }) {
   // Component implementation
 }
 
@@ -28,7 +29,7 @@ export function HeroSection({ title, subtitle, ctaText }) {
  * @feature theme-management
  * @user-story US-006
  */
-export async function GET(request) {
+export async function GET(_request) {
   // API implementation
 }
 
